@@ -22,7 +22,7 @@ public class Rato : MonoBehaviour
 
     void FixedUpdate(){
         Walk();
-        Run();
+        Run();                                                                                             
     }
 
     void Update(){
@@ -33,16 +33,18 @@ public class Rato : MonoBehaviour
         //rb.velocity = new Vector2(Input.GetAxis("Horizontal"), 0f) * Speed;
         transform.position += new Vector3(Input.GetAxis("Horizontal"), 0f, 0f) * Speed * Time.deltaTime;
 
-        if(!isjumping){ 
-            if(Input.GetAxis("Horizontal") > 0f){
+        if(Input.GetAxis("Horizontal") > 0f){
+            if(!isjumping){
                 animator.SetBool("walk", true);
-                transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            }else if(Input.GetAxis("Horizontal") == 0f){
-                animator.SetBool("walk", false);
-            }else if(Input.GetAxis("Horizontal") < 0){
-                animator.SetBool("walk", true);
-                transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }
+            transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        }else if(Input.GetAxis("Horizontal") == 0f){
+            animator.SetBool("walk", false);
+        }else if(Input.GetAxis("Horizontal") < 0){
+            if(!isjumping){
+                animator.SetBool("walk", true);
+            }
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
     }
 

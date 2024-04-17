@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f2de034f2fdaa4587d1c2d09cd361a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerInitialX: 0
+  PlayerInitialY: 0
+  PlayerInitialZ: 0
 --- !u!4 &62812743
 Transform:
   m_ObjectHideFlags: 0
@@ -19544,6 +19547,18 @@ PrefabInstance:
     - target: {fileID: 3956235454026559704, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404642371600715882, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346719554937317636, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: JumpForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346719554937317636, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: OriginalSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6841282409529321609, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_Offset.y

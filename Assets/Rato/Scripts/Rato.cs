@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Rato : MonoBehaviour
 {
-    public float OriginalSpeed;
+    [SerializeField] private float OriginalSpeed, JumpForce;
     private float Speed;
     private Rigidbody2D rb;
-    public float JumpForce;
     private bool isjumping;
     private bool doublejump;
     private Animator animator;

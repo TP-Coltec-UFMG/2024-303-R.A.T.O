@@ -5,23 +5,21 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public static CameraController instance;
-    public Camera cam;
-    float v;
-    public Transform Player;
-    public float Speed;
-    public float maxLimit;
-    public float minLimit;
-    Transform autoZoomTarget;
+    [SerializeField] private Camera cam;
+    [SerializeField] private Transform Player;
+    [SerializeField] private float Speed, maxLimit, minLimit;
+    private float initialSize;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        initialSize = cam.orthographicSize;
     }
 
     void FixedUpdate(){
         FollowPlayer();
-        Zoom(15f, 2f, Input.GetAxis("Zoom") * 0.5f);
+        //Zoom(15f, 2f, Input.GetAxis("Zoom") * 0.5f);
         StopInLimits();
     }
 
@@ -29,8 +27,9 @@ public class CameraController : MonoBehaviour
         transform.position = Vector2.Lerp(transform.position, Player.position, Speed);
     }
 
+    //provavelmente inútil
     public void Zoom(float maxSize, float minSize, float zoomSpeed){
-        cam.orthographicSize -= zoomSpeed;
+        SetSize(cam.orthographicSize - zoomSpeed);
 
         if(cam.orthographicSize > maxSize){
              cam.orthographicSize = maxSize;
@@ -44,6 +43,20 @@ public class CameraController : MonoBehaviour
             transform.position = new Vector3(maxLimit - cam.orthographicSize, transform.position.y, transform.position.z);
         }else if((transform.position.x - cam.orthographicSize) < minLimit){
             transform.position = new Vector3(minLimit + cam.orthographicSize, transform.position.y, transform.position.z);
+        }
+    }
+
+    public void SetSize(float size){
+        cam.orthographicSize = size;
+    }
+
+    public void AutoZoom(float VerticalRange, float ZoomRange, float RangeLeft, float RangeRight, float FinalSize, Transform Target){
+        if((Player.position.y <= (Target.position.y + VerticalRange / 2f)) && (Player.position.y >= (Target.position.y - VerticalRange / 2f))){
+            if((Player.position.x >= Target.position.x - RangeLeft) && (Player.position.x <= Target.position.x)){
+                SetSize(((FinalSize - initialSize) / (ZoomRange / 2 - RangeLeft)) * (Target.position.x - Player.position.x - RangeLeft) + initialSize);     
+            }else if((Player.position.x > Target.position.x) && (Player.position.x <= Target.position.x + RangeRight)){
+                SetSize(((FinalSize - initialSize) / (ZoomRange / 2 - RangeRight)) * (Player.position.x - Target.position.x - RangeRight) + initialSize);
+            }
         }
     }
 } 

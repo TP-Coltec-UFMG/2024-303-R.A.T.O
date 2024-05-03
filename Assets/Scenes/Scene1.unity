@@ -152,9 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f2de034f2fdaa4587d1c2d09cd361a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerInitialX: -8
-  PlayerInitialY: 0.9
-  PlayerInitialZ: 0
 --- !u!4 &62812743
 Transform:
   m_ObjectHideFlags: 0
@@ -181,7 +178,6 @@ GameObject:
   - component: {fileID: 676833099}
   - component: {fileID: 676833097}
   - component: {fileID: 676833100}
-  - component: {fileID: 676833101}
   m_Layer: 0
   m_Name: ChangeSceneTrigger
   m_TagString: Untagged
@@ -262,22 +258,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
---- !u!114 &676833101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676833096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403df65de8aee1f4f81c41a4634ed1df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Distance: 40
-  Height: 2
-  Player: {fileID: 1706896741}
-  FinalSize: 4
 --- !u!1 &1449608352
 GameObject:
   m_ObjectHideFlags: 0
@@ -25907,7 +25887,7 @@ GameObject:
   - component: {fileID: 1689225009}
   - component: {fileID: 1689225008}
   m_Layer: 0
-  m_Name: AutoZoomTarget
+  m_Name: AutoZoomExample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25925,10 +25905,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403df65de8aee1f4f81c41a4634ed1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 10
-  Height: 3
-  Player: {fileID: 0}
-  FinalSize: 6
+  VerticalRange: 4
+  ZoomRange: 6
+  RangeLeft: 10
+  RangeRight: 10
+  FinalSize: 2
 --- !u!4 &1689225009
 Transform:
   m_ObjectHideFlags: 0

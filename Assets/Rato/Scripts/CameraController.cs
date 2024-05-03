@@ -53,9 +53,17 @@ public class CameraController : MonoBehaviour
     public void AutoZoom(float VerticalRange, float ZoomRange, float RangeLeft, float RangeRight, float FinalSize, Transform Target){
         if((Player.position.y <= (Target.position.y + VerticalRange / 2f)) && (Player.position.y >= (Target.position.y - VerticalRange / 2f))){
             if((Player.position.x >= Target.position.x - RangeLeft) && (Player.position.x <= Target.position.x)){
-                SetSize(((FinalSize - initialSize) / (ZoomRange / 2 - RangeLeft)) * (Target.position.x - Player.position.x - RangeLeft) + initialSize);     
-            }else if((Player.position.x > Target.position.x) && (Player.position.x <= Target.position.x + RangeRight)){
-                SetSize(((FinalSize - initialSize) / (ZoomRange / 2 - RangeRight)) * (Player.position.x - Target.position.x - RangeRight) + initialSize);
+                if(Player.position.x < Target.position.x - ZoomRange / 2){
+                    SetSize(((FinalSize - initialSize) / (ZoomRange / 2f - RangeLeft)) * (Target.position.x - Player.position.x - RangeLeft) + initialSize);
+                }else{
+                    SetSize(FinalSize);
+                }
+            }else if((Player.position.x > Target.position.x + ZoomRange / 2) && (Player.position.x <= Target.position.x + RangeRight)){
+                if(Player.position.x > Target.position.x + ZoomRange / 2){
+                    SetSize(((FinalSize - initialSize) / (ZoomRange / 2f - RangeRight)) * (Player.position.x - Target.position.x - RangeRight) + initialSize);
+                }else{
+                    SetSize(FinalSize);
+                }
             }
         }
     }

@@ -25983,6 +25983,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4404642371600715882, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404642371600715882, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}

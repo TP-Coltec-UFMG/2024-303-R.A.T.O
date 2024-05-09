@@ -58,12 +58,14 @@ public class CameraController : MonoBehaviour
                 }else{
                     SetSize(FinalSize);
                 }
-            }else if((Player.position.x > Target.position.x + ZoomRange / 2) && (Player.position.x <= Target.position.x + RangeRight)){
+            }else if((Player.position.x > Target.position.x) && (Player.position.x <= Target.position.x + RangeRight)){
                 if(Player.position.x > Target.position.x + ZoomRange / 2){
                     SetSize(((FinalSize - initialSize) / (ZoomRange / 2f - RangeRight)) * (Player.position.x - Target.position.x - RangeRight) + initialSize);
                 }else{
                     SetSize(FinalSize);
                 }
+            }else{
+                SetSize(initialSize);
             }
         }
     }

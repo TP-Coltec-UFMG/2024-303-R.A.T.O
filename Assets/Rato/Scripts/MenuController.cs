@@ -7,13 +7,16 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField] private string FirstScene;
     [SerializeField] private GameObject MainMenu;
+    [SerializeField] private GameObject JogarMenu;
     [SerializeField] private GameObject AcessibilidadeMenu;
     [SerializeField] private GameObject ConfiguracoesMenu;
     [SerializeField] private GameObject CreditosPanel;
     private GameObject CurrentPanel;
 
     public void Jogar(){
-        SceneManager.LoadScene(FirstScene);
+        this.MainMenu.SetActive(false);
+        this.JogarMenu.SetActive(true);
+        this.CurrentPanel = JogarMenu;
     }
 
     public void Acessibilidade(){

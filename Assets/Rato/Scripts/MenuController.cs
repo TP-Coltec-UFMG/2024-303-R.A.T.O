@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private string FirstScene;
-    [SerializeField] private GameObject MainMenu, JogarMenu, AcessibilidadeMenu, ConfiguracoesMenu, CreditosPanel, NovoJogoMenu, Message, ControlesMenu; 
+    [SerializeField] private GameObject MainMenu, JogarMenu, AcessibilidadeMenu, ConfiguracoesMenu, CreditosPanel, NovoJogoMenu, Message, ControlesMenu, ColourPickerPanel; 
     private GameObject CurrentPanel;
     private string BackTo;
 
@@ -74,6 +74,12 @@ public class MenuController : MonoBehaviour
     public void Controles(){
         this.ControlesMenu.SetActive(true);
         this.CurrentPanel = ControlesMenu;
-        this.BackTo = "Configuracoes";
+        this.BackTo = "Acessibilidade";
+    }
+
+    public void ColourPicker(){
+        this.ColourPickerPanel.SetActive(true);
+        this.CurrentPanel = ColourPickerPanel;
+        this.BackTo = "Acessibilidade";
     }
 }

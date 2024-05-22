@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,7 +11,7 @@ public class ColourPickerController : MonoBehaviour
     [SerializeField] private Slider hueSlider;
     [SerializeField] private TMP_InputField hexInputField;
     private Texture2D hueTexture, svTexture, outputTexture;
-    [SerializeField] Image changeThisColour;
+    private Color currentColour;
 
     private void Start(){
         CreateHueImage();
@@ -68,7 +70,7 @@ public class ColourPickerController : MonoBehaviour
     }
 
     private void UpdateOutputImage(){
-        Color currentColour = Color.HSVToRGB(this.currentHue, this.currentSat, this.currentVal);
+        this.currentColour = Color.HSVToRGB(this.currentHue, this.currentSat, this.currentVal);
         
         for(int i = 0; i < this.outputTexture.height; i++){
             this.outputTexture.SetPixel(0, i, currentColour);
@@ -77,8 +79,6 @@ public class ColourPickerController : MonoBehaviour
         this.outputTexture.Apply();
 
         hexInputField.text = ColorUtility.ToHtmlStringRGB(currentColour);
-
-        changeThisColour.color = currentColour;
     }
 
     public void SetSV(float s, float v){
@@ -115,5 +115,9 @@ public class ColourPickerController : MonoBehaviour
         hueSlider.value = currentHue;
         hexInputField.text = "";
         UpdateOutputImage();
+    }
+
+    public Color GetCurrentColour(){
+        return this.currentColour;
     }
 }

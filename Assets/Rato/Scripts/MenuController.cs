@@ -24,11 +24,11 @@ public class MenuController : MonoBehaviour
     [SerializeField] private Toggle ContrasteToggle, TelaCheiaToggle; 
 
     void Start(){
-        GetValues();
+        //GetValues();
     }
         
     void Update(){
-        ApplyChanges();
+        //ApplyChanges();
     }
     
     public void Main(){
@@ -104,7 +104,7 @@ public class MenuController : MonoBehaviour
         this.BackTo = "Acessibilidade";
     }
 
-    public void SetValues(){
+    /*public void SetValues(){
         gama = ControleGamaScrollbar.value;
         difficulty = DificuldadeDropdown.value;
         fontSize = TamanhoFonteDropdown.value;
@@ -165,7 +165,9 @@ public class MenuController : MonoBehaviour
         
         TMP_Text[] changeThisColour = FindObjectsOfType<TMP_Text>();
         foreach (TMP_Text element in changeThisColour){
-            element.color = ColorUtility.TryParseHtmlString(SavePrefs.GetString("fontColor"));
+            Color newColor;
+            ColorUtility.TryParseHtmlString(SavePrefs.GetString("fontColor"), out newColor);
+            element.color = newColor;
         }
-    }
+    }*/
 }

@@ -13,9 +13,8 @@ public class MenuController : MonoBehaviour
     private string BackTo;
 
     private float gama, audioVolume, musicVolume; 
-    private string left, right, jump, down, run, interact;
+    private string left, right, jump, down, run, interact, fontColor;
     private bool contrast, fullScreen;
-    private Color fontColor;
     private int difficulty, fontSize;
 
     [SerializeField] private Scrollbar ControleGamaScrollbar, VolumeAudioScrollbar, VolumeMusicaScrollbar;
@@ -23,12 +22,8 @@ public class MenuController : MonoBehaviour
     [SerializeField] private TMP_InputField EsquerdaInputText, DireitaInputText, PularInputText, AbaixarInputText, CorrerInputText, InteragirInputText;
     [SerializeField] private Toggle ContrasteToggle, TelaCheiaToggle; 
 
-    void Start(){
-        //GetValues();
-    }
-        
-    void Update(){
-        //ApplyChanges();
+    void Awake(){
+        GetValues();
     }
     
     public void Main(){
@@ -104,21 +99,6 @@ public class MenuController : MonoBehaviour
         this.BackTo = "Acessibilidade";
     }
 
-    /*public void SetValues(){
-        gama = ControleGamaScrollbar.value;
-        difficulty = DificuldadeDropdown.value;
-        fontSize = TamanhoFonteDropdown.value;
-        audioVolume = VolumeAudioScrollbar.value;
-        musicVolume = VolumeMusicaScrollbar.value;
-        right = DireitaInputText.text;
-        left = EsquerdaInputText.text;
-        jump = PularInputText.text;
-        down = AbaixarInputText.text;
-        run = CorrerInputText.text;
-        interact = InteragirInputText.text;
-        fontColor = ColourPickerPanel.GetComponent<ColourPickerController>().GetCurrentColour();        
-    }
-
     public void SaveValues(){
         SavePrefs.SaveFloat("gama", gama);
         SavePrefs.SaveInt("difficulty", difficulty);
@@ -131,43 +111,60 @@ public class MenuController : MonoBehaviour
         SavePrefs.SaveString("down", down);
         SavePrefs.SaveString("run", run);
         SavePrefs.SaveString("interact", interact);
-        SavePrefs.SaveString("fontColor", ColorUtility.ToHtmlStringRGB(fontColor));                
+        SavePrefs.SaveString("fontColor", fontColor);                
     }
 
     void GetValues(){
-        gama = SavePrefs.GetFloat("gama");
-        difficulty = SavePrefs.GetInt("difficulty");
-        fontSize = SavePrefs.GetInt("fontSize");
-        audioVolume = SavePrefs.GetFloat("audioVolume");
-        musicVolume = SavePrefs.GetFloat("musicVolume");
-        right = SavePrefs.GetString("right");
-        left = SavePrefs.GetString("left");
-        jump = SavePrefs.GetString("jump");
-        down = SavePrefs.GetString("down");
-        run = SavePrefs.GetString("run");
-        interact = SavePrefs.GetString("interact");
-        ColorUtility.TryParseHtmlString(SavePrefs.GetString("fontColor"), out fontColor);
-        ApplyChanges();
+        this.gama = SavePrefs.GetFloat("gama");
+        this.difficulty = SavePrefs.GetInt("difficulty");
+        this.audioVolume = SavePrefs.GetFloat("audioVolume");
+        this.musicVolume = SavePrefs.GetFloat("musicVolume");
+        this.right = SavePrefs.GetString("right");
+        this.left = SavePrefs.GetString("left");
+        this.jump = SavePrefs.GetString("jump");
+        this.down = SavePrefs.GetString("down");
+        this.run = SavePrefs.GetString("run");
+        this.interact = SavePrefs.GetString("interact");
+
+        this.fontSize = SavePrefs.GetInt("fontSize");
+        this.TamanhoFonteDropdown.value = fontSize;
+        GameController.ChangeFontSize(FixedFontSize(fontSize));
+
+        this.fontColor = SavePrefs.GetString("fontColor");
+        Color color;
+        ColorUtility.TryParseHtmlString("#" + fontColor, out color);        
+        ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(color);
+        GameController.ChangeFontColor(color);
     }
 
-    public void ApplyChanges(){
-        ControleGamaScrollbar.value = gama;
-        DificuldadeDropdown.value = difficulty;
-        TamanhoFonteDropdown.value = fontSize;
-        VolumeAudioScrollbar.value = audioVolume;
-        VolumeMusicaScrollbar.value = musicVolume;
-        DireitaInputText.text = right;
-        EsquerdaInputText.text = left;
-        PularInputText.text = jump;
-        AbaixarInputText.text = down;
-        CorrerInputText.text = run;
-        InteragirInputText.text = interact;
-        
-        TMP_Text[] changeThisColour = FindObjectsOfType<TMP_Text>();
-        foreach (TMP_Text element in changeThisColour){
-            Color newColor;
-            ColorUtility.TryParseHtmlString(SavePrefs.GetString("fontColor"), out newColor);
-            element.color = newColor;
+    public void SetFontSize(){
+        this.fontSize = this.TamanhoFonteDropdown.value;
+        GameController.ChangeFontSize(FixedFontSize(fontSize));
+    }
+
+    int FixedFontSize(int size){
+        switch (size){
+            case 0:
+                size = 30;
+                break;
+            case 1:
+                size = 35;
+                break;
+            case 2:
+                size = 40;
+                break;
+            default:
+                size = 40;
+                break;
         }
-    }*/
+
+        return size;
+    }
+
+    public void SetFontColor(){
+        this.fontColor = ColorUtility.ToHtmlStringRGBA(ColourPickerPanel.GetComponent<ColourPickerController>().GetCurrentColour());
+        Color color;
+        ColorUtility.TryParseHtmlString("#" + this.fontColor, out color);
+        GameController.ChangeFontColor(color);
+    }
 }

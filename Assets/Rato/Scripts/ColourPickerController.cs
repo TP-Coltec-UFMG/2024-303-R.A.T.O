@@ -120,4 +120,12 @@ public class ColourPickerController : MonoBehaviour
     public Color GetCurrentColour(){
         return this.currentColour;
     }
+
+    public void SetCurrentColour(Color color){
+        this.currentColour = color;
+        CreateHueImage();
+        CreateSVImage();
+        CreateOutputImage();
+        UpdateOutputImage();
+    }
 }

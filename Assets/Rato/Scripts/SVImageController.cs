@@ -26,13 +26,13 @@ public class SVImageController : MonoBehaviour, IDragHandler, IPointerClickHandl
         if(position.x > deltaX){
             position.x = deltaX;
         }else if(position.x < -deltaX){
-            position.x = deltaX;
+            position.x = -deltaX;
         }
 
         if(position.y > deltaY){
             position.y = deltaY;
         }else if(position.y < -deltaY){
-            position.y = deltaY;
+            position.y = -deltaY;
         }
 
         float x = position.x + deltaX;

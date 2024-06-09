@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MazeCell : MonoBehaviour
 {
-    [SerializeField] private GameObject LeftWall, BottomWall, RightWall, TopWall;
+    [SerializeField] private GameObject LeftWall, BottomWall, RightWall, TopWall, Entrance, Exit;
     
     public void RemoveWall(string wall){
         switch (wall){
@@ -23,5 +23,17 @@ public class MazeCell : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void IsEntrance(bool isEntrance){
+        if(isEntrance){
+            this.Entrance.SetActive(true);
+        } 
+    }
+
+    public void IsExit(bool isExit){
+        if(isExit){
+            this.Exit.SetActive(true);
+        } 
     }
 }

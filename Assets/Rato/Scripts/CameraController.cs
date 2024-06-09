@@ -15,6 +15,7 @@ public class CameraController : MonoBehaviour
     {
         instance = this;
         initialSize = cam.orthographicSize;
+        transform.position = Player.position;
     }
 
     void FixedUpdate(){

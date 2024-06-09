@@ -11,6 +11,8 @@ public class RandomMazeGenerator : MonoBehaviour
     private MazeCell[,] maze;
     private List<int[]> edges;
     private int[,] sets;
+    public MazeCell Entrance {get; set;}
+    public MazeCell Exit {get; set;}
     
     void Awake(){
         this.InitializeMaze();
@@ -79,9 +81,20 @@ public class RandomMazeGenerator : MonoBehaviour
 
     void Shuffle(List<int[]> list){
         if(list != null){
-            for(int i = 0; i < list.Count; i++){
+            for(var i = 0; i < list.Count; i++){
                 int k = Random.Range(0, list.Count - 1);
                 int[] v = list[k];
+                list[k] = list[i];
+                list[i] = v;
+            }
+        }
+    }
+
+    void Shuffle(List<MazeCell> list){
+        if(list != null){
+            for(var i = 0; i < list.Count; i++){
+                int k = Random.Range(0, list.Count - 1);
+                MazeCell v = list[k];
                 list[k] = list[i];
                 list[i] = v;
             }
@@ -114,6 +127,8 @@ public class RandomMazeGenerator : MonoBehaviour
 
             this.edges.RemoveAt(0);
         }
+
+        SetIO();
     }
 
     bool Finished(){
@@ -146,5 +161,24 @@ public class RandomMazeGenerator : MonoBehaviour
                 this.maze[NumberToPosition(w2)[0], NumberToPosition(w2)[1]].RemoveWall("bottom");
             }
         }
+    }
+
+    void SetIO(){
+        List<MazeCell> borders = new List<MazeCell>();
+        for(int x = 0; x < this.width; x++){
+            for(int y = 0; y < this.height; y++){
+                if(x == 0 || x == this.width - 1 || y == 0 || y == this.height - 1){
+                    borders.Add(this.maze[x,y]);
+                }
+            }
+        }
+
+        Shuffle(borders);
+        
+        this.Entrance = borders[0];
+        this.Entrance.IsEntrance(true);
+
+        this.Exit = borders[1];
+        this.Exit.IsExit(true);
     }
 }

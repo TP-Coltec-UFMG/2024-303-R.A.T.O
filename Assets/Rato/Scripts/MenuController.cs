@@ -16,6 +16,7 @@ public class MenuController : MonoBehaviour
     private string left, right, jump, down, run, interact, fontColor;
     private bool contrast, fullScreen;
     private int difficulty, fontSize;
+    private Color color;
 
     [SerializeField] private Scrollbar ControleGamaScrollbar, VolumeAudioScrollbar, VolumeMusicaScrollbar;
     [SerializeField] private TMP_Dropdown DificuldadeDropdown, TamanhoFonteDropdown;
@@ -24,6 +25,11 @@ public class MenuController : MonoBehaviour
 
     void Awake(){
         GetValues();
+    }
+
+    void Update(){
+        GameController.ChangeFontColor(this.color);
+        GameController.ChangeFontSize(FixedFontSize(this.fontSize));
     }
     
     public void Main(){
@@ -128,18 +134,16 @@ public class MenuController : MonoBehaviour
 
         this.fontSize = SavePrefs.GetInt("fontSize");
         this.TamanhoFonteDropdown.value = fontSize;
-        GameController.ChangeFontSize(FixedFontSize(fontSize));
+        //GameController.ChangeFontSize(FixedFontSize(fontSize));
 
         this.fontColor = SavePrefs.GetString("fontColor");
-        Color color;
-        ColorUtility.TryParseHtmlString("#" + fontColor, out color);        
-        ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(color);
-        GameController.ChangeFontColor(color);
+        ColorUtility.TryParseHtmlString("#" + fontColor, out this.color);        
+        ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(this.color);
+        //GameController.ChangeFontColor(color);
     }
 
     public void SetFontSize(){
         this.fontSize = this.TamanhoFonteDropdown.value;
-        GameController.ChangeFontSize(FixedFontSize(fontSize));
     }
 
     int FixedFontSize(int size){
@@ -154,7 +158,7 @@ public class MenuController : MonoBehaviour
                 size = 40;
                 break;
             default:
-                size = 40;
+                size = 35;
                 break;
         }
 
@@ -163,8 +167,6 @@ public class MenuController : MonoBehaviour
 
     public void SetFontColor(){
         this.fontColor = ColorUtility.ToHtmlStringRGBA(ColourPickerPanel.GetComponent<ColourPickerController>().GetCurrentColour());
-        Color color;
-        ColorUtility.TryParseHtmlString("#" + this.fontColor, out color);
-        GameController.ChangeFontColor(color);
+        ColorUtility.TryParseHtmlString("#" + this.fontColor, out this.color);
     }
 }

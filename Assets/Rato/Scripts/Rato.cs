@@ -20,8 +20,8 @@ public class Rato : MonoBehaviour
         Speed = OriginalSpeed;
 
         this.dialogueSystem.Initialize();
-        this.dialogueSystem.WriteText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
-        //this.dialogueSystem.Finish();
+        this.dialogueSystem.NewLine("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+        this.dialogueSystem.NewLine("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
     }
 
     void FixedUpdate(){

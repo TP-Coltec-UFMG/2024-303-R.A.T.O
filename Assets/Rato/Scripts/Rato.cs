@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Rato : MonoBehaviour
 {
-    [SerializeField] private float OriginalSpeed, JumpForce;
+    [SerializeField] private Image Dialogue;
     [SerializeField] private DialogueSystem dialogueSystem;
+    [SerializeField] private float OriginalSpeed, JumpForce;
     private float Speed;
     private Rigidbody2D rb;
     private bool isjumping;
@@ -19,9 +20,7 @@ public class Rato : MonoBehaviour
         animator = GetComponent<Animator>();
         Speed = OriginalSpeed;
 
-        this.dialogueSystem.Initialize();
-        this.dialogueSystem.NewLine("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
-        this.dialogueSystem.NewLine("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+        this.dialogueSystem.NewDialogueBox();
     }
 
     void FixedUpdate(){

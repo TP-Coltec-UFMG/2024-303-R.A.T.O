@@ -1,51 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class DialogueSystem : MonoBehaviour
 {
-    private static List<string> lines;
-    [SerializeField] private GameObject DialogueBox;
-    [SerializeField] private TMP_Text DialogueText;
-    [SerializeField] private float TextSpeed, Delay, FinalDelay;
+    [SerializeField] private DialogueBox DialogueBoxPrefab;
 
-    void Start(){
-        lines = new List<string>();
-        Debug.Log("aaa"); 
-    }
-    
-    public void Initialize(){
-        this.DialogueBox.SetActive(true);
-    }
+    public void NewDialogueBox(string text, string name, Image icon){
+        DialogueBox db = Instantiate(this.DialogueBoxPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        db.Initialize(name, icon);
 
-    public void NewLine(string text){
-        if(lines != null){
-            lines.Add(text);
-            StartCoroutine(WriteText());
-        }else{
-            //Debug.Log("aaa");
-        }
-    }
-
-    IEnumerator WriteText(){
-        foreach(string text in lines){
-            foreach(char c in text){
-                this.DialogueText.text += c;
-                if(c == ',' || c == '.'){
-                    yield return new WaitForSeconds(this.Delay);
-                }else{
-                    yield return new WaitForSeconds(this.TextSpeed);   
-                }
-            }
-
-            yield return new WaitForSeconds(this.FinalDelay);  
-        }
-        
-        this.DialogueBox.SetActive(false);
-    }
-
-    public void Clean(){
-        this.DialogueText.text = "";
+        db.PlayText(text);
     }
 }

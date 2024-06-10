@@ -7,15 +7,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController instance;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        instance = this;
-    }
-
-    public void ChangeScene(string SceneName){
+    public static void ChangeScene(string SceneName){
         SceneManager.LoadScene(SceneName);
     }
 

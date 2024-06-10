@@ -75,7 +75,7 @@ public class MenuController : MonoBehaviour
             this.CurrentPanel = NovoJogoMenu;
             this.BackTo = "Jogar";
         }else{
-            //carrega primeira cena       
+            GameController.ChangeScene(this.FirstScene);       
         }
     }
 

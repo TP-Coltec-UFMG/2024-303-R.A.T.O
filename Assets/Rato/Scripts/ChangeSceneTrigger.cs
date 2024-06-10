@@ -8,7 +8,7 @@ public class ChangeSceneTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Player"){
-            GameController.instance.ChangeScene(NewScene);
+            GameController.ChangeScene(NewScene);
         }
     }
 }

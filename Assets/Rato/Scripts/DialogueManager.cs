@@ -51,19 +51,19 @@ public class DialogueManager : MonoBehaviour
         foreach (DialogueResponse response in node.responses)
         {
             if(i == 0){
-                GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(-185, -120, 0), Quaternion.identity, responseButtonContainer); 
+                GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(284, 47, 0), Quaternion.identity, responseButtonContainer); 
                 buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
  
                 // Setup button to trigger SelectResponse when clicked
                 buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response, title));
             }else if(i == 1){
-                GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(185, -120, 0), Quaternion.identity, responseButtonContainer); 
+                GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(800, 47, 0), Quaternion.identity, responseButtonContainer); 
                 buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
  
                 // Setup button to trigger SelectResponse when clicked
                 buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response, title));
             }
-            
+            i++;
         }
     }
  

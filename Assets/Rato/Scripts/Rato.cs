@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Rato : MonoBehaviour
 {
-    [SerializeField] private Image Dialogue;
-    [SerializeField] private DialogueSystem dialogueSystem;
     [SerializeField] private float OriginalSpeed, JumpForce;
     private float Speed;
     private Rigidbody2D rb;
@@ -19,8 +18,6 @@ public class Rato : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Speed = OriginalSpeed;
-
-        this.dialogueSystem.NewDialogueBox();
     }
 
     void FixedUpdate(){

@@ -4,10 +4,10 @@ public class Actor : MonoBehaviour
 {
     public string Name;
     public Dialogue Dialogue;
- 
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             SpeakTo();
         }
@@ -16,6 +16,6 @@ public class Actor : MonoBehaviour
     // Trigger dialogue for this actor
     public void SpeakTo()
     {
-        DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNode);
+        DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNodes);
     }
 }

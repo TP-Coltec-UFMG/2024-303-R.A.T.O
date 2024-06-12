@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+
 [System.Serializable]
 public class DialogueResponse
 {
     public string responseText;
-    public DialogueNode nextNode;
+    public List<DialogueNode> nextDialogueNodes;
 }
  
  

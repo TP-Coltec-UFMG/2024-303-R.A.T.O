@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
   m_Name: "Ol\xE1"
   m_EditorClassIdentifier: 
-  RootNode:
-    dialogueText: "Aonde voc\xEA pensa que vai roedor?"
+  RootNodes:
+  - dialogueText: oi
+    responses: []
+  - dialogueText: ola
+    responses: []
+  - dialogueText: td bem
     responses: []

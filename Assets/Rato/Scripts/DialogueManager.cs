@@ -8,119 +8,99 @@ using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
- 
-    // UI references
-    public GameObject DialogueParent; // Main container for dialogue UI
-    public TextMeshProUGUI DialogTitleText, DialogBodyText; // Text components for title and body
-    public GameObject responseButtonPrefab; // Prefab for generating response buttons
-    public Transform responseButtonContainer; // Container to hold response buttons
-    private int index;
- 
-    private void Awake()
-    {
-        // Singleton pattern to ensure only one instance of DialogueManager
-        if (Instance == null)
-        {
+
+    [SerializeField] private GameObject DialogueParent; 
+    [SerializeField] private TMP_Text DialogTitleText, DialogBodyText;
+    [SerializeField] private GameObject responseButtonPrefab;
+    [SerializeField] private Transform responseButtonContainer;
+    [SerializeField] private Image Icon;
+    private List<DialogueNode> currentDialogueNodes;
+    private int currentIndex;
+    [SerializeField] private float delay;
+
+    private void Awake(){
+        if (Instance == null){
             Instance = this;
-        }
-        else
-        {
+        }else{
             Destroy(gameObject);
         }
 
-        index = 0;
- 
-        // Initially hide the dialogue UI
         HideDialogue();
     }
- 
-    // Starts the dialogue with given title and dialogue node
-    public void StartDialogue(string title, List<DialogueNode> nodes)
-    {
-        // Display the dialogue UI
+
+    public void StartDialogue(string title, List<DialogueNode> nodes, Sprite iconSprite){
         ShowDialogue();
- 
-        // Set dialogue title and body text
+        Icon.sprite = iconSprite;
         DialogTitleText.text = title;
-        DialogBodyText.text = nodes[index].dialogueText;
- 
-        // Remove any existing response buttons
-        foreach (Transform child in responseButtonContainer)
-        {
+        currentDialogueNodes = nodes;
+        currentIndex = 0;
+        UpdateDialogueUI();
+    }
+
+    private void UpdateDialogueUI()
+    {
+        StartCoroutine(TypeTextUI(currentDialogueNodes[currentIndex].dialogueText));
+
+        foreach (Transform child in responseButtonContainer){
             Destroy(child.gameObject);
         }
- 
-        // Create and setup response buttons based on current dialogue node
-        
-        if(nodes[index].responses.Count != 0){
-            int i = 0;
-            foreach (DialogueResponse response in nodes[index].responses){
-                if(i == 0){
-                    GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(284, 47, 0), Quaternion.identity, responseButtonContainer); 
-                    buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
 
-                    // Setup button to trigger SelectResponse when clicked
-                    buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response, title));
-                }else if(i == 1){
-                    GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(800, 47, 0), Quaternion.identity, responseButtonContainer); 
-                    buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
+        int i = 0;
+        foreach (DialogueResponse response in currentDialogueNodes[currentIndex].responses){
+            if(i == 0){
+                GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(190, 30, 0), Quaternion.identity, responseButtonContainer);
+                buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
 
-                    // Setup button to trigger SelectResponse when clicked
-                    buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response, title));
-                }
-                i++;
+                buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
+            }else if(i == 1){
+                GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(500, 30, 0), Quaternion.identity, responseButtonContainer);
+                buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
+
+                buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
             }
-        }else{
-            StartCoroutine(NewDialogueRoot(title, nodes));
+            
+            i++;
         }
     }
 
-    IEnumerator NewDialogueRoot(string title, List<DialogueNode> nodes){
-        while (!Input.GetKeyDown(KeyCode.Return)){
-            yield return null;
-        }
-
-        index++;
-        
-        if(index < nodes.Count){
-            StartDialogue(title, nodes);
+    public void SelectResponse(DialogueResponse response){
+        if (response.nextDialogueNodes.Count > 0){
+            currentDialogueNodes = response.nextDialogueNodes;
+            currentIndex = 0;
+            UpdateDialogueUI();
         }else{
             HideDialogue();
         }
     }
 
-    
- 
-    // Handles response selection and triggers next dialogue node
-    public void SelectResponse(DialogueResponse response, string title)
-    {
-        // Check if there's a follow-up node
-        if (!response.nextDialogueNodes[index].IsLastNode())
-        {
-            StartDialogue(title, response.nextDialogueNodes); // Start next dialogue
-        }
-        else
-        {
-            // If no follow-up node, end the dialogue
-            HideDialogue();
+    void Update(){
+        if(IsDialogueActive() && Input.GetKeyDown(KeyCode.Return)){
+            if (currentIndex + 1 < currentDialogueNodes.Count){
+                currentIndex++;
+                UpdateDialogueUI();
+            }else{
+                HideDialogue();
+            }
         }
     }
- 
-    // Hide the dialogue UI
-    public void HideDialogue()
-    {
+
+    public void HideDialogue(){
         DialogueParent.SetActive(false);
     }
- 
-    // Show the dialogue UI
-    private void ShowDialogue()
-    {
+
+    private void ShowDialogue(){
         DialogueParent.SetActive(true);
     }
- 
-    // Check if dialogue is currently active
-    public bool IsDialogueActive()
-    {
+
+    public bool IsDialogueActive(){
         return DialogueParent.activeSelf;
+    }
+
+    IEnumerator TypeTextUI(string text){
+        DialogBodyText.text = "";
+        foreach (char letter in text){
+            DialogBodyText.text += letter;
+            yield return new WaitForSeconds(delay);            
+        }
     }
 }

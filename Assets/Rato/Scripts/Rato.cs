@@ -11,6 +11,7 @@ public class Rato : MonoBehaviour
     private bool isjumping;
     private bool doublejump;
     private Animator animator;
+    private bool isBiting;
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +28,11 @@ public class Rato : MonoBehaviour
 
     void Update(){
         Jump();
+        isBiting = false;
+        Bite();
     }
 
     void Walk(){
-        //rb.velocity = new Vector2(Input.GetAxis("Horizontal"), 0f) * Speed;
         transform.position += new Vector3(Input.GetAxis("Horizontal"), 0f, 0f) * Speed * Time.deltaTime;
 
         if(Input.GetAxis("Horizontal") > 0f){
@@ -52,7 +54,7 @@ public class Rato : MonoBehaviour
         if(Input.GetButtonDown("Jump")){
             if(!isjumping){
                 animator.SetBool("jump", true);
-                rb.AddForce(new Vector2(/*Input.GetAxis("Horizontal") * Speed*/ 0f, JumpForce), ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 doublejump = true;
             }else if(doublejump){
                 Doublejump();
@@ -63,6 +65,15 @@ public class Rato : MonoBehaviour
     void Doublejump(){
         rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
         doublejump = false;
+    }
+
+    void Bite(){
+        if(Input.GetButtonDown("Fire") && !isBiting){
+            animator.SetBool("bite", true);
+            isBiting = true;
+        }else{
+            animator.SetBool("bite", false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision){
@@ -85,8 +96,9 @@ public class Rato : MonoBehaviour
     void Run(){
         if(Input.GetAxis("Horizontal") * Input.GetAxis("Run") != 0){           
             Speed = OriginalSpeed * 1.5f;
+            animator.speed = Speed / OriginalSpeed;
         }else{
             Speed = OriginalSpeed;           
-        }
+        } 
     }
 }

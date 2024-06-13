@@ -16,30 +16,38 @@ public class MazeRato : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();    
+        Walk();
+        Rotate();    
     }
 
     void Walk(){
-        if(Input.GetAxis("Horizontal") != 0){
-            transform.position += new Vector3(Input.GetAxis("Horizontal"), 0f, 0f) * this.Speed * Time.deltaTime;
-            animator.SetBool("walking", true);
+        transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f) * this.Speed * Time.deltaTime;
+        animator.SetBool("walk", true);
+    }
 
-            if(Input.GetAxis("Horizontal") > 0){
-                transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            }else if(Input.GetAxis("Horizontal") < 0){
+    void Rotate(){
+        if(Input.GetAxis("Horizontal") > 0){
+            if(Input.GetAxis("Vertical") > 0){
+                transform.eulerAngles = new Vector3(0f, 45f, 0f);
+            }else if(Input.GetAxis("Vertical") < 0){
+                transform.eulerAngles = new Vector3(0f, 0f, 135f);
+            }else{
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }
-        }else if(Input.GetAxis("Vertical") != 0){
-            transform.position += new Vector3(0f, Input.GetAxis("Vertical"), 0f) * this.Speed * Time.deltaTime;
-            animator.SetBool("walking", true);
-
+        }else if(Input.GetAxis("Horizontal") < 0){
+            if(Input.GetAxis("Vertical") > 0){
+                transform.eulerAngles = new Vector3(0f, 0f, -45f);
+            }else if(Input.GetAxis("Vertical") > 0){
+                transform.eulerAngles = new Vector3(0f, 0f, -135f);
+            }else{
+                transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            }
+        }else{
             if(Input.GetAxis("Vertical") > 0){
                 transform.eulerAngles = new Vector3(0f, 0f, 90f);
             }else if(Input.GetAxis("Vertical") < 0){
                 transform.eulerAngles = new Vector3(0f, 0f, 270f);
             }
-        }else{
-            animator.SetBool("walking", false);
         }
     }
 }

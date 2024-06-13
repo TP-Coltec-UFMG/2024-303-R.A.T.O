@@ -4,6 +4,11 @@ using UnityEngine;
 using static UnityEngine.Random;
 using System.Linq;
 
+/*private struct Vertex{
+    int number;
+    
+}*/ 
+
 public class RandomMazeGenerator : MonoBehaviour
 {
     [SerializeField] private MazeCell Cell;
@@ -164,21 +169,21 @@ public class RandomMazeGenerator : MonoBehaviour
     }
 
     void SetIO(){
-        List<MazeCell> borders = new List<MazeCell>();
+        List<MazeCell> topBorders = new List<MazeCell>();
         for(int x = 0; x < this.width; x++){
             for(int y = 0; y < this.height; y++){
-                if(x == 0 || x == this.width - 1 || y == 0 || y == this.height - 1){
-                    borders.Add(this.maze[x,y]);
+                if(x == 0){
+                    topBorders.Add(this.maze[x,y]);
                 }
             }
         }
 
-        Shuffle(borders);
+        Shuffle(topBorders);
         
-        this.Entrance = borders[0];
+        this.Entrance = maze[this.width - 1, this.height - 1];
         this.Entrance.IsEntrance(true);
 
-        this.Exit = borders[1];
+        this.Exit = topBorders[0];
         this.Exit.IsExit(true);
     }
 }

@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RootNodes:
   - dialogueText: oi
-    responses: []
+    responses:
+    - responseText: oi
+      nextDialogueNodes:
+      - dialogueText: ola ahahahahah
+        responses: []
+      - dialogueText: oi hahahahahaha
+        responses: []
+      - dialogueText: opa hahahahaha
+        responses: []
   - dialogueText: ola pequeno roedor hahahahaha
     responses: []
   - dialogueText: eu sou o pollux aahahahaha

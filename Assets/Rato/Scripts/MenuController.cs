@@ -28,8 +28,8 @@ public class MenuController : MonoBehaviour
     }
 
     void Update(){
-        GameController.ChangeFontColor(this.color);
-        GameController.ChangeFontSize(FixedFontSize(this.fontSize));
+        GameController.Instance.ChangeFontColor(this.color);
+        GameController.Instance.ChangeFontSize(FixedFontSize(this.fontSize));
     }
     
     public void Main(){
@@ -75,7 +75,7 @@ public class MenuController : MonoBehaviour
             this.CurrentPanel = NovoJogoMenu;
             this.BackTo = "Jogar";
         }else{
-            GameController.ChangeScene(this.FirstScene);       
+            GameController.Instance.ChangeScene(this.FirstScene);       
         }
     }
 

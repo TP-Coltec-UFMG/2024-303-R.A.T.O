@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class Rato : MonoBehaviour
 {
-    [SerializeField] private float OriginalSpeed, JumpForce;
+    [SerializeField] private float OriginalSpeed, JumpForce, Damage;
     private float Speed;
     private Rigidbody2D rb;
     private bool isjumping;
     private bool doublejump;
     private Animator animator;
     private bool isBiting;
+    [SerializeField] public float MaxHealth; 
+    public float health {get; private set;}
+    private GameObject attack;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,10 @@ public class Rato : MonoBehaviour
         Speed = OriginalSpeed;
     }
 
+    void Awake(){
+        health = MaxHealth;
+    }
+
     void FixedUpdate(){
         Walk();
         Run();                                                                                             
@@ -28,7 +35,6 @@ public class Rato : MonoBehaviour
 
     void Update(){
         Jump();
-        isBiting = false;
         Bite();
     }
 
@@ -69,24 +75,29 @@ public class Rato : MonoBehaviour
 
     void Bite(){
         if(Input.GetButtonDown("Fire") && !isBiting){
-            animator.SetBool("bite", true);
-            isBiting = true;
+            animator.SetTrigger("bite");
         }else{
-            animator.SetBool("bite", false);
+            animator.ResetTrigger("bite");
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.layer == 6){
+        if(collision.gameObject.layer == 6 || collision.gameObject.tag == "Gato"){
             isjumping = false;
             animator.SetBool("jump", false);
+        }
+
+        if(collision.gameObject.tag == "Gato"){
+            attack = collision.gameObject;
         }    
     }
 
     void OnCollisionExit2D(Collision2D collision){
         if(collision.gameObject.layer == 6){
             isjumping = true;
-        }    
+        }
+        
+        attack = null;    
     }
 
     public void SetPosition(float x, float y, float z){
@@ -100,5 +111,15 @@ public class Rato : MonoBehaviour
         }else{
             Speed = OriginalSpeed;           
         } 
+    }
+
+    public void Attack(){
+        if(attack != null){
+            attack.GetComponent<Gato>().TakeDamage(this.Damage);
+        }      
+    }
+
+    public void TakeDamage(float damage){
+        this.health -= damage;
     }
 }

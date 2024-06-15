@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GatoWalk : StateMachineBehaviour
+public class GatoWalking : StateMachineBehaviour
 {
     private Transform target;
     private Rigidbody2D rb;
     [SerializeField] private float Speed;
+    private float AttackRange;
     private Gato gato;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -15,6 +16,7 @@ public class GatoWalk : StateMachineBehaviour
         this.target = GameObject.FindGameObjectWithTag("Player").transform;
         this.rb = animator.GetComponent<Rigidbody2D>();
         gato = animator.GetComponent<Gato>();
+        AttackRange = gato.AttackRange;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,12 +24,16 @@ public class GatoWalk : StateMachineBehaviour
     {
         gato.LookAtPlayer();
         rb.position = Vector2.MoveTowards(rb.position, new Vector2(target.position.x, rb.position.y), this.Speed * Time.deltaTime);
+
+        if(rb.position.x - target.position.x <= AttackRange || rb.position.x - target.position.x >= -AttackRange){
+            animator.SetTrigger("attack");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        animator.ResetTrigger("attack");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

@@ -7,11 +7,29 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    public static void ChangeScene(string SceneName){
+    public static GameController Instance {get; private set;}
+    private Rato rato;
+    [SerializeField] private Slider RatoHealthBar;
+
+    void Awake(){
+        if (Instance == null){
+            Instance = this;
+        }else{
+            Destroy(gameObject);
+        }
+
+        rato = FindObjectOfType<Rato>();
+    }
+
+    void Update(){
+        ShowHealth();
+    }
+
+    public void ChangeScene(string SceneName){
         SceneManager.LoadScene(SceneName);
     }
 
-    public static void ChangeFontColor(Color color){
+    public void ChangeFontColor(Color color){
         TMP_Text[] changeThisColour = FindObjectsOfType<TMP_Text>();
 
         foreach(TMP_Text element in changeThisColour){
@@ -21,7 +39,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public static void ChangeFontSize(int size){
+    public void ChangeFontSize(int size){
         TMP_Text[] changeThisSize = FindObjectsOfType<TMP_Text>();
 
         foreach(TMP_Text element in changeThisSize){
@@ -29,5 +47,10 @@ public class GameController : MonoBehaviour
                 element.fontSize = size;
             }
         }
+    }
+
+    void ShowHealth(){
+        RatoHealthBar.maxValue = rato.MaxHealth;
+        RatoHealthBar.value = rato.health;        
     }
 }

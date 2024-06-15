@@ -8,6 +8,7 @@ public class GatoRunning : StateMachineBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float Speed;
     private Gato gato;
+    private float AttackRange;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

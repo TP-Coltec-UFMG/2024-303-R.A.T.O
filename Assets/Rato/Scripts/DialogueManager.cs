@@ -1,15 +1,14 @@
-using System.Threading;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
 
-    [SerializeField] private GameObject DialogueParent; 
+    [SerializeField] private GameObject DialogueParent;
     [SerializeField] private TMP_Text DialogTitleText, DialogBodyText;
     [SerializeField] private GameObject responseButtonPrefab;
     [SerializeField] private Transform responseButtonContainer;
@@ -17,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     private List<DialogueNode> currentDialogueNodes;
     private int currentIndex;
     [SerializeField] private float delay;
+    private Coroutine typingCoroutine;
 
     private void Awake(){
         if (Instance == null){
@@ -28,10 +28,11 @@ public class DialogueManager : MonoBehaviour
         HideDialogue();
     }
 
-    public void StartDialogue(string title, List<DialogueNode> nodes, Sprite iconSprite){
+    public void StartDialogue(List<DialogueNode> nodes){
+        GameController.Instance.StopGame();
+        
         ShowDialogue();
-        Icon.sprite = iconSprite;
-        DialogTitleText.text = title;
+        
         currentDialogueNodes = nodes;
         currentIndex = 0;
         UpdateDialogueUI();
@@ -39,7 +40,14 @@ public class DialogueManager : MonoBehaviour
 
     private void UpdateDialogueUI()
     {
-        StartCoroutine(TypeTextUI(currentDialogueNodes[currentIndex].dialogueText));
+        Icon.sprite = currentDialogueNodes[currentIndex].iconSprite;
+        DialogTitleText.text = currentDialogueNodes[currentIndex].title;
+
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+        typingCoroutine = StartCoroutine(TypeTextUI(currentDialogueNodes[currentIndex].dialogueText));
 
         foreach (Transform child in responseButtonContainer){
             Destroy(child.gameObject);
@@ -47,18 +55,18 @@ public class DialogueManager : MonoBehaviour
 
         int i = 0;
         foreach (DialogueResponse response in currentDialogueNodes[currentIndex].responses){
-            if(i == 0){
-                GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(190, 30, 0), Quaternion.identity, responseButtonContainer);
-                buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
-
-                buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
-            }else if(i == 1){
-                GameObject buttonObj = Instantiate(responseButtonPrefab, new Vector3(500, 30, 0), Quaternion.identity, responseButtonContainer);
-                buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
-
-                buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
+            GameObject buttonObj;
+            if (i == 0){
+                buttonObj = Instantiate(responseButtonPrefab, new Vector3(190, 30, 0), Quaternion.identity, responseButtonContainer);
+            }else if (i == 1){
+                buttonObj = Instantiate(responseButtonPrefab, new Vector3(500, 30, 0), Quaternion.identity, responseButtonContainer);
+            } else {
+                continue; // Skip other responses if needed
             }
-            
+
+            buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
+            buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
+
             i++;
         }
     }
@@ -70,16 +78,24 @@ public class DialogueManager : MonoBehaviour
             UpdateDialogueUI();
         }else{
             HideDialogue();
+            GameController.Instance.Resume();
         }
     }
 
     void Update(){
         if(IsDialogueActive() && Input.GetKeyDown(KeyCode.Return)){
-            if (currentIndex + 1 < currentDialogueNodes.Count){
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+                DialogBodyText.text = currentDialogueNodes[currentIndex].dialogueText;
+                typingCoroutine = null;
+            }
+            else if (currentIndex + 1 < currentDialogueNodes.Count){
                 currentIndex++;
                 UpdateDialogueUI();
             }else{
                 HideDialogue();
+                GameController.Instance.Resume();
             }
         }
     }
@@ -100,7 +116,9 @@ public class DialogueManager : MonoBehaviour
         DialogBodyText.text = "";
         foreach (char letter in text){
             DialogBodyText.text += letter;
-            yield return new WaitForSeconds(delay);            
+            yield return new WaitForSecondsRealtime(delay);
         }
+        typingCoroutine = null;
     }
 }
+

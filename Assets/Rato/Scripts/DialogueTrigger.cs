@@ -1,12 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
  
-public class Actor : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
-    [SerializeField] private string Name;
     [SerializeField] private Dialogue Dialogue;
-    [SerializeField] private Sprite Icon;
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -18,7 +15,7 @@ public class Actor : MonoBehaviour
     // Trigger dialogue for this actor
     public void SpeakTo()
     {
-        DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNodes, Icon);
+        DialogueManager.Instance.StartDialogue(Dialogue.RootNodes);
     }
 }
 

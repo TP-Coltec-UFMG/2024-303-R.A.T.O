@@ -10,7 +10,6 @@ public class GameController : MonoBehaviour
     public static GameController Instance {get; private set;}
     private Rato rato;
     [SerializeField] private Slider RatoHealthBar;
-
     void Awake(){
         if (Instance == null){
             Instance = this;
@@ -52,5 +51,14 @@ public class GameController : MonoBehaviour
     void ShowHealth(){
         RatoHealthBar.maxValue = rato.MaxHealth;
         RatoHealthBar.value = rato.health;        
+    }
+
+    public void StopGame(){
+
+        Time.timeScale = 0;
+    }
+
+    public void Resume(){
+        Time.timeScale = 1;
     }
 }

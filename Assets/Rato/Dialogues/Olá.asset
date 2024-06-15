@@ -13,22 +13,23 @@ MonoBehaviour:
   m_Name: "Ol\xE1"
   m_EditorClassIdentifier: 
   RootNodes:
-  - dialogueText: oi
-    responses:
-    - responseText: oi
-      nextDialogueNodes:
-      - dialogueText: ola ahahahahah
-        responses: []
-      - dialogueText: oi hahahahahaha
-        responses: []
-      - dialogueText: opa hahahahaha
-        responses: []
-  - dialogueText: ola pequeno roedor hahahahaha
+  - title: Pollux
+    iconSprite: {fileID: 21300000, guid: 840f311c555dd94468638a50b12983bb, type: 3}
+    dialogueText: "Aonde voc\xEA vai roedor?"
     responses: []
-  - dialogueText: eu sou o pollux aahahahaha
+  - title: Hubble
+    iconSprite: {fileID: 21300000, guid: 03deb03c2544eeb4e8ec3f48959087bd, type: 3}
+    dialogueText: Hahaha Roedor!!!
     responses: []
-  - dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat
+  - title: Pollux
+    iconSprite: {fileID: 21300000, guid: 840f311c555dd94468638a50b12983bb, type: 3}
+    dialogueText: "Voc\xEA n\xE3o quer brincar com a gente?"
+    responses: []
+  - title: Hubble
+    iconSprite: {fileID: 21300000, guid: 03deb03c2544eeb4e8ec3f48959087bd, type: 3}
+    dialogueText: Ele vai virar comida! Ele vai virar comida!
+    responses: []
+  - title: 
+    iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+    dialogueText: .  .  .
     responses: []

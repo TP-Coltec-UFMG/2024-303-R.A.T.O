@@ -6,12 +6,12 @@ public class Gato : MonoBehaviour
 {
     private Transform Rato;
     private Animator animator;
-    [SerializeField] private float RunRange, Damage; 
+    [SerializeField] private float RunRange, Damage, queijoOffset; 
     public float AttackRange;
     [SerializeField] public float MaxHealth; 
     public float health {get; private set;}
     private bool attack;
-    [SerializeField] GameObject QueijoHubble;
+    [SerializeField] GameObject Queijo;
 
     // Start is called before the first frame update
     void Start()
@@ -67,19 +67,17 @@ public class Gato : MonoBehaviour
     void Die(){
         if(this.health == 0){
             animator.SetTrigger("die");
-            StartCoroutine(TurnIntoQueijo());
         }
     }
 
     void SetQueijo(){
-        QueijoHubble.transform.position = transform.position;
-        QueijoHubble.transform.eulerAngles = transform.eulerAngles;
+        Queijo.transform.position = new Vector3(transform.position.x, transform.position.y - queijoOffset, transform.position.z);
+        Queijo.transform.eulerAngles = transform.eulerAngles;
     }
 
-    IEnumerator TurnIntoQueijo(){
-        yield return new WaitForSeconds(3f);
+    void TurnIntoQueijo(){
         SetQueijo();
-        QueijoHubble.SetActive(true);
+        Queijo.SetActive(true);
         Destroy(gameObject);
     }
 }

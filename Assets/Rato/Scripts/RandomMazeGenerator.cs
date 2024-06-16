@@ -28,7 +28,7 @@ public class RandomMazeGenerator : MonoBehaviour
         this.maze = new MazeCell[this.width, this.height];
         for(int x = 0; x < this.width; x++){
             for(int y = 0; y < this.height; y++){
-                this.maze[x,y] = Instantiate(this.Cell, new Vector3(y * 2, -x * 2, 0), Quaternion.identity);
+                this.maze[x,y] = Instantiate(this.Cell, new Vector3(y * 4, -x * 4, 0), Quaternion.identity);
             }
         }
     }

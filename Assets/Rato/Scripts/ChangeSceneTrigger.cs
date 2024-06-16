@@ -8,7 +8,13 @@ public class ChangeSceneTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Player"){
-            GameController.Instance.ChangeScene(NewScene);
+            GameController.Instance.SetNewSceneOnKeyPress(NewScene);
+            StartCoroutine(SetTriggerInactive());
         }
+    }
+
+    IEnumerator SetTriggerInactive(){
+        yield return new WaitForSeconds(10);
+        gameObject.SetActive(false);
     }
 }

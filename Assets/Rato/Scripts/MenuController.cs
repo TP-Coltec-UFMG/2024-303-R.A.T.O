@@ -12,11 +12,11 @@ public class MenuController : MonoBehaviour
     private GameObject CurrentPanel;
     private string BackTo;
 
-    private float gama, audioVolume, musicVolume; 
+    /*private float gama, audioVolume, musicVolume; 
     private string left, right, jump, down, run, interact, fontColor;
     private bool contrast, fullScreen;
     private int difficulty, fontSize;
-    private Color color;
+    private Color color;*/
 
     [SerializeField] private Scrollbar ControleGamaScrollbar, VolumeAudioScrollbar, VolumeMusicaScrollbar;
     [SerializeField] private TMP_Dropdown DificuldadeDropdown, TamanhoFonteDropdown;
@@ -25,11 +25,6 @@ public class MenuController : MonoBehaviour
 
     void Awake(){
         GetValues();
-    }
-
-    void Update(){
-        GameController.Instance.ChangeFontColor(this.color);
-        GameController.Instance.ChangeFontSize(FixedFontSize(this.fontSize));
     }
     
     public void Main(){
@@ -106,67 +101,48 @@ public class MenuController : MonoBehaviour
     }
 
     public void SaveValues(){
-        SavePrefs.SaveFloat("gama", gama);
-        SavePrefs.SaveInt("difficulty", difficulty);
-        SavePrefs.SaveInt("fontSize", fontSize);
-        SavePrefs.SaveFloat("audioVolume", audioVolume);
-        SavePrefs.SaveFloat("musicVolume", musicVolume);
-        SavePrefs.SaveString("right", right);
-        SavePrefs.SaveString("left", left);
-        SavePrefs.SaveString("jump", jump);
-        SavePrefs.SaveString("down", down);
-        SavePrefs.SaveString("run", run);
-        SavePrefs.SaveString("interact", interact);
-        SavePrefs.SaveString("fontColor", fontColor);                
+        SavePrefs.SaveFloat("gama", GameController.Instance.gama);
+        SavePrefs.SaveInt("difficulty", GameController.Instance.difficulty);
+        SavePrefs.SaveInt("fontSize", GameController.Instance.fontSize);
+        SavePrefs.SaveFloat("audioVolume", GameController.Instance.audioVolume);
+        SavePrefs.SaveFloat("musicVolume", GameController.Instance.musicVolume);
+        SavePrefs.SaveString("right", GameController.Instance.right);
+        SavePrefs.SaveString("left", GameController.Instance.left);
+        SavePrefs.SaveString("jump", GameController.Instance.jump);
+        SavePrefs.SaveString("down", GameController.Instance.down);
+        SavePrefs.SaveString("run", GameController.Instance.run);
+        SavePrefs.SaveString("interact", GameController.Instance.interact);
+        SavePrefs.SaveString("fontColor", GameController.Instance.fontColor);                
     }
 
     void GetValues(){
-        this.gama = SavePrefs.GetFloat("gama");
-        this.difficulty = SavePrefs.GetInt("difficulty");
-        this.audioVolume = SavePrefs.GetFloat("audioVolume");
-        this.musicVolume = SavePrefs.GetFloat("musicVolume");
-        this.right = SavePrefs.GetString("right");
-        this.left = SavePrefs.GetString("left");
-        this.jump = SavePrefs.GetString("jump");
-        this.down = SavePrefs.GetString("down");
-        this.run = SavePrefs.GetString("run");
-        this.interact = SavePrefs.GetString("interact");
+        GameController.Instance.gama = SavePrefs.GetFloat("gama");
+        GameController.Instance.difficulty = SavePrefs.GetInt("difficulty");
+        GameController.Instance.audioVolume = SavePrefs.GetFloat("audioVolume");
+        GameController.Instance.musicVolume = SavePrefs.GetFloat("musicVolume");
+        GameController.Instance.right = SavePrefs.GetString("right");
+        GameController.Instance.left = SavePrefs.GetString("left");
+        GameController.Instance.jump = SavePrefs.GetString("jump");
+        GameController.Instance.down = SavePrefs.GetString("down");
+        GameController.Instance.run = SavePrefs.GetString("run");
+        GameController.Instance.interact = SavePrefs.GetString("interact");
 
-        this.fontSize = SavePrefs.GetInt("fontSize");
-        this.TamanhoFonteDropdown.value = fontSize;
+        GameController.Instance.fontSize = SavePrefs.GetInt("fontSize");
+        TamanhoFonteDropdown.value = GameController.Instance.fontSize;
         //GameController.ChangeFontSize(FixedFontSize(fontSize));
 
-        this.fontColor = SavePrefs.GetString("fontColor");
-        ColorUtility.TryParseHtmlString("#" + fontColor, out this.color);        
-        ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(this.color);
+        GameController.Instance.fontColor = SavePrefs.GetString("fontColor");
+        ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);        
+        ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(GameController.Instance.color);
         //GameController.ChangeFontColor(color);
     }
 
     public void SetFontSize(){
-        this.fontSize = this.TamanhoFonteDropdown.value;
-    }
-
-    int FixedFontSize(int size){
-        switch (size){
-            case 0:
-                size = 30;
-                break;
-            case 1:
-                size = 35;
-                break;
-            case 2:
-                size = 40;
-                break;
-            default:
-                size = 35;
-                break;
-        }
-
-        return size;
+        GameController.Instance.fontSize = TamanhoFonteDropdown.value;
     }
 
     public void SetFontColor(){
-        this.fontColor = ColorUtility.ToHtmlStringRGBA(ColourPickerPanel.GetComponent<ColourPickerController>().GetCurrentColour());
-        ColorUtility.TryParseHtmlString("#" + this.fontColor, out this.color);
+        GameController.Instance.fontColor = ColorUtility.ToHtmlStringRGBA(ColourPickerPanel.GetComponent<ColourPickerController>().GetCurrentColour());
+        ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);
     }
 }

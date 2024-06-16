@@ -7,47 +7,31 @@ public class MazeRato : MonoBehaviour
     [SerializeField] private float Speed;
     Animator animator;
     
-    void Start()
-    {
+    void Start(){
         this.transform.position = FindObjectOfType<RandomMazeGenerator>().Entrance.transform.position;
         animator = GetComponent<Animator>();
+        transform.eulerAngles = new Vector3(0f, 0f, 90f);
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         Walk();
         Rotate();    
     }
 
     void Walk(){
-        transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f) * this.Speed * Time.deltaTime;
-        animator.SetBool("walk", true);
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
+        transform.position += movement * Speed * Time.deltaTime;
+        animator.SetBool("walk", movement.magnitude > 0f);
     }
 
     void Rotate(){
-        if(Input.GetAxis("Horizontal") > 0){
-            if(Input.GetAxis("Vertical") > 0){
-                transform.eulerAngles = new Vector3(0f, 45f, 0f);
-            }else if(Input.GetAxis("Vertical") < 0){
-                transform.eulerAngles = new Vector3(0f, 0f, 135f);
-            }else{
-                transform.eulerAngles = new Vector3(0f, 180f, 0f);
-            }
-        }else if(Input.GetAxis("Horizontal") < 0){
-            if(Input.GetAxis("Vertical") > 0){
-                transform.eulerAngles = new Vector3(0f, 0f, -45f);
-            }else if(Input.GetAxis("Vertical") > 0){
-                transform.eulerAngles = new Vector3(0f, 0f, -135f);
-            }else{
-                transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            }
-        }else{
-            if(Input.GetAxis("Vertical") > 0){
-                transform.eulerAngles = new Vector3(0f, 0f, 90f);
-            }else if(Input.GetAxis("Vertical") < 0){
-                transform.eulerAngles = new Vector3(0f, 0f, 270f);
-            }
+        Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f).normalized;
+        
+        if (movementDirection != Vector3.zero){
+            float angle = Mathf.Atan2(movementDirection.y, movementDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
+
 }

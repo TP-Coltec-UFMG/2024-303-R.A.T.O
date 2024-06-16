@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 60857b7396350ef4c8be742819f8440b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Maze.unity
     guid: 8cf3deaf6fb834b4984b9190b481f30a
+  - enabled: 1
+    path: Assets/Scenes/casateste.unity
+    guid: e5b690641ee2a364cb210371d048246e
   m_configObjects: {}

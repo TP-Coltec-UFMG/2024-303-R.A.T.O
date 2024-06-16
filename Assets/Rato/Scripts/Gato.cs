@@ -80,4 +80,8 @@ public class Gato : MonoBehaviour
         Queijo.SetActive(true);
         Destroy(gameObject);
     }
+
+    public void ResetLife(){
+        health = MaxHealth;
+    }
 }

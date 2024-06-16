@@ -4071,6 +4071,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RatoHealthBar: {fileID: 0}
+  GameOverPanel: {fileID: 0}
+  GameOverTextUI: {fileID: 0}
+  GameOverMessage: "Voc\xEA morreu, rato est\xFApido.\n\nPressione <enter> para tentar
+    novamente"
+  gama: 0
+  audioVolume: 0
+  musicVolume: 0
+  left: 
+  right: 
+  jump: 
+  down: 
+  run: 
+  interact: 
+  fontColor: 
+  contrast: 0
+  fullScreen: 0
+  difficulty: 0
+  fontSize: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &365462639
 Transform:
   m_ObjectHideFlags: 0
@@ -8824,7 +8843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5445776521f505438fe1a71e8f8cea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirstScene: Scene1
+  FirstScene: casateste
   MainMenu: {fileID: 1512218125}
   JogarMenu: {fileID: 23990797}
   AcessibilidadeMenu: {fileID: 1529979808}

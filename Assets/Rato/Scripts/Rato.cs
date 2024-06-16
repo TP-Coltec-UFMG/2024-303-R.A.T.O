@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Rato : MonoBehaviour
 {
-    [SerializeField] private float OriginalSpeed, JumpForce, Damage;
+    [SerializeField] private float OriginalSpeed, JumpForce, Damage, RespawnX, RespawnY;
     private float Speed;
     private Rigidbody2D rb;
     private bool isjumping;
@@ -15,17 +15,19 @@ public class Rato : MonoBehaviour
     [SerializeField] public float MaxHealth; 
     public float health {get; private set;}
     private GameObject attack;
+    public bool dead {get; set;}
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        Speed = OriginalSpeed;
+        Speed = OriginalSpeed; 
     }
 
     void Awake(){
         health = MaxHealth;
+        dead = false;
     }
 
     void FixedUpdate(){
@@ -36,6 +38,9 @@ public class Rato : MonoBehaviour
     void Update(){
         Jump();
         Bite();
+        if(this.health <= 0 && !dead){
+            Die();
+        }
     }
 
     void Walk(){
@@ -121,5 +126,13 @@ public class Rato : MonoBehaviour
 
     public void TakeDamage(float damage){
         this.health -= damage;
+    }
+
+    void Die(){
+        GameController.Instance.GameOver(RespawnX, RespawnY);
+    }
+
+    public void ResetLife(){
+        health = MaxHealth;
     }
 }

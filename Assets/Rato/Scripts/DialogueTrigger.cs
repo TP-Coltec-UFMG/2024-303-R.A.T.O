@@ -8,14 +8,19 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SpeakTo();
+            //SpeakTo();
         }
     }
- 
-    // Trigger dialogue for this actor
+
     public void SpeakTo()
     {
-        DialogueManager.Instance.StartDialogue(Dialogue.RootNodes);
+        DialogueManager.Instance.StartDialogue(Dialogue.RootNodes, this.gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D collider){
+        if(collider.gameObject.tag == "Player"){
+            SpeakTo();
+        }
     }
 }
 

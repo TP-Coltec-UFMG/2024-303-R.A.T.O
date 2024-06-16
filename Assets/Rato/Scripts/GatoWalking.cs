@@ -22,10 +22,9 @@ public class GatoWalking : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        gato.LookAtPlayer();
-        rb.position = Vector2.MoveTowards(rb.position, new Vector2(target.position.x, rb.position.y), this.Speed * Time.deltaTime);
-
-        if(rb.position.x - target.position.x <= AttackRange || rb.position.x - target.position.x >= -AttackRange){
+        if((rb.position.x - target.position.x <= AttackRange || rb.position.x - target.position.x >= -AttackRange) && (rb.position.y >= target.position.y)){
+            gato.LookAtPlayer();
+            rb.position = Vector2.MoveTowards(rb.position, new Vector2(target.position.x, rb.position.y), this.Speed * Time.deltaTime);
             animator.SetTrigger("attack");
         }
     }

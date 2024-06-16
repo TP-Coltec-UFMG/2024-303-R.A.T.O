@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     private int currentIndex;
     [SerializeField] private float delay;
     private Coroutine typingCoroutine;
+    private GameObject dialogueTrigger;
 
     private void Awake(){
         if (Instance == null){
@@ -28,14 +29,15 @@ public class DialogueManager : MonoBehaviour
         HideDialogue();
     }
 
-    public void StartDialogue(List<DialogueNode> nodes){
+    public void StartDialogue(List<DialogueNode> nodes, GameObject trigger){
         GameController.Instance.StopGame();
-        
+
         ShowDialogue();
-        
+
         currentDialogueNodes = nodes;
         currentIndex = 0;
         UpdateDialogueUI();
+        trigger.SetActive(false);
     }
 
     private void UpdateDialogueUI()

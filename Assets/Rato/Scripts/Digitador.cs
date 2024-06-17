@@ -10,10 +10,6 @@ public class Cutscene : MonoBehaviour
     [SerializeField] private TMP_Text TextUI;
     [SerializeField] [TextArea(1, 10)] private string Text;
     
-    void Start(){
-        Digitar();
-    }
-    
     void Digitar(){
         StartCoroutine(DigiTalento());
     }

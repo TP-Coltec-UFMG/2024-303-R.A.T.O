@@ -8843,7 +8843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5445776521f505438fe1a71e8f8cea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirstScene: casateste
+  FirstScene: Cutscene
   MainMenu: {fileID: 1512218125}
   JogarMenu: {fileID: 23990797}
   AcessibilidadeMenu: {fileID: 1529979808}

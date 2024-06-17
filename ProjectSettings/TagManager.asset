@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ChangeableFont
   - Gato
+  - Freeze
   layers:
   - Default
   - TransparentFX

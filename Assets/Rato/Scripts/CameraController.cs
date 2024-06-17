@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     public static CameraController instance;
     [SerializeField] private Camera cam;
     [SerializeField] private Transform Player;
-    [SerializeField] private float Speed, maxLimit, minLimit;
+    [SerializeField] private float Speed, maxLimit, minLimit, Offset;
     private float initialSize;
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour
     }
 
     public void FollowPlayer(){
-        transform.position = Vector2.Lerp(transform.position, Player.position, Speed);
+        transform.position = Vector2.Lerp(transform.position, Player.position + new Vector3(0, Offset, 0), Speed);
     }
 
     //provavelmente inútil

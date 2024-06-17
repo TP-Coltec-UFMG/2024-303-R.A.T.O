@@ -127,14 +127,21 @@ public class MenuController : MonoBehaviour
         GameController.Instance.run = SavePrefs.GetString("run");
         GameController.Instance.interact = SavePrefs.GetString("interact");
 
-        GameController.Instance.fontSize = SavePrefs.GetInt("fontSize");
+        if(SavePrefs.HasKey("fontSize")) {
+            GameController.Instance.fontSize = SavePrefs.GetInt("fontSize");
+        }else{
+            GameController.Instance.fontSize = 14;
+        }
         TamanhoFonteDropdown.value = GameController.Instance.fontSize;
-        //GameController.ChangeFontSize(FixedFontSize(fontSize));
 
-        GameController.Instance.fontColor = SavePrefs.GetString("fontColor");
-        ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);        
+        if(SavePrefs.HasKey("fontColor")){
+            GameController.Instance.fontColor = SavePrefs.GetString("fontColor");
+            ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);
+        }else{
+            GameController.Instance.fontColor = "FFFFFF";
+            ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);
+        }
         ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(GameController.Instance.color);
-        //GameController.ChangeFontColor(color);
     }
 
     public void SetFontSize(){

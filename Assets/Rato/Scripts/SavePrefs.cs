@@ -55,5 +55,9 @@ public class SavePrefs : MonoBehaviour
         else{
             return false;
         }
-}
+    }
+
+    public static bool HasKey(string KeyName){
+        return PlayerPrefs.HasKey(KeyName);
+    }
 }

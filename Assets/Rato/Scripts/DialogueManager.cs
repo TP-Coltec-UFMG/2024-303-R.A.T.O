@@ -81,6 +81,9 @@ public class DialogueManager : MonoBehaviour
         }else{
             HideDialogue();
             GameController.Instance.Resume();
+            foreach (GameObject freeze in GameObject.FindGameObjectsWithTag("Freeze")){
+                freeze.SetActive(false);
+            }
         }
     }
 
@@ -98,6 +101,9 @@ public class DialogueManager : MonoBehaviour
             }else{
                 HideDialogue();
                 GameController.Instance.Resume();
+                foreach (GameObject freeze in GameObject.FindGameObjectsWithTag("Freeze")){
+                    freeze.SetActive(false);
+                }
             }
         }
     }

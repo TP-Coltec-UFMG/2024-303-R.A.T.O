@@ -17,7 +17,7 @@ public class TutorialTrigger : MonoBehaviour
     }
 
     IEnumerator Tutorial(){
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         TutorialPanel.SetActive(true);
         TutorialTextUI.text = "";
         
@@ -25,13 +25,9 @@ public class TutorialTrigger : MonoBehaviour
             TutorialTextUI.text += c;
             yield return new WaitForSecondsRealtime(0.1f);
         }
-
-        while(!Input.GetKeyDown(KeyCode.Return)){
-            yield return null;
-        }
         
         TutorialPanel.SetActive(false);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         gameObject.SetActive(false);
     }
 }

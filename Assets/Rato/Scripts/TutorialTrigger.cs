@@ -6,7 +6,7 @@ using TMPro;
 
 public class TutorialTrigger : MonoBehaviour
 {
-    [SerializeField] string TutorialText;
+    [SerializeField] [TextArea(1, 10)] private string TutorialText;
     [SerializeField] GameObject TutorialPanel;
     [SerializeField] TMP_Text TutorialTextUI;
 
@@ -20,6 +20,7 @@ public class TutorialTrigger : MonoBehaviour
         //Time.timeScale = 0;
         TutorialPanel.SetActive(true);
         TutorialTextUI.text = "";
+        GetComponent<BoxCollider2D>().enabled = false;
         
         foreach (char c in TutorialText){
             TutorialTextUI.text += c;

@@ -21,7 +21,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private Scrollbar ControleGamaScrollbar, VolumeAudioScrollbar, VolumeMusicaScrollbar;
     [SerializeField] private TMP_Dropdown DificuldadeDropdown, TamanhoFonteDropdown;
     [SerializeField] private TMP_InputField EsquerdaInputText, DireitaInputText, PularInputText, AbaixarInputText, CorrerInputText, InteragirInputText;
-    [SerializeField] private Toggle ContrasteToggle, TelaCheiaToggle; 
+    [SerializeField] private Toggle ContrasteToggle, TelaCheiaToggle;
 
     void Awake(){
         GetValues();

@@ -15,7 +15,7 @@ MonoBehaviour:
   RootNodes:
   - title: Pollux
     iconSprite: {fileID: 21300000, guid: 840f311c555dd94468638a50b12983bb, type: 3}
-    dialogueText: "Aonde voc\xEA vai, roedor?"
+    dialogueText: "Aonde voc\xEA pensa que vai, roedor?"
     responses: []
   - title: Hubble
     iconSprite: {fileID: 21300000, guid: 03deb03c2544eeb4e8ec3f48959087bd, type: 3}

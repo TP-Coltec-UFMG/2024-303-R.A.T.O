@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
         ShowHealth();
         ChangeFontColor(color);
         ChangeFontSize(FixedFontSize(fontSize));
+        AtivaPorta();
     }
 
     public void ChangeScene(string SceneName){
@@ -196,5 +197,11 @@ public class GameController : MonoBehaviour
             ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out color);
         }
         //ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(GameController.Instance.color);
+    }
+
+    void AtivaPorta(){
+        if(GameObject.FindGameObjectsWithTag("Gato").Length == 0){
+            GameObject.FindGameObjectWithTag("Porta").GetComponent<BoxCollider2D>().enabled = true;
+        }
     }
 }

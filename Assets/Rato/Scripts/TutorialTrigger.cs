@@ -29,6 +29,15 @@ public class TutorialTrigger : MonoBehaviour
         
         TutorialPanel.SetActive(false);
         //Time.timeScale = 1;
+
+        if(gameObject.tag == "TutorialFinal"){
+            foreach(GameObject freeze in GameObject.FindGameObjectsWithTag("Freeze")){
+                freeze.SetActive(false);
+            }
+
+            GameObject.Find("Buraco").GetComponent<BoxCollider2D>().enabled = true;
+        }
+        
         gameObject.SetActive(false);
     }
 }

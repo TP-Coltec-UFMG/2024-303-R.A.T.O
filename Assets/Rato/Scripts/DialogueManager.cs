@@ -81,9 +81,7 @@ public class DialogueManager : MonoBehaviour
         }else{
             HideDialogue();
             GameController.Instance.Resume();
-            foreach (GameObject freeze in GameObject.FindGameObjectsWithTag("Freeze")){
-                freeze.SetActive(false);
-            }
+            //GameObject.Find("Buraco").GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 
@@ -101,9 +99,7 @@ public class DialogueManager : MonoBehaviour
             }else{
                 HideDialogue();
                 GameController.Instance.Resume();
-                foreach (GameObject freeze in GameObject.FindGameObjectsWithTag("Freeze")){
-                    freeze.SetActive(false);
-                }
+                //GameObject.Find("Buraco").GetComponent<BoxCollider2D>().enabled = true;
             }
         }
     }

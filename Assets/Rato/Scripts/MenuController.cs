@@ -24,7 +24,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private Toggle ContrasteToggle, TelaCheiaToggle;
 
     void Awake(){
-        GetValues();
+        InitialChanges();
     }
     
     public void Main(){
@@ -115,8 +115,8 @@ public class MenuController : MonoBehaviour
         SavePrefs.SaveString("fontColor", GameController.Instance.fontColor);                
     }
 
-    void GetValues(){
-        GameController.Instance.gama = SavePrefs.GetFloat("gama");
+    void InitialChanges(){
+        /*GameController.Instance.gama = SavePrefs.GetFloat("gama");
         GameController.Instance.difficulty = SavePrefs.GetInt("difficulty");
         GameController.Instance.audioVolume = SavePrefs.GetFloat("audioVolume");
         GameController.Instance.musicVolume = SavePrefs.GetFloat("musicVolume");
@@ -131,16 +131,16 @@ public class MenuController : MonoBehaviour
             GameController.Instance.fontSize = SavePrefs.GetInt("fontSize");
         }else{
             GameController.Instance.fontSize = 14;
-        }
+        }*/
         TamanhoFonteDropdown.value = GameController.Instance.fontSize;
 
-        if(SavePrefs.HasKey("fontColor")){
+        /*if(SavePrefs.HasKey("fontColor")){
             GameController.Instance.fontColor = SavePrefs.GetString("fontColor");
             ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);
         }else{
             GameController.Instance.fontColor = "FFFFFF";
             ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);
-        }
+        }*/
         ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(GameController.Instance.color);
     }
 

@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;
+        GetValues();
     }
 
     void OnDestroy(){
@@ -166,5 +167,34 @@ public class GameController : MonoBehaviour
         }
         
         ChangeScene(sceneName);
+    }
+
+    void GetValues(){
+        gama = SavePrefs.GetFloat("gama");
+        difficulty = SavePrefs.GetInt("difficulty");
+        audioVolume = SavePrefs.GetFloat("audioVolume");
+        musicVolume = SavePrefs.GetFloat("musicVolume");
+        right = SavePrefs.GetString("right");
+        left = SavePrefs.GetString("left");
+        jump = SavePrefs.GetString("jump");
+        down = SavePrefs.GetString("down");
+        run = SavePrefs.GetString("run");
+        interact = SavePrefs.GetString("interact");
+
+        if(SavePrefs.HasKey("fontSize")) {
+            fontSize = SavePrefs.GetInt("fontSize");
+        }else{
+            fontSize = 2;
+        }
+        //TamanhoFonteDropdown.value = GameController.Instance.fontSize;
+
+        if(SavePrefs.HasKey("fontColor")){
+            fontColor = SavePrefs.GetString("fontColor");
+            ColorUtility.TryParseHtmlString("#" + fontColor, out color);
+        }else{
+            GameController.Instance.fontColor = "FFFFFF";
+            ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out color);
+        }
+        //ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(GameController.Instance.color);
     }
 }

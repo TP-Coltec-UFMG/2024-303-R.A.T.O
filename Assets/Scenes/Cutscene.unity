@@ -788,9 +788,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 676127571}
   TextUI: {fileID: 854655352}
-  Text: "O rato acordou em sua casa nesta manh\xE3.\n\nTinha algo no ar, ele sentia
-    um cheiro\u2026 diferente\u2026\n\nUm leve perfume de\u2026 queijo\n\nmas o rato
-    n\xE3o tinha fome.\n\nPressione <ENTER> para continuar"
+  Text1: "O rato acordou em sua casa nesta manh\xE3.\n\nTinha algo no ar, ele sentia
+    um cheiro... diferente...\n\nUm leve perfume de... queijo.\n\nMas o rato n\xE3o
+    tinha fome.\n\nPressione <ENTER> para continuar "
+  Text2: "O homem n\xE3o \xE9 nada al\xE9m do que faz de si mesmo.\n\t\t\t\t\t\tJean-Paul
+    Sartre\n\n\n\n\n\n\nPressione <ENTER> para continuar "
 --- !u!1 &1317269432
 GameObject:
   m_ObjectHideFlags: 0

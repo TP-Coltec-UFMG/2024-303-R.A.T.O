@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
         ChangeFontColor(color);
         ChangeFontSize(FixedFontSize(fontSize));
         AtivaPorta();
+        DesativaBuraco();
     }
 
     public void ChangeScene(string SceneName){
@@ -200,8 +201,14 @@ public class GameController : MonoBehaviour
     }
 
     void AtivaPorta(){
-        if(GameObject.FindGameObjectsWithTag("Gato").Length == 0){
+        if(GameObject.FindGameObjectsWithTag("Gato").Length == 0 && GameObject.FindGameObjectWithTag("Porta") != null){
             GameObject.FindGameObjectWithTag("Porta").GetComponent<BoxCollider2D>().enabled = true;
+        }
+    }
+
+    void DesativaBuraco(){
+        if(GameObject.FindGameObjectsWithTag("Gato").Length != 2 && GameObject.FindGameObjectWithTag("Buraco") != null){
+            GameObject.FindGameObjectWithTag("Buraco").GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }

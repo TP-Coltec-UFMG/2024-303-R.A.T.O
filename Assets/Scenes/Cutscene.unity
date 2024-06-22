@@ -840,16 +840,11 @@ MonoBehaviour:
   Panel: {fileID: 676127571}
   TextUI: {fileID: 854655352}
   Texts:
-  - "qqjjefijcijiucgcwjbccygwij \nou 0ij\n\n\noihfddcuwhcow\n\nooffuy"
-  - 'wofgwudchwp
-
-
-
-
-
-
-
-    wfe9wuhc9wi'
+  - "O rato acordou em sua casa nesta manh\xE3.\n\nTinha algo no ar, ele sentia um
+    cheiro ... diferente ...\n\nUm leve perfume de ... queijo.\n\nMas o rato n\xE3o
+    tinha fome.\n\nPressione <ENTER> para continuar"
+  - "O homem n\xE3o \xE9 nada al\xE9m do que faz de si mesmo.\nJean-Paul Sartre\n\nPressione
+    <ENTER> para continuar"
   NewScene: casateste
 --- !u!1 &1317269432
 GameObject:

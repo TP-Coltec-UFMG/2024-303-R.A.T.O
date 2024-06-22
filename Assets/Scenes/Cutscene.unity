@@ -556,6 +556,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1067571133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067571135}
+  - component: {fileID: 1067571134}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1067571134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067571133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70868f5def0adae7a5ff0f4979db30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueParent: {fileID: 676127571}
+  DialogTitleText: {fileID: 0}
+  DialogBodyText: {fileID: 854655352}
+  responseButtonPrefab: {fileID: 0}
+  responseButtonContainer: {fileID: 0}
+  Icon: {fileID: 0}
+  delay: 0.08
+--- !u!4 &1067571135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067571133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 405.3982, y: 156.63577, z: 2.2174497}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1101545076
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,11 +839,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 676127571}
   TextUI: {fileID: 854655352}
-  Text1: "O rato acordou em sua casa nesta manh\xE3.\n\nTinha algo no ar, ele sentia
-    um cheiro... diferente...\n\nUm leve perfume de... queijo.\n\nMas o rato n\xE3o
-    tinha fome.\n\nPressione <ENTER> para continuar "
-  Text2: "O homem n\xE3o \xE9 nada al\xE9m do que faz de si mesmo.\n\t\t\t\t\t\tJean-Paul
-    Sartre\n\n\n\n\n\n\nPressione <ENTER> para continuar "
+  Text1: "vkdsjbvjsb \n\n\nlksbvisbvj\n\nvjsdbvjsdv\n\nvkjsdb"
+  Text2: 'llsbdbvjsdvj
+
+
+
+
+
+
+    sdjvbisdvb'
 --- !u!1 &1317269432
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,3 +942,4 @@ SceneRoots:
   - {fileID: 1317269434}
   - {fileID: 1177135483}
   - {fileID: 496731900}
+  - {fileID: 1067571135}

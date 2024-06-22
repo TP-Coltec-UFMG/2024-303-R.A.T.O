@@ -37,13 +37,20 @@ public class DialogueManager : MonoBehaviour
         currentDialogueNodes = nodes;
         currentIndex = 0;
         UpdateDialogueUI();
-        trigger.SetActive(false);
+        
+        if(trigger != null){
+            trigger.SetActive(false);
+        }
     }
 
     private void UpdateDialogueUI()
     {
-        Icon.sprite = currentDialogueNodes[currentIndex].iconSprite;
-        DialogTitleText.text = currentDialogueNodes[currentIndex].title;
+        if(currentDialogueNodes[currentIndex].iconSprite != null && Icon != null){
+            Icon.sprite = currentDialogueNodes[currentIndex].iconSprite;
+        }
+        if(currentDialogueNodes[currentIndex].title != null && DialogTitleText != null){
+            DialogTitleText.text = currentDialogueNodes[currentIndex].title;
+        }
 
         if (typingCoroutine != null)
         {
@@ -51,25 +58,29 @@ public class DialogueManager : MonoBehaviour
         }
         typingCoroutine = StartCoroutine(TypeTextUI(currentDialogueNodes[currentIndex].dialogueText));
 
-        foreach (Transform child in responseButtonContainer){
-            Destroy(child.gameObject);
+        if(responseButtonContainer != null){
+            foreach (Transform child in responseButtonContainer){
+                Destroy(child.gameObject);
+            }
         }
 
-        int i = 0;
-        foreach (DialogueResponse response in currentDialogueNodes[currentIndex].responses){
-            GameObject buttonObj;
-            if (i == 0){
-                buttonObj = Instantiate(responseButtonPrefab, new Vector3(190, 30, 0), Quaternion.identity, responseButtonContainer);
-            }else if (i == 1){
-                buttonObj = Instantiate(responseButtonPrefab, new Vector3(500, 30, 0), Quaternion.identity, responseButtonContainer);
-            } else {
-                continue; // Skip other responses if needed
+        if(responseButtonContainer != null){
+            int i = 0;
+            foreach (DialogueResponse response in currentDialogueNodes[currentIndex].responses){
+                GameObject buttonObj;
+                if (i == 0){
+                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(190, 30, 0), Quaternion.identity, responseButtonContainer);
+                }else if (i == 1){
+                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(500, 30, 0), Quaternion.identity, responseButtonContainer);
+                } else {
+                    continue; // Skip other responses if needed
+                }
+
+                buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
+                buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
+
+                i++;
             }
-
-            buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
-            buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
-
-            i++;
         }
     }
 
@@ -81,7 +92,6 @@ public class DialogueManager : MonoBehaviour
         }else{
             HideDialogue();
             GameController.Instance.Resume();
-            //GameObject.Find("Buraco").GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 
@@ -99,7 +109,6 @@ public class DialogueManager : MonoBehaviour
             }else{
                 HideDialogue();
                 GameController.Instance.Resume();
-                //GameObject.Find("Buraco").GetComponent<BoxCollider2D>().enabled = true;
             }
         }
     }

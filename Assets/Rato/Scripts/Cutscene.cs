@@ -9,9 +9,11 @@ public class Cutscene : MonoBehaviour
     [SerializeField] private GameObject Panel;
     [SerializeField] private TMP_Text TextUI;
     [SerializeField] [TextArea(1, 10)] private string Text1, Text2;
+    //[SerializeField] private Dialogue Texts;
     
     void Digitar(){
         StartCoroutine(DigiTalento());
+        //DialogueManager.Instance.StartDialogue(Texts.RootNodes, null);
     }
     
     IEnumerator DigiTalento(){

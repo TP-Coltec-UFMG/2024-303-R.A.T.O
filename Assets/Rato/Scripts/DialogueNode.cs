@@ -8,7 +8,7 @@ public class DialogueNode
 {
     public string title;
     public Sprite iconSprite;
-    public string dialogueText;
+    [TextArea(2, 10)] public string dialogueText;
     public List<DialogueResponse> responses;
     internal bool IsLastNode()
     {

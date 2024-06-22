@@ -839,15 +839,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 676127571}
   TextUI: {fileID: 854655352}
-  Text1: "vkdsjbvjsb \n\n\nlksbvisbvj\n\nvjsdbvjsdv\n\nvkjsdb"
-  Text2: 'llsbdbvjsdvj
+  Texts:
+  - "qqjjefijcijiucgcwjbccygwij \nou 0ij\n\n\noihfddcuwhcow\n\nooffuy"
+  - 'wofgwudchwp
 
 
 
 
 
 
-    sdjvbisdvb'
+
+    wfe9wuhc9wi'
+  NewScene: casateste
 --- !u!1 &1317269432
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +935,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2065467954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065467956}
+  - component: {fileID: 2065467955}
+  m_Layer: 0
+  m_Name: Typer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2065467955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065467954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69d18b9bb2d8ab459e44f7c3b6d1e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2065467956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065467954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 363.70007, y: 195.12483, z: 2.549045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -943,3 +990,4 @@ SceneRoots:
   - {fileID: 1177135483}
   - {fileID: 496731900}
   - {fileID: 1067571135}
+  - {fileID: 2065467956}

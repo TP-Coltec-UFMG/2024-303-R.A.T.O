@@ -3,43 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Cutscene : MonoBehaviour
 {
     [SerializeField] private GameObject Panel;
     [SerializeField] private TMP_Text TextUI;
-    [SerializeField] [TextArea(1, 10)] private string Text1, Text2;
-    //[SerializeField] private Dialogue Texts;
-    
-    void Digitar(){
-        StartCoroutine(DigiTalento());
-        //DialogueManager.Instance.StartDialogue(Texts.RootNodes, null);
+    [SerializeField] [TextArea(1, 10)] private string[] Texts;
+    [SerializeField] private string NewScene;
+
+    public void CutsceneNarration(){
+        Typer.Instance.TypeNSkip(Panel, TextUI, Texts);
+        StartCoroutine(CheckTypingCompletion());
     }
-    
-    IEnumerator DigiTalento(){
-        Panel.SetActive(true);
-        TextUI.text = "";
 
-        foreach (char c in Text1){
-            TextUI.text += c;
-            yield return new WaitForSecondsRealtime(0.1f);
-        }
-
-        while(!Input.GetKeyDown(KeyCode.Return)){
+    private IEnumerator CheckTypingCompletion(){
+        while (Typer.Instance.isTyping){
             yield return null;
         }
-
-        TextUI.text = "";
-
-        foreach (char c in Text2){
-            TextUI.text += c;
-            yield return new WaitForSecondsRealtime(0.1f);
-        }
-
-        while(!Input.GetKeyDown(KeyCode.Return)){
-            yield return null;
-        }
-
-        GameController.Instance.ChangeScene("casateste");
+        
+        GameController.Instance.ChangeScene(NewScene);
     }
 }
+

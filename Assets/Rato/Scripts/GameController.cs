@@ -159,12 +159,12 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void SetNewSceneOnKeyPress(string sceneName){
-        StartCoroutine(WaitForKeyPress(sceneName));
+    public void SetNewSceneOnKeyPress(string sceneName, KeyCode keyCode){
+        StartCoroutine(WaitForKeyPress(sceneName, keyCode));
     }
 
-    private IEnumerator WaitForKeyPress(string sceneName){
-        while (!Input.GetKeyDown(KeyCode.E)){
+    private IEnumerator WaitForKeyPress(string sceneName, KeyCode keyCode){
+        while (!Input.GetKeyDown(keyCode)){
             yield return null;
         }
         

@@ -10,6 +10,7 @@ TagManager:
   - TutorialFinal
   - Porta
   - Buraco
+  - TFreeze
   layers:
   - Default
   - TransparentFX

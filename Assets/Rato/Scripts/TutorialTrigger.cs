@@ -31,7 +31,7 @@ public class TutorialTrigger : MonoBehaviour
         //Time.timeScale = 1;
 
         if(gameObject.tag == "TutorialFinal"){
-            foreach(GameObject freeze in GameObject.FindGameObjectsWithTag("Freeze")){
+            foreach(GameObject freeze in GameObject.FindGameObjectsWithTag("TFreeze")){
                 freeze.SetActive(false);
             }
 

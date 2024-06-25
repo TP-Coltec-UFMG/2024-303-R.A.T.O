@@ -57,13 +57,20 @@ public class Gato : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "Player"){
             attack = true;
-        }else if(collision.gameObject.tag == "Freeze"){
-            animator.SetBool("idle", true);
         }
     }
 
     void OnCollisionExit2D(Collision2D collision){
         attack = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D collider){
+        if(collider.gameObject.tag == "Freeze" || collider.gameObject.tag == "TFreeze"){
+            animator.SetBool("idle", true);
+        }
+    }
+
+    void OnTriggerExit2D(){
         animator.SetBool("idle", false);
     }
 

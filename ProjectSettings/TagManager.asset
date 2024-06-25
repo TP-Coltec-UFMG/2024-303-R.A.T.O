@@ -11,6 +11,7 @@ TagManager:
   - Porta
   - Buraco
   - TFreeze
+  - Escada
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - UI
   - Ground
   - Luz
-  - 
-  - 
-  - 
+  - Gato
+  - Escada
+  - BarreiraGato
   - 
   - 
   - 

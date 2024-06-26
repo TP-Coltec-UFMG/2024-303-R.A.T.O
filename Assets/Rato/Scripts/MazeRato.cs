@@ -22,7 +22,7 @@ public class MazeRato : MonoBehaviour
     void Walk(){
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
         transform.position += movement * Speed * Time.deltaTime;
-        animator.SetBool("walk", movement.magnitude > 0f);
+        animator.SetBool("walk", (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0));
     }
 
     void Rotate(){

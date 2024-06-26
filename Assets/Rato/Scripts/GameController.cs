@@ -43,7 +43,6 @@ public class GameController : MonoBehaviour
         ChangeFontSize(FixedFontSize(fontSize));
         AtivaPorta();
         DesativaBuraco();
-        Debug.Log(difficulty);
     }
 
     public void ChangeScene(string SceneName){

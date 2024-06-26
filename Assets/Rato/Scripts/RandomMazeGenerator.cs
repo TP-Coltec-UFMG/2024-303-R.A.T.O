@@ -6,7 +6,7 @@ using System.Linq;
 
 /*private struct Vertex{
     int number;
-    
+    string color;
 }*/ 
 
 public class RandomMazeGenerator : MonoBehaviour
@@ -15,28 +15,33 @@ public class RandomMazeGenerator : MonoBehaviour
     [SerializeField] private int width, height;
     private MazeCell[,] maze;
     private List<int[]> edges;
+    private List<MazeCell[]> DFSedges;
     private int[,] sets;
     public MazeCell Entrance {get; set;}
     public MazeCell Exit {get; set;}
     
     void Awake(){
-        /*width *= (GameController.Instance.difficulty + 1);
-        height *= (GameController.Instance.difficulty + 1);*/
-        this.InitializeMaze();
+        InitializeMaze();
         GenerateMaze();
     }
     
     void InitializeMaze(){
+        this.width *= (GameController.Instance.difficulty + 1);
+        this.height *= (GameController.Instance.difficulty + 1);
+
         this.maze = new MazeCell[this.width, this.height];
         for(int x = 0; x < this.width; x++){
             for(int y = 0; y < this.height; y++){
                 this.maze[x,y] = Instantiate(this.Cell, new Vector3(y * 3, -x * 3, 0), Quaternion.identity);
+                this.maze[x,y].color = "white";
+                this.maze[x,y].parent = null;
             }
         }
     }
 
     void MakeEdges(){
         this.edges = new List<int[]>();
+        this.DFSedges = new List<MazeCell[]>();
         for(int x = 0; x < this.width; x++){
             for(int y = 0; y < this.height; y++){
                 if(x - 1 >= 0 && !ExistEdge(PositionToNumber(x, y), PositionToNumber(x - 1, y))){
@@ -67,6 +72,21 @@ public class RandomMazeGenerator : MonoBehaviour
             if(this.edges.Any(x => x[0] == v1 && x[1] == v2)){
                 return true;
             }else if(this.edges.Any(x => x[0] == v2 && x[1] == v1)){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+        
+    }
+
+    bool ExistDFSedge(MazeCell v1, MazeCell v2){
+        if(this.DFSedges != null){
+            if(this.DFSedges.Any(x => x[0] == v1 && x[1] == v2)){
+                return true;
+            }else if(this.DFSedges.Any(x => x[0] == v2 && x[1] == v1)){
                 return true;
             }else{
                 return false;
@@ -129,13 +149,18 @@ public class RandomMazeGenerator : MonoBehaviour
                             this.sets[x,y] = this.sets[NumberToPosition(this.edges[0][0])[0],NumberToPosition(this.edges[0][0])[1]];
                         }
                     }
-                }         
+                }
+
+                MazeCell[] e = {this.maze[NumberToPosition(this.edges[0][0])[0],NumberToPosition(this.edges[0][0])[1]], this.maze[NumberToPosition(this.edges[0][1])[0], NumberToPosition(this.edges[0][1])[1]]};
+                this.DFSedges.Add(e);         
             }
+
 
             this.edges.RemoveAt(0);
         }
 
         SetIO();
+        DFS();
     }
 
     bool Finished(){
@@ -187,5 +212,44 @@ public class RandomMazeGenerator : MonoBehaviour
 
         this.Exit = topBorders[0];
         this.Exit.IsExit(true);
+    }
+
+    void DFS(){
+        for(int x = 0; x < this.width; x++){
+            for(int y = 0; y < this.height; y++){
+                if(ExistDFSedge(this.Entrance, this.maze[x,y]) && this.maze[x,y].color == "white"){
+                    this.maze[x,y].parent = this.Entrance;
+                    DFSVisita(this.maze[x,y]);
+                }
+            }
+        }
+    }
+
+    void DFSVisita(MazeCell cell){
+        cell.color = "gray";
+
+        for(int x = 0; x < this.width; x++){
+            for(int y = 0; y < this.height; y++){
+                if(ExistDFSedge(cell, this.maze[x,y]) && this.maze[x,y].color == "white"){
+                    this.maze[x,y].parent = cell;
+                    if(this.maze[x,y] != this.Exit){
+                        DFSVisita(this.maze[x,y]);
+                    }else{
+                        FinishDFS(this.maze[x,y]);
+                    }
+                    
+                }
+            }
+        }
+
+        cell.color = "black";
+    }
+
+    void FinishDFS(MazeCell cell){
+        do{
+            cell.Path();
+            cell = cell.parent;
+        }while(cell != this.Entrance);
+        this.Entrance.Path();
     }
 }

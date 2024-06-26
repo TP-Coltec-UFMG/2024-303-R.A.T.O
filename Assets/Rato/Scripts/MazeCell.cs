@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MazeCell : MonoBehaviour
 {
-    [SerializeField] private GameObject LeftWall, BottomWall, RightWall, TopWall, Entrance, Exit;
+    [SerializeField] private GameObject LeftWall, BottomWall, RightWall, TopWall, Entrance, Exit, path;
+    [HideInInspector] public string color;
+    [HideInInspector] public MazeCell parent;
     
     public void RemoveWall(string wall){
         switch (wall){
@@ -35,5 +37,9 @@ public class MazeCell : MonoBehaviour
         if(isExit){
             this.Exit.SetActive(true);
         } 
+    }
+
+    public void Path(){
+        this.path.SetActive(true);
     }
 }

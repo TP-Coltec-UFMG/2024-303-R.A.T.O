@@ -15,10 +15,10 @@ public class GameController : MonoBehaviour
     [SerializeField] [TextArea(1, 10)] private string GameOverMessage;
 
     [HideInInspector] public float gama, audioVolume, musicVolume;
-    [HideInInspector] public string left, right, jump, down, run, interact, fontColor;
+    [HideInInspector] public string left, right, jump, down, run, interact, fontColor, backgroundColor;
     [HideInInspector] public bool contrast, fullScreen;
     [HideInInspector] public int difficulty, fontSize;
-    [HideInInspector] public Color color;
+    [HideInInspector] public Color _fontColor, _backgroundColor;
 
     void Awake()
     {
@@ -39,23 +39,28 @@ public class GameController : MonoBehaviour
 
     void Update(){
         ShowHealth();
-        ChangeFontColor(color);
+        ChangeTheme();
         ChangeFontSize(FixedFontSize(fontSize));
         AtivaPorta();
         DesativaBuraco();
+        Debug.Log(difficulty);
     }
 
     public void ChangeScene(string SceneName){
         SceneManager.LoadScene(SceneName);
     }
 
-    public void ChangeFontColor(Color color){
+    public void ChangeTheme(){
         TMP_Text[] changeThisColour = FindObjectsOfType<TMP_Text>();
 
-        foreach (TMP_Text element in changeThisColour){
-            if (element.tag == "ChangeableFont"){
-                element.color = color;
+        foreach (TMP_Text text in changeThisColour){
+            if (text.tag == "ChangeableFont"){
+                text.color = _fontColor;
             }
+        }
+
+        foreach (GameObject background in GameObject.FindGameObjectsWithTag("ChangeableBackground")){
+            background.GetComponent<Image>().color = _backgroundColor;
         }
     }
 
@@ -100,7 +105,7 @@ public class GameController : MonoBehaviour
 
         foreach (char c in GameOverMessage){ 
             GameOverTextUI.text += c;
-            yield return new WaitForSecondsRealtime(0.2f);
+            yield return new WaitForSecondsRealtime(0.01f);
         }
 
         while (!Input.GetKeyDown(KeyCode.Return)){
@@ -119,6 +124,7 @@ public class GameController : MonoBehaviour
         if (rato != null){
             rato.transform.position = new Vector3(RespawnX, RespawnY, 0);
             rato.ResetLife();
+            rato.dead = false;
         }
 
         foreach (Gato gato in FindObjectsOfType<Gato>()){
@@ -173,7 +179,6 @@ public class GameController : MonoBehaviour
 
     void GetValues(){
         gama = SavePrefs.GetFloat("gama");
-        difficulty = SavePrefs.GetInt("difficulty");
         audioVolume = SavePrefs.GetFloat("audioVolume");
         musicVolume = SavePrefs.GetFloat("musicVolume");
         right = SavePrefs.GetString("right");
@@ -183,19 +188,32 @@ public class GameController : MonoBehaviour
         run = SavePrefs.GetString("run");
         interact = SavePrefs.GetString("interact");
 
+        if(SavePrefs.HasKey("difficulty")) {
+            difficulty = SavePrefs.GetInt("difficulty");
+        }else{
+            difficulty = 1;
+        }
+
         if(SavePrefs.HasKey("fontSize")) {
             fontSize = SavePrefs.GetInt("fontSize");
         }else{
             fontSize = 2;
         }
-        //TamanhoFonteDropdown.value = GameController.Instance.fontSize;
 
         if(SavePrefs.HasKey("fontColor")){
             fontColor = SavePrefs.GetString("fontColor");
-            ColorUtility.TryParseHtmlString("#" + fontColor, out color);
+            ColorUtility.TryParseHtmlString("#" + fontColor, out _fontColor);
         }else{
-            GameController.Instance.fontColor = "FFFFFF";
-            ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out color);
+            fontColor = "FFFFFF";
+            ColorUtility.TryParseHtmlString("#" + fontColor, out _fontColor);
+        }
+
+        if(SavePrefs.HasKey("backgroundColor")){
+            backgroundColor = SavePrefs.GetString("backgroundColor");
+            ColorUtility.TryParseHtmlString("#" + backgroundColor, out _backgroundColor);
+        }else{
+            backgroundColor = "000000";
+            ColorUtility.TryParseHtmlString("#" + backgroundColor, out _backgroundColor);
         }
         //ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(GameController.Instance.color);
     }
@@ -209,7 +227,7 @@ public class GameController : MonoBehaviour
     void DesativaBuraco(){
         if(GameObject.FindGameObjectsWithTag("Gato").Length != 2 && GameObject.FindGameObjectWithTag("Buraco") != null){
             GameObject.FindGameObjectWithTag("Buraco").GetComponent<BoxCollider2D>().enabled = false;
-            GameObject.FindGameObjectWithTag("Freeze").GetComponent<BoxCollider2D>().enabled = false;
+            //GameObject.FindGameObjectWithTag("Freeze").GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }

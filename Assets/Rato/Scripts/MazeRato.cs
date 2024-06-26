@@ -28,7 +28,7 @@ public class MazeRato : MonoBehaviour
     void Rotate(){
         Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f).normalized;
         
-        if (movementDirection != Vector3.zero){
+        if(movementDirection != Vector3.zero){
             float angle = Mathf.Atan2(movementDirection.y, movementDirection.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }

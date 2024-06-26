@@ -12,6 +12,7 @@ TagManager:
   - Buraco
   - TFreeze
   - Escada
+  - ChangeableBackground
   layers:
   - Default
   - TransparentFX

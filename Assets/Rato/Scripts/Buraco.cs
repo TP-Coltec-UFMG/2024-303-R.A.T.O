@@ -5,15 +5,17 @@ using UnityEngine;
 public class Buraco : MonoBehaviour
 {
     [SerializeField] private string NewScene;
-    private bool sair;
+    [SerializeField] private GameObject InteragirTutorial;
 
     void OnTriggerEnter2D(Collider2D collider){
         if(collider.gameObject.tag == "Player"){
+            InteragirTutorial.SetActive(true);
             StartCoroutine(WaitForKeyPress(NewScene));
         }
     }
 
     void OnTriggerExit2D(){
+        InteragirTutorial.SetActive(false);
         StopAllCoroutines();
     }
 

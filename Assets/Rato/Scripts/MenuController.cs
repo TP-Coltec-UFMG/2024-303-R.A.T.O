@@ -8,15 +8,9 @@ using TMPro;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private string FirstScene;
-    [SerializeField] private GameObject MainMenu, JogarMenu, AcessibilidadeMenu, ConfiguracoesMenu, CreditosPanel, NovoJogoMenu, Message, ControlesMenu, ColourPickerPanel, Submenus;
+    [SerializeField] private GameObject MainMenu, JogarMenu, AcessibilidadeMenu, ConfiguracoesMenu, CreditosPanel, NovoJogoMenu, Message, ControlesMenu, TemasPanel, Submenus;
     private GameObject CurrentPanel;
     private string BackTo;
-
-    /*private float gama, audioVolume, musicVolume; 
-    private string left, right, jump, down, run, interact, fontColor;
-    private bool contrast, fullScreen;
-    private int difficulty, fontSize;
-    private Color color;*/
 
     [SerializeField] private Scrollbar ControleGamaScrollbar, VolumeAudioScrollbar, VolumeMusicaScrollbar;
     [SerializeField] private TMP_Dropdown DificuldadeDropdown, TamanhoFonteDropdown;
@@ -94,9 +88,9 @@ public class MenuController : MonoBehaviour
         this.BackTo = "Acessibilidade";
     }
 
-    public void ColourPicker(){
-        this.ColourPickerPanel.SetActive(true);
-        this.CurrentPanel = ColourPickerPanel;
+    public void Temas(){
+        this.TemasPanel.SetActive(true);
+        this.CurrentPanel = TemasPanel;
         this.BackTo = "Acessibilidade";
     }
 
@@ -112,44 +106,44 @@ public class MenuController : MonoBehaviour
         SavePrefs.SaveString("down", GameController.Instance.down);
         SavePrefs.SaveString("run", GameController.Instance.run);
         SavePrefs.SaveString("interact", GameController.Instance.interact);
-        SavePrefs.SaveString("fontColor", GameController.Instance.fontColor);                
+        SavePrefs.SaveString("fontColor", GameController.Instance.fontColor);
+        SavePrefs.SaveString("backgroundColor", GameController.Instance.backgroundColor);                
     }
 
     void InitialChanges(){
-        /*GameController.Instance.gama = SavePrefs.GetFloat("gama");
-        GameController.Instance.difficulty = SavePrefs.GetInt("difficulty");
-        GameController.Instance.audioVolume = SavePrefs.GetFloat("audioVolume");
-        GameController.Instance.musicVolume = SavePrefs.GetFloat("musicVolume");
-        GameController.Instance.right = SavePrefs.GetString("right");
-        GameController.Instance.left = SavePrefs.GetString("left");
-        GameController.Instance.jump = SavePrefs.GetString("jump");
-        GameController.Instance.down = SavePrefs.GetString("down");
-        GameController.Instance.run = SavePrefs.GetString("run");
-        GameController.Instance.interact = SavePrefs.GetString("interact");
-
-        if(SavePrefs.HasKey("fontSize")) {
-            GameController.Instance.fontSize = SavePrefs.GetInt("fontSize");
-        }else{
-            GameController.Instance.fontSize = 14;
-        }*/
         TamanhoFonteDropdown.value = GameController.Instance.fontSize;
+        DificuldadeDropdown.value = GameController.Instance.difficulty;
+    }
 
-        /*if(SavePrefs.HasKey("fontColor")){
-            GameController.Instance.fontColor = SavePrefs.GetString("fontColor");
-            ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);
-        }else{
-            GameController.Instance.fontColor = "FFFFFF";
-            ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);
-        }*/
-        ColourPickerPanel.GetComponent<ColourPickerController>().SetCurrentColour(GameController.Instance.color);
+    public void SetDifficulty(){
+        GameController.Instance.difficulty = DificuldadeDropdown.value;
     }
 
     public void SetFontSize(){
         GameController.Instance.fontSize = TamanhoFonteDropdown.value;
     }
 
-    public void SetFontColor(){
-        GameController.Instance.fontColor = ColorUtility.ToHtmlStringRGBA(ColourPickerPanel.GetComponent<ColourPickerController>().GetCurrentColour());
-        ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance.color);
+    public void SetTheme1(){
+        GameController.Instance.fontColor = "FFFFFF";
+        ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance._fontColor);
+
+        GameController.Instance.backgroundColor = "000000";
+        ColorUtility.TryParseHtmlString("#" + GameController.Instance.backgroundColor, out GameController.Instance._backgroundColor);
+    }
+
+    public void SetTheme2(){
+        GameController.Instance.fontColor = "F300FF";
+        ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance._fontColor);
+
+        GameController.Instance.backgroundColor = "00FFC2";
+        ColorUtility.TryParseHtmlString("#" + GameController.Instance.backgroundColor, out GameController.Instance._backgroundColor);
+    }
+
+    public void SetTheme3(){
+        GameController.Instance.fontColor = "A0B600";
+        ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance._fontColor);
+
+        GameController.Instance.backgroundColor = "FFFFFF";
+        ColorUtility.TryParseHtmlString("#" + GameController.Instance.backgroundColor, out GameController.Instance._backgroundColor);
     }
 }

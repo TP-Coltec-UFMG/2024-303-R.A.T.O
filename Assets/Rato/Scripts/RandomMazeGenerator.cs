@@ -20,6 +20,8 @@ public class RandomMazeGenerator : MonoBehaviour
     public MazeCell Exit {get; set;}
     
     void Awake(){
+        /*width *= (GameController.Instance.difficulty + 1);
+        height *= (GameController.Instance.difficulty + 1);*/
         this.InitializeMaze();
         GenerateMaze();
     }

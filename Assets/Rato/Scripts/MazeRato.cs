@@ -5,6 +5,7 @@ using UnityEngine;
 public class MazeRato : MonoBehaviour
 {
     [SerializeField] private float Speed;
+    [SerializeField] private Transform AudioListener;
     Animator animator;
     
     void Start(){
@@ -23,6 +24,7 @@ public class MazeRato : MonoBehaviour
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
         transform.position += movement * Speed * Time.deltaTime;
         animator.SetBool("walk", (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0));
+        this.AudioListener.position = transform.position;
     }
 
     void Rotate(){

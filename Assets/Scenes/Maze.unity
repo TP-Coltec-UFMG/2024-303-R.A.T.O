@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1369718174535797234, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
       propertyPath: orthographic size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1369718174535797234, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2792661716543154655, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 6428590060430040793, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
       propertyPath: Speed
       value: 0.1
@@ -208,6 +212,46 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
+--- !u!1 &626596030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626596032}
+  - component: {fileID: 626596031}
+  m_Layer: 0
+  m_Name: AudioListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &626596031
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626596030}
+  m_Enabled: 1
+--- !u!4 &626596032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626596030}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720812014
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +332,6 @@ GameObject:
   - component: {fileID: 1341689458}
   - component: {fileID: 1341689459}
   - component: {fileID: 1341689460}
-  - component: {fileID: 1341689461}
   m_Layer: 0
   m_Name: MazeRato
   m_TagString: Player
@@ -448,6 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
+  AudioListener: {fileID: 626596032}
 --- !u!95 &1341689459
 Animator:
   serializedVersion: 5
@@ -514,14 +558,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7636709, y: 2.2475545}
   m_EdgeRadius: 0
---- !u!81 &1341689461
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341689453}
-  m_Enabled: 1
 --- !u!1 &1358882958
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,3 +824,4 @@ SceneRoots:
   - {fileID: 1358882962}
   - {fileID: 2002402141}
   - {fileID: 720812016}
+  - {fileID: 626596032}

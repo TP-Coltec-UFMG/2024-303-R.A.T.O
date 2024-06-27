@@ -4,11 +4,6 @@ using UnityEngine;
 using static UnityEngine.Random;
 using System.Linq;
 
-/*private struct Vertex{
-    int number;
-    string color;
-}*/ 
-
 public class RandomMazeGenerator : MonoBehaviour
 {
     [SerializeField] private MazeCell Cell;

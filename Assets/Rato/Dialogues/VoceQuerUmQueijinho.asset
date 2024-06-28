@@ -13,9 +13,81 @@ MonoBehaviour:
   m_Name: VoceQuerUmQueijinho
   m_EditorClassIdentifier: 
   RootNodes:
-  - title: lskjabckankl
-    iconSprite: {fileID: 0}
-    dialogueText: 'vmnscljvnlsnvvlsncklsnvkl
-
-'
+  - title: '?'
+    iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+    dialogueText: Oi ratinho :)
     responses: []
+  - title: '?'
+    iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+    dialogueText: "Voc\xEA quer um queijinho?"
+    responses:
+    - responseText: ...
+      nextDialogueNodes:
+      - title: '?'
+        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+        dialogueText: "Ah, n\xE3o, n\xE3o tenho agora comigo n\xE3o!"
+        responses:
+        - responseText: ...
+          nextDialogueNodes:
+          - title: '?'
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Mas se voc\xEA est\xE1 procurando um queijo de qualidade
+              tem uma f\xE1brica l\xE1 no fim da cidade..."
+            responses:
+            - responseText: ...?
+              nextDialogueNodes:
+              - title: '?'
+                iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                dialogueText: Meu nome?
+                responses: []
+              - title: '?'
+                iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                dialogueText: "Ah... Voc\xEA n\xE3o precisa se preocupar com isso..."
+                responses:
+                - responseText: ....
+                  nextDialogueNodes:
+                  - title: '?'
+                    iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                    dialogueText: Aproveite sua estadia!
+                    responses: []
+                - responseText: ....
+                  nextDialogueNodes:
+                  - title: '?'
+                    iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                    dialogueText: Aproveite sua estadia!
+                    responses: []
+    - responseText: ...
+      nextDialogueNodes:
+      - title: '?'
+        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+        dialogueText: "Ah, n\xE3o, n\xE3o tenho agora comigo n\xE3o!"
+        responses:
+        - responseText: ...
+          nextDialogueNodes:
+          - title: '?'
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Mas se voc\xEA est\xE1 procurando um queijo de qualidade
+              tem uma f\xE1brica l\xE1 no fim da cidade..."
+            responses:
+            - responseText: ...?
+              nextDialogueNodes:
+              - title: '?'
+                iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                dialogueText: Meu nome?
+                responses: []
+              - title: '?'
+                iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                dialogueText: "Ah... Voc\xEA n\xE3o precisa se preocupar com isso..."
+                responses:
+                - responseText: ....
+                  nextDialogueNodes:
+                  - title: '?'
+                    iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                    dialogueText: Aproveite sua estadia!
+                    responses: []
+                - responseText: ....
+                  nextDialogueNodes:
+                  - title: '?'
+                    iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                    dialogueText: Aproveite sua estadia!
+                    responses: []

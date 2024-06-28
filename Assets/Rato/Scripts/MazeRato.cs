@@ -7,6 +7,7 @@ public class MazeRato : MonoBehaviour
     [SerializeField] private float Speed;
     [SerializeField] private Transform AudioListener;
     Animator animator;
+    [SerializeField] private GameObject ContrastFilter;
     
     void Start(){
         this.transform.position = FindObjectOfType<RandomMazeGenerator>().Entrance.transform.position;
@@ -36,4 +37,11 @@ public class MazeRato : MonoBehaviour
         }
     }
 
+    public void SetContrast(bool v){
+        this.ContrastFilter.SetActive(v);
+    }
+
+    public void SetContrastPosition(){
+        this.ContrastFilter.transform.position = transform.position;
+    }
 }

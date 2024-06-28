@@ -95,7 +95,7 @@ public class MenuController : MonoBehaviour
     }
 
     public void SaveValues(){
-        SavePrefs.SaveFloat("gama", GameController.Instance.gama);
+        SavePrefs.SaveBool("contrast", GameController.Instance.contrast);
         SavePrefs.SaveInt("difficulty", GameController.Instance.difficulty);
         SavePrefs.SaveInt("fontSize", GameController.Instance.fontSize);
         SavePrefs.SaveFloat("audioVolume", GameController.Instance.audioVolume);
@@ -113,6 +113,10 @@ public class MenuController : MonoBehaviour
     void InitialChanges(){
         TamanhoFonteDropdown.value = GameController.Instance.fontSize;
         DificuldadeDropdown.value = GameController.Instance.difficulty;
+        ContrasteToggle.isOn = GameController.Instance.contrast;
+    }
+    public void SetContrast(){
+        GameController.Instance.contrast = ContrasteToggle.isOn;
     }
 
     public void SetDifficulty(){

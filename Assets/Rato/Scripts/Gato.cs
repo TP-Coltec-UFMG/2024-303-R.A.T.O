@@ -11,7 +11,7 @@ public class Gato : MonoBehaviour
     [SerializeField] public float MaxHealth; 
     public float health {get; private set;}
     private bool attack;
-    [SerializeField] GameObject Queijo;
+    [SerializeField] GameObject Queijo, ContrastFilter;
 
     // Start is called before the first frame update
     void Start()
@@ -95,5 +95,9 @@ public class Gato : MonoBehaviour
 
     public void ResetLife(){
         health = MaxHealth;
+    }
+
+    public void SetContrast(bool v){
+        this.ContrastFilter.SetActive(v);
     }
 }

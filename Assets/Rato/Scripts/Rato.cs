@@ -15,6 +15,7 @@ public class Rato : MonoBehaviour
     [SerializeField] public float MaxHealth; 
     public float health {get; private set;}
     private GameObject attack;
+    [SerializeField] private GameObject ContrastFilter;
     public bool dead {get; set;}
 
     // Start is called before the first frame update
@@ -134,5 +135,9 @@ public class Rato : MonoBehaviour
 
     public void ResetLife(){
         health = MaxHealth;
+    }
+
+    public void SetContrast(bool v){
+        this.ContrastFilter.SetActive(v);
     }
 }

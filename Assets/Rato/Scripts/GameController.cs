@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private TMP_Text GameOverTextUI;
     [SerializeField] [TextArea(1, 10)] private string GameOverMessage;
 
-    [HideInInspector] public float gama, audioVolume, musicVolume;
+    [HideInInspector] public float audioVolume, musicVolume;
     [HideInInspector] public string left, right, jump, down, run, interact, fontColor, backgroundColor;
     [HideInInspector] public bool contrast, fullScreen;
     [HideInInspector] public int difficulty, fontSize;
@@ -43,10 +43,28 @@ public class GameController : MonoBehaviour
         ChangeFontSize(FixedFontSize(fontSize));
         AtivaPorta();
         DesativaBuraco();
+        ChangeContrast();
     }
 
     public void ChangeScene(string SceneName){
         SceneManager.LoadScene(SceneName);
+    }
+
+    public void ChangeContrast(){
+        Rato rato = FindObjectOfType<Rato>();
+        if(rato != null){
+            rato.SetContrast(contrast);
+        }
+
+        MazeRato mazeRato = FindObjectOfType<MazeRato>();
+        if(mazeRato != null){
+            mazeRato.SetContrast(contrast);
+        }
+
+        Gato[] gatos = FindObjectsOfType<Gato>();
+        foreach (Gato gato in gatos){
+            gato.SetContrast(contrast);
+        }
     }
 
     public void ChangeTheme(){
@@ -177,7 +195,6 @@ public class GameController : MonoBehaviour
     }
 
     void GetValues(){
-        gama = SavePrefs.GetFloat("gama");
         audioVolume = SavePrefs.GetFloat("audioVolume");
         musicVolume = SavePrefs.GetFloat("musicVolume");
         right = SavePrefs.GetString("right");
@@ -186,6 +203,12 @@ public class GameController : MonoBehaviour
         down = SavePrefs.GetString("down");
         run = SavePrefs.GetString("run");
         interact = SavePrefs.GetString("interact");
+
+        if(SavePrefs.HasKey("contrast")) {
+            contrast = SavePrefs.GetBool("contrast");
+        }else{
+            contrast = false;
+        }
 
         if(SavePrefs.HasKey("difficulty")) {
             difficulty = SavePrefs.GetInt("difficulty");

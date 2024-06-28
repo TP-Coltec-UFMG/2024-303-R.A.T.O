@@ -4209,7 +4209,6 @@ MonoBehaviour:
   GameOverMessage: "Voc\xEA morreu, roedor. Na vida n\xE3o temos uma segunda chance,
     mas voc\xEA n\xE3o est\xE1 vivo, n\xE3o \xE9 mesmo?\n\nPressione <ENTER> para
     tentar novamente"
-  gama: 0
   audioVolume: 0
   musicVolume: 0
   left: 
@@ -12923,7 +12922,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 991665273}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: SetValues
+        m_MethodName: SetContrast
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18229,7 +18228,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "F\xE1cil"
+  m_text: "M\xE9dio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7757faad1e2a47449ba2232d024bba1b, type: 2}
   m_sharedMaterial: {fileID: 6455004838823645016, guid: 7757faad1e2a47449ba2232d024bba1b, type: 2}

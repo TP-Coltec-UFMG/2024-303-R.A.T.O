@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 78119269}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 82404364}
   m_Layer: 0
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1295,7 +1295,7 @@ GameObject:
   - component: {fileID: 104986915}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 109257283}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1925,7 +1925,7 @@ GameObject:
   - component: {fileID: 115841371}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4053,7 +4053,7 @@ GameObject:
   - component: {fileID: 365305495}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5098,7 +5098,7 @@ GameObject:
   - component: {fileID: 472091992}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5232,7 +5232,7 @@ GameObject:
   - component: {fileID: 473790407}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6322,7 +6322,7 @@ GameObject:
   - component: {fileID: 558958153}
   m_Layer: 5
   m_Name: Item Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6817,7 +6817,7 @@ GameObject:
   - component: {fileID: 591374440}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6953,7 +6953,7 @@ GameObject:
   - component: {fileID: 605629641}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7408,7 +7408,7 @@ GameObject:
   - component: {fileID: 640440676}
   m_Layer: 5
   m_Name: OptionIndicator
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8665,7 +8665,7 @@ GameObject:
   - component: {fileID: 851987051}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8799,7 +8799,7 @@ GameObject:
   - component: {fileID: 855231615}
   m_Layer: 5
   m_Name: Message
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9196,7 +9196,7 @@ GameObject:
   - component: {fileID: 922053861}
   m_Layer: 0
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9478,7 +9478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &950519023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11049,7 +11049,7 @@ GameObject:
   - component: {fileID: 1173366360}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11871,7 +11871,7 @@ GameObject:
   - component: {fileID: 1270168124}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12005,7 +12005,7 @@ GameObject:
   - component: {fileID: 1271076352}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13349,7 +13349,7 @@ GameObject:
   - component: {fileID: 1492820643}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14669,7 +14669,7 @@ GameObject:
   - component: {fileID: 1687876734}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16710,7 +16710,7 @@ GameObject:
   - component: {fileID: 1942054619}
   m_Layer: 5
   m_Name: Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17043,7 +17043,7 @@ GameObject:
   - component: {fileID: 2009036641}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17179,7 +17179,7 @@ GameObject:
   - component: {fileID: 2032550379}
   m_Layer: 5
   m_Name: Item Label
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17840,7 +17840,7 @@ GameObject:
   - component: {fileID: 2082496198}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18184,7 +18184,7 @@ GameObject:
   - component: {fileID: 2102738235}
   m_Layer: 5
   m_Name: OptionIndicator
-  m_TagString: ChangeableFont
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

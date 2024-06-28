@@ -95,6 +95,13 @@ public class Rato : MonoBehaviour
 
         if(collision.gameObject.tag == "Gato"){
             attack = collision.gameObject;
+        }
+
+        Velha velha = FindObjectOfType<Velha>();
+        if(velha != null){
+            if(collision.gameObject.tag == "Barrier"){
+                velha.walk = true;
+            }
         }    
     }
 

@@ -10,37 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
-  m_Name: Cutscene
+  m_Name: VoceQuerUmQueijinho
   m_EditorClassIdentifier: 
   RootNodes:
-  - title: 
+  - title: lskjabckankl
     iconSprite: {fileID: 0}
-    dialogueText: 'qiduiscibciwc
+    dialogueText: 'vmnscljvnlsnvvlsncklsnvkl
 
-
-      cowhcwhciwdhc
-
-
-      cwiudciwciw
-
-
-
-      cowhdchwchuwdhccdcm
-
-
-      widhc'
-    responses: []
-  - title: 
-    iconSprite: {fileID: 0}
-    dialogueText: 'wcjwkckjwjnck
-
-      c
-
-
-
-
-
-
-
-      wdcohwichiwckcl'
+'
     responses: []

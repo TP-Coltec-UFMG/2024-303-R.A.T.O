@@ -69,11 +69,11 @@ public class DialogueManager : MonoBehaviour
             foreach (DialogueResponse response in currentDialogueNodes[currentIndex].responses){
                 GameObject buttonObj;
                 if (i == 0){
-                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(190, 30, 0), Quaternion.identity, responseButtonContainer);
+                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(30, 15, 0), Quaternion.identity, responseButtonContainer);
                 }else if (i == 1){
-                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(500, 30, 0), Quaternion.identity, responseButtonContainer);
+                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(100, 15, 0), Quaternion.identity, responseButtonContainer);
                 } else {
-                    continue; // Skip other responses if needed
+                    continue;
                 }
 
                 buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;

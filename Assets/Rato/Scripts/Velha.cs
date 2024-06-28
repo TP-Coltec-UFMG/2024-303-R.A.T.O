@@ -19,7 +19,7 @@ public class Velha : MonoBehaviour
     void Update()
     {
         if(walk && !freeze){
-            animator.SetBool("walk", true);
+            Walk();
         }else{
             animator.SetBool("walk", false);
         }
@@ -30,5 +30,9 @@ public class Velha : MonoBehaviour
             this.freeze = true;
             GameObject.FindGameObjectWithTag("Barrier").GetComponent<BoxCollider2D>().enabled = false;
         }
+    }
+
+    void Walk(){
+        animator.SetBool("walk", true);
     }
 }

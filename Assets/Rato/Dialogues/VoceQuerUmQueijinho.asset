@@ -27,12 +27,12 @@ MonoBehaviour:
         iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
         dialogueText: "N\xE3o n\xE3o, agora infelizmente n\xE3o tenho."
         responses:
-        - responseText: ...
+        - responseText: ... :(
           nextDialogueNodes:
           - title: '?'
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
             dialogueText: "Mas ouvi dizer que na f\xE1brica que tem l\xE1 no final
-              da cidade eles fabricam um queijo incr\xEDvel..."
+              da cidade eles fazem um queijo incr\xEDvel..."
             responses:
             - responseText: ...?
               nextDialogueNodes:
@@ -50,7 +50,7 @@ MonoBehaviour:
 
 '
                 responses: []
-    - responseText: ...
+    - responseText: ...!
       nextDialogueNodes:
       - title: '?'
         iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}

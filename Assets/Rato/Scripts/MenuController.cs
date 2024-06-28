@@ -136,18 +136,18 @@ public class MenuController : MonoBehaviour
     }
 
     public void SetTheme2(){
-        GameController.Instance.fontColor = "F300FF";
+        GameController.Instance.fontColor = "000000";
         ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance._fontColor);
 
-        GameController.Instance.backgroundColor = "00FFC2";
+        GameController.Instance.backgroundColor = "FFFFFF";
         ColorUtility.TryParseHtmlString("#" + GameController.Instance.backgroundColor, out GameController.Instance._backgroundColor);
     }
 
     public void SetTheme3(){
-        GameController.Instance.fontColor = "A0B600";
+        GameController.Instance.fontColor = "760000";
         ColorUtility.TryParseHtmlString("#" + GameController.Instance.fontColor, out GameController.Instance._fontColor);
 
-        GameController.Instance.backgroundColor = "FFFFFF";
+        GameController.Instance.backgroundColor = "FFCF8C";
         ColorUtility.TryParseHtmlString("#" + GameController.Instance.backgroundColor, out GameController.Instance._backgroundColor);
     }
 }

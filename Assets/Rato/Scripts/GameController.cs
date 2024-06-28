@@ -122,7 +122,7 @@ public class GameController : MonoBehaviour
 
         foreach (char c in GameOverMessage){ 
             GameOverTextUI.text += c;
-            yield return new WaitForSecondsRealtime(0.01f);
+            yield return new WaitForSecondsRealtime(0.05f);
         }
 
         while (!Input.GetKeyDown(KeyCode.Return)){

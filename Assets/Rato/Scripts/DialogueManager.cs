@@ -71,7 +71,7 @@ public class DialogueManager : MonoBehaviour
                 if (i == 0){
                     buttonObj = Instantiate(responseButtonPrefab, new Vector3(60, 30, 0), Quaternion.identity, responseButtonContainer);
                 }else if (i == 1){
-                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(400, 30, 0), Quaternion.identity, responseButtonContainer);
+                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(300, 30, 0), Quaternion.identity, responseButtonContainer);
                 } else {
                     continue;
                 }

@@ -1,7 +1,7 @@
 # 2024-303-RATO
 <!-- # 2024-303-RATO-->
 
-<h1> R.A.T.O</h1>
+<h1> R.A.T.O.</h1>
 
 <p align="left">Um jogo desenvolvido pelos integrantes Marco Túlio, Bruna Santarelli, Isabel Valadares e Joana Guimarães</p>
 

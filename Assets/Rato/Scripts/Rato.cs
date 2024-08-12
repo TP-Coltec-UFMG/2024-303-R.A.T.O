@@ -18,6 +18,13 @@ public class Rato : MonoBehaviour
     [SerializeField] private GameObject ContrastFilter;
     public bool dead {get; set;}
 
+    private float moveInput;
+    private bool jumpInput;
+    private bool interactInput;
+    private bool attackInput;
+    private float runInput; 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,16 +52,18 @@ public class Rato : MonoBehaviour
     }
 
     void Walk(){
-        transform.position += new Vector3(Input.GetAxis("Horizontal"), 0f, 0f) * Speed * Time.deltaTime;
+        this.moveInput = UserInput.Instance.MoveInput.x;
 
-        if(Input.GetAxis("Horizontal") > 0f){
+        transform.position += new Vector3(moveInput, 0f, 0f) * Speed * Time.deltaTime;
+
+        if(moveInput > 0f){
             if(!isjumping){
                 animator.SetBool("walk", true);
             }
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
-        }else if(Input.GetAxis("Horizontal") == 0f){
+        }else if(moveInput == 0f){
             animator.SetBool("walk", false);
-        }else if(Input.GetAxis("Horizontal") < 0){
+        }else if(moveInput < 0){
             if(!isjumping){
                 animator.SetBool("walk", true);
             }
@@ -63,7 +72,8 @@ public class Rato : MonoBehaviour
     }
 
     void Jump(){
-        if(Input.GetButtonDown("Jump")){
+        jumpInput = UserInput.Instance.JumpInput;
+        if(jumpInput){
             if(!isjumping){
                 animator.SetBool("jump", true);
                 rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
@@ -80,7 +90,9 @@ public class Rato : MonoBehaviour
     }
 
     void Bite(){
-        if(Input.GetButtonDown("Fire") && !isBiting){
+        attackInput = UserInput.Instance.AttackInput;
+
+        if(attackInput && !isBiting){
             animator.SetTrigger("bite");
         }else{
             animator.ResetTrigger("bite");
@@ -118,7 +130,8 @@ public class Rato : MonoBehaviour
     }
 
     void Run(){
-        if(Input.GetAxis("Horizontal") * Input.GetAxis("Run") != 0){           
+        runInput = UserInput.Instance.RunInput;
+        if(this.runInput != 0 && this.moveInput != 0){           
             Speed = OriginalSpeed * 1.5f;
             animator.speed = Speed / OriginalSpeed;
         }else{

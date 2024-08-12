@@ -28,7 +28,7 @@ public class Interactable : MonoBehaviour
     }
 
     private IEnumerator WaitForKeyPress(){
-        while (!Input.GetKeyDown(KeyCode.E)){
+        while(!UserInput.Instance.InteractInput){
             yield return null;
         }
         

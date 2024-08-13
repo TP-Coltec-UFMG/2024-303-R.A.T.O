@@ -8336,6 +8336,7 @@ GameObject:
   - component: {fileID: 818355964}
   - component: {fileID: 818355966}
   - component: {fileID: 818355965}
+  - component: {fileID: 818355967}
   m_Layer: 5
   m_Name: ControlesMenu
   m_TagString: Untagged
@@ -8404,6 +8405,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818355963}
   m_CullTransparentMesh: 1
+--- !u!114 &818355967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818355963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6c2da2db9374dada6761b5e35121c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: {fileID: -944628639613478452, guid: d83eac2a9af2d8144bc5a2167c4426af, type: 3}
 --- !u!1 &851987049
 GameObject:
   m_ObjectHideFlags: 0

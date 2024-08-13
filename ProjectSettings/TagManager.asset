@@ -14,6 +14,8 @@ TagManager:
   - Escada
   - ChangeableBackground
   - Barrier
+  - Barrier1
+  - Adeus
   layers:
   - Default
   - TransparentFX

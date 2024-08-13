@@ -160,4 +160,8 @@ public class Rato : MonoBehaviour
     public void SetContrast(bool v){
         this.ContrastFilter.SetActive(v);
     }
+
+    public void SetAwake(){
+        GetComponent<Animator>().SetBool("awake", true);
+    }
 }

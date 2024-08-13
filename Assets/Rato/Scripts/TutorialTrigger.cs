@@ -17,7 +17,10 @@ public class TutorialTrigger : MonoBehaviour
     }
 
     IEnumerator Tutorial(){
-        //Time.timeScale = 0;
+        if(this.tag == "TutorialFinal"){
+            Time.timeScale = 0;
+        }
+
         TutorialPanel.SetActive(true);
         TutorialTextUI.text = "";
         GetComponent<BoxCollider2D>().enabled = false;
@@ -28,7 +31,7 @@ public class TutorialTrigger : MonoBehaviour
         }
         
         TutorialPanel.SetActive(false);
-        //Time.timeScale = 1;
+        Time.timeScale = 1;
 
         if(gameObject.tag == "TutorialFinal"){
             foreach(GameObject freeze in GameObject.FindGameObjectsWithTag("TFreeze")){

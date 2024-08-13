@@ -172,6 +172,8 @@ public class GameController : MonoBehaviour
         rato = FindObjectOfType<Rato>();
 
         if (scene.name == "casateste"){
+            rato.GetComponent<Animator>().SetBool("startAwake", false);
+
             RatoHealthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
             GameOverPanel = GameObject.Find("GameOverPanel");
             GameOverTextUI = GameObject.Find("GameOverTextUI").GetComponent<TMP_Text>();
@@ -179,6 +181,8 @@ public class GameController : MonoBehaviour
             if (GameOverPanel != null){
                 GameOverPanel.GetComponent<Image>().enabled = false;
             }
+        }else{
+            rato.GetComponent<Animator>().SetBool("startAwake", true);
         }
     }
 

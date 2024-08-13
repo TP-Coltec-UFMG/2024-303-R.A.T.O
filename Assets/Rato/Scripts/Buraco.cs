@@ -15,7 +15,9 @@ public class Buraco : MonoBehaviour
     }
 
     void OnTriggerExit2D(){
-        InteragirTutorial.SetActive(false);
+        if(InteragirTutorial != null){
+            InteragirTutorial.SetActive(false);
+        } 
         StopAllCoroutines();
     }
 

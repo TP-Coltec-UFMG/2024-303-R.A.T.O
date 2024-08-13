@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float delay;
     private Coroutine typingCoroutine;
     private GameObject dialogueTrigger;
+    public bool dialogueHappened {get; private set;}
 
     private void Awake(){
         if (Instance == null){
@@ -26,10 +27,11 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        HideDialogue();
+        HideDialogue1();
     }
 
     public void StartDialogue(List<DialogueNode> nodes, GameObject trigger){
+        dialogueHappened = false;
         GameController.Instance.StopGame();
 
         ShowDialogue();
@@ -114,6 +116,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void HideDialogue(){
+        DialogueParent.SetActive(false);
+        dialogueHappened = true;
+    }
+
+    public void HideDialogue1(){
         DialogueParent.SetActive(false);
     }
 

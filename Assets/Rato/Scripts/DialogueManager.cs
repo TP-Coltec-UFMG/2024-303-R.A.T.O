@@ -98,7 +98,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void Update(){
-        if(IsDialogueActive() && Input.GetKeyDown(KeyCode.Return)){
+        if(IsDialogueActive() && Input.GetKeyDown(KeyCode.Return) && currentDialogueNodes[currentIndex].responses.Count == 0){
             if (typingCoroutine != null)
             {
                 StopCoroutine(typingCoroutine);

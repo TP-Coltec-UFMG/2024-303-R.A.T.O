@@ -64,13 +64,17 @@ public class MenuController : MonoBehaviour
             this.CurrentPanel = NovoJogoMenu;
             this.BackTo = "Jogar";
         }else{
-            GameController.Instance.ChangeScene(this.FirstScene);       
+            StartGame();       
         }
+    }
+
+    public void StartGame(){
+        GameController.Instance.ChangeScene(this.FirstScene);
     }
 
     public void Continuar(){
         if(SaveAndLoad.LoadData() != null){
-            //carrega jogo de onde parou
+            GameController.Instance.Continue();
         }else{
             this.Message.SetActive(true);
             StartCoroutine(DisableMessage());       

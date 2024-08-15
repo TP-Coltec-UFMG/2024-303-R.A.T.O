@@ -7,16 +7,12 @@ public class Velha : MonoBehaviour
     public bool walk {get; set;}
     private Animator animator;
     [SerializeField] private float Speed;
-    private bool walkBack;
-    private Time VeiaTime;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         walk = false;
-        walkBack = false;
-        VeiaTime = new Time();
     }
 
     // Update is called once per frame

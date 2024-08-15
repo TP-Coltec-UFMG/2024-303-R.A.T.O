@@ -4,9 +4,12 @@ using UnityEngine;
 
 [System.Serializable] public class Data{
     //coisas pra salvar
-    public int maxScore;
+    public float currentPositionX, currentPositionY;
+    public int currentScene;
 
-    public Data(int v){
-        this.maxScore = v;
+    public Data(float x, float y, int s){
+        currentPositionX = x;
+        currentPositionY = y;
+        currentScene = s;
     }
 }

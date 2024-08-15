@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
     private Rato rato;
+    private Vector3 ratoPosition;
 
     [SerializeField] private Slider RatoHealthBar;
     [SerializeField] private GameObject GameOverPanel;
@@ -19,6 +20,10 @@ public class GameController : MonoBehaviour
     [HideInInspector] public bool contrast, fullScreen;
     [HideInInspector] public int difficulty, fontSize;
     [HideInInspector] public Color _fontColor, _backgroundColor;
+
+    void Start(){
+        ratoPosition = new Vector3(100f, 100f, 100f);
+    }
 
     void Awake()
     {
@@ -170,19 +175,33 @@ public class GameController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         rato = FindObjectOfType<Rato>();
-
-        if (scene.name == "casateste"){
-            rato.GetComponent<Animator>().SetBool("startAwake", false);
-
+    
+        if(GameObject.Find("HealthBar") != null){
             RatoHealthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
-            GameOverPanel = GameObject.Find("GameOverPanel");
+        }
+        
+        if(GameObject.Find("GameOverTextUI")){
             GameOverTextUI = GameObject.Find("GameOverTextUI").GetComponent<TMP_Text>();
+        }
 
-            if (GameOverPanel != null){
-                GameOverPanel.GetComponent<Image>().enabled = false;
-            }
+        GameOverPanel = GameObject.Find("GameOverPanel");
+        if (GameOverPanel != null){
+            GameOverPanel.GetComponent<Image>().enabled = false;
+        }
+
+        if(SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene && ratoPosition != new Vector3(100f, 100f, 100f)){
+            Debug.Log("a");
+            rato.transform.position = new Vector3(SaveAndLoad.LoadData().currentPositionX, SaveAndLoad.LoadData().currentPositionY, 0);
+            rato.GetComponent<Animator>().SetBool("startAwake", false);
+            rato.GetComponent<Animator>().SetBool("awake", false);
+        }else if(scene.name == "casateste"){
+            Debug.Log("b");
+            rato.GetComponent<Animator>().SetBool("startAwake", false);        
         }else{
-            rato.GetComponent<Animator>().SetBool("startAwake", true);
+            Debug.Log("c");
+            if(rato != null){
+                rato.GetComponent<Animator>().SetBool("startAwake", true);
+            }
         }
     }
 
@@ -255,5 +274,16 @@ public class GameController : MonoBehaviour
             GameObject.FindGameObjectWithTag("Buraco").GetComponent<BoxCollider2D>().enabled = false;
             //GameObject.FindGameObjectWithTag("Freeze").GetComponent<BoxCollider2D>().enabled = false;
         }
+    }
+
+    public void Continue(){
+        SceneManager.LoadScene(SaveAndLoad.LoadData().currentScene);
+        Debug.Log("x: " + SaveAndLoad.LoadData().currentPositionX);
+        Debug.Log("y: " + SaveAndLoad.LoadData().currentPositionY);
+    }
+
+    public void Save(Vector3 position){
+        rato = FindObjectOfType<Rato>();
+        SaveAndLoad.SaveData(new Data(rato.transform.position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex));
     }
 }

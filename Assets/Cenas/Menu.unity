@@ -3966,7 +3966,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 991665273}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: SetValues
+        m_MethodName: SetMusicVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9897,7 +9897,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 991665273}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: SetValues
+        m_MethodName: SetAudioVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

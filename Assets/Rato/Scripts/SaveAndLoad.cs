@@ -23,4 +23,11 @@ public static class SaveAndLoad{
             return null;
         }
     }
+
+    public static void DeleteData(){
+        string path = Application.persistentDataPath + "/saveData.data";
+        if(File.Exists(path)){
+            File.Delete(path);
+        }
+    }
 }

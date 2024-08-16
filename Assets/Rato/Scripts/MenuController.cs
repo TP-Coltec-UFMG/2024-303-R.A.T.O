@@ -8,7 +8,7 @@ using TMPro;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private string FirstScene;
-    [SerializeField] private GameObject MainMenu, JogarMenu, AcessibilidadeMenu, ConfiguracoesMenu, CreditosPanel, NovoJogoMenu, Message, ControlesMenu, TemasPanel, Submenus;
+    [SerializeField] private GameObject MainMenu, JogarMenu, AcessibilidadeMenu, ConfiguracoesMenu, CreditosPanel, NovoJogoMenu, Message, ControlesMenu, TemasPanel, MenuInGameCanvas;
     private GameObject CurrentPanel;
     private string BackTo;
 
@@ -17,7 +17,18 @@ public class MenuController : MonoBehaviour
     [SerializeField] private TMP_InputField EsquerdaInputText, DireitaInputText, PularInputText, AbaixarInputText, CorrerInputText, InteragirInputText;
     [SerializeField] private Toggle ContrasteToggle, TelaCheiaToggle;
 
+    public static MenuController Instance;
+
     void Awake(){
+        if (Instance == null){
+            Instance = this;
+            if(gameObject.tag == "MenuInGame"){
+                DontDestroyOnLoad(gameObject);
+            }
+        }else{
+            Destroy(gameObject);
+        }
+
         InitialChanges();
     }
     
@@ -71,6 +82,9 @@ public class MenuController : MonoBehaviour
     public void StartGame(){
         GameController.Instance.loadSavedData = false;
         GameController.Instance.ChangeScene(this.FirstScene);
+        if(SaveAndLoad.LoadData() != null){
+            SaveAndLoad.DeleteData();
+        }
     }
 
     public void Continuar(){
@@ -119,6 +133,8 @@ public class MenuController : MonoBehaviour
         TamanhoFonteDropdown.value = GameController.Instance.fontSize;
         DificuldadeDropdown.value = GameController.Instance.difficulty;
         ContrasteToggle.isOn = GameController.Instance.contrast;
+        VolumeAudioScrollbar.value = GameController.Instance.audioVolume;
+        VolumeMusicaScrollbar.value = GameController.Instance.musicVolume;
     }
     public void SetContrast(){
         GameController.Instance.contrast = ContrasteToggle.isOn;
@@ -154,5 +170,22 @@ public class MenuController : MonoBehaviour
 
         GameController.Instance.backgroundColor = "FFCF8C";
         ColorUtility.TryParseHtmlString("#" + GameController.Instance.backgroundColor, out GameController.Instance._backgroundColor);
+    }
+
+    public void SetAudioVolume(){
+        GameController.Instance.audioVolume = this.VolumeAudioScrollbar.value;
+    }
+
+    public void SetMusicVolume(){
+        GameController.Instance.musicVolume = this.VolumeMusicaScrollbar.value;
+    }
+
+    public void OpenMenuInGame(){
+        MenuInGameCanvas.SetActive(true);
+    }
+
+    public void CloseMenuInGame(){
+        MenuInGameCanvas.SetActive(false);
+        GameController.Instance.Resume();
     }
 }

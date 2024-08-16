@@ -45,6 +45,12 @@ public class GameController : MonoBehaviour
         AtivaPorta();
         DesativaBuraco();
         ChangeContrast();
+
+        if(MenuController.Instance.tag == "MenuInGame" && Input.GetKeyDown(KeyCode.H)){
+            MenuController.Instance.OpenMenuInGame();
+            //StopGame();
+            Debug.Log("oi");
+        }
     }
 
     public void ChangeScene(string SceneName){
@@ -139,7 +145,7 @@ public class GameController : MonoBehaviour
             GameOverTextUI.text = "";
         }
 
-        if (rato != null){
+        /*if (rato != null){
             rato.transform.position = new Vector3(RespawnX, RespawnY, 0);
             rato.ResetLife();
             rato.dead = false;
@@ -147,6 +153,12 @@ public class GameController : MonoBehaviour
 
         foreach (Gato gato in FindObjectsOfType<Gato>()){
             gato.ResetLife();
+        }*/
+        
+        if(SaveAndLoad.LoadData() != null && SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene){
+            Continue();
+        }else{
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -185,11 +197,13 @@ public class GameController : MonoBehaviour
             GameOverPanel.GetComponent<Image>().enabled = false;
         }
 
-        if(SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene && loadSavedData){
-            Debug.Log("a");
-            rato.transform.position = new Vector3(SaveAndLoad.LoadData().currentPositionX, SaveAndLoad.LoadData().currentPositionY, 0);
-            rato.GetComponent<Animator>().SetBool("startAwake", false);
-            rato.GetComponent<Animator>().SetBool("awake", false);
+        if(SaveAndLoad.LoadData() != null){
+            if(SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene && loadSavedData){
+                Debug.Log("a");
+                rato.transform.position = new Vector3(SaveAndLoad.LoadData().currentPositionX, SaveAndLoad.LoadData().currentPositionY, 0);
+                rato.GetComponent<Animator>().SetBool("startAwake", false);
+                rato.GetComponent<Animator>().SetBool("awake", false);
+            }
         }else if(scene.name == "casateste"){
             Debug.Log("b");
             rato.GetComponent<Animator>().SetBool("startAwake", false);        
@@ -214,14 +228,24 @@ public class GameController : MonoBehaviour
     }
 
     void GetValues(){
-        audioVolume = SavePrefs.GetFloat("audioVolume");
-        musicVolume = SavePrefs.GetFloat("musicVolume");
         right = SavePrefs.GetString("right");
         left = SavePrefs.GetString("left");
         jump = SavePrefs.GetString("jump");
         down = SavePrefs.GetString("down");
         run = SavePrefs.GetString("run");
         interact = SavePrefs.GetString("interact");
+
+        if(SavePrefs.HasKey("audioVolume")){
+            audioVolume = SavePrefs.GetFloat("audioVolume");
+        }else{
+            audioVolume = 0;
+        }
+
+        if(SavePrefs.HasKey("musicVolume")){
+            musicVolume = SavePrefs.GetFloat("musicVolume");
+        }else{
+            musicVolume = 0;
+        }
 
         if(SavePrefs.HasKey("contrast")) {
             contrast = SavePrefs.GetBool("contrast");

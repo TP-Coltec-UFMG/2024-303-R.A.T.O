@@ -16,6 +16,7 @@ TagManager:
   - Barrier
   - Barrier1
   - Adeus
+  - MenuInGame
   layers:
   - Default
   - TransparentFX

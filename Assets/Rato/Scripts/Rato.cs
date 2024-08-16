@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Rato : MonoBehaviour
 {
-    [SerializeField] private float OriginalSpeed, JumpForce, Damage, RespawnX, RespawnY;
+    [SerializeField] private float OriginalSpeed, aOriginalSpeed, JumpForce, aJumpForce, Damage, RespawnX, RespawnY;
     private float Speed;
     private Rigidbody2D rb;
     private bool isjumping;
     private bool doublejump;
     private Animator animator;
-    private bool isBiting;
+    private bool isBiting, flip;
     [SerializeField] public float MaxHealth; 
     public float health {get; private set;}
     private GameObject attack;
@@ -28,14 +28,20 @@ public class Rato : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        Speed = OriginalSpeed; 
+         
     }
 
     void Awake(){
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        aOriginalSpeed = OriginalSpeed;
+        OriginalSpeed = 0;
+        Speed = 0;
+        aJumpForce = JumpForce;
+        JumpForce = 0;
         health = MaxHealth;
         dead = false;
+        flip = false;
     }
 
     void FixedUpdate(){
@@ -56,18 +62,20 @@ public class Rato : MonoBehaviour
 
         transform.position += new Vector3(moveInput, 0f, 0f) * Speed * Time.deltaTime;
 
-        if(moveInput > 0f){
-            if(!isjumping){
-                animator.SetBool("walk", true);
+        if(flip){
+            if(moveInput > 0f){
+                if(!isjumping){
+                    animator.SetBool("walk", true);
+                }
+                transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            }else if(moveInput == 0f){
+                animator.SetBool("walk", false);
+            }else if(moveInput < 0){
+                if(!isjumping){
+                    animator.SetBool("walk", true);
+                }
+                transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }
-            transform.eulerAngles = new Vector3(0f, 0f, 0f);
-        }else if(moveInput == 0f){
-            animator.SetBool("walk", false);
-        }else if(moveInput < 0){
-            if(!isjumping){
-                animator.SetBool("walk", true);
-            }
-            transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
     }
 
@@ -163,5 +171,9 @@ public class Rato : MonoBehaviour
 
     public void SetAwake(){
         GetComponent<Animator>().SetBool("awake", true);
+        OriginalSpeed = aOriginalSpeed;       
+        Speed = OriginalSpeed;
+        JumpForce = aJumpForce;
+        flip = true;
     }
 }

@@ -1539,11 +1539,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
---- !u!1 &915819922 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8846815700591970431, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
-  m_PrefabInstance: {fileID: 1944640706}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1111344774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1111344775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2228,6 +2223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f2de034f2fdaa4587d1c2d09cd361a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadSavedData: 0
   RatoHealthBar: {fileID: 0}
   GameOverPanel: {fileID: 0}
   GameOverTextUI: {fileID: 0}
@@ -2633,7 +2629,11 @@ PrefabInstance:
     - target: {fileID: 5346719554937317636, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: ContrastFilter
       value: 
-      objectReference: {fileID: 915819922}
+      objectReference: {fileID: 1944640707}
+    - target: {fileID: 5638071274609444598, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6841282409529321609, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_Size.y
       value: 3.4
@@ -2659,6 +2659,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+--- !u!1 &1944640707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5638071274609444598, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+  m_PrefabInstance: {fileID: 1944640706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2005347765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6221630201027953834, guid: 26ed3fb392575a045be498088b7903dd, type: 3}

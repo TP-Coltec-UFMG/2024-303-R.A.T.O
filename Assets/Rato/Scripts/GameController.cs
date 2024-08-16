@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
     private Rato rato;
-    private Vector3 ratoPosition;
+    public bool loadSavedData;
 
     [SerializeField] private Slider RatoHealthBar;
     [SerializeField] private GameObject GameOverPanel;
@@ -20,10 +20,6 @@ public class GameController : MonoBehaviour
     [HideInInspector] public bool contrast, fullScreen;
     [HideInInspector] public int difficulty, fontSize;
     [HideInInspector] public Color _fontColor, _backgroundColor;
-
-    void Start(){
-        ratoPosition = new Vector3(100f, 100f, 100f);
-    }
 
     void Awake()
     {
@@ -189,7 +185,7 @@ public class GameController : MonoBehaviour
             GameOverPanel.GetComponent<Image>().enabled = false;
         }
 
-        if(SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene && ratoPosition != new Vector3(100f, 100f, 100f)){
+        if(SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene && loadSavedData){
             Debug.Log("a");
             rato.transform.position = new Vector3(SaveAndLoad.LoadData().currentPositionX, SaveAndLoad.LoadData().currentPositionY, 0);
             rato.GetComponent<Animator>().SetBool("startAwake", false);
@@ -278,8 +274,7 @@ public class GameController : MonoBehaviour
 
     public void Continue(){
         SceneManager.LoadScene(SaveAndLoad.LoadData().currentScene);
-        Debug.Log("x: " + SaveAndLoad.LoadData().currentPositionX);
-        Debug.Log("y: " + SaveAndLoad.LoadData().currentPositionY);
+        loadSavedData = true;
     }
 
     public void Save(Vector3 position){

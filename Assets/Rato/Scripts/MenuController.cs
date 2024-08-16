@@ -69,6 +69,7 @@ public class MenuController : MonoBehaviour
     }
 
     public void StartGame(){
+        GameController.Instance.loadSavedData = false;
         GameController.Instance.ChangeScene(this.FirstScene);
     }
 

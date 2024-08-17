@@ -224,7 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f2de034f2fdaa4587d1c2d09cd361a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadSavedData: 0
   RatoHealthBar: {fileID: 7310560466363135976}
   GameOverPanel: {fileID: 1029651849649365429}
   GameOverTextUI: {fileID: 6759300803272020880}
@@ -314,8 +313,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd9eb9ed202ad12459e86da59664e4e1, type: 2}
-  m_sharedMaterial: {fileID: 1629969065811824780, guid: cd9eb9ed202ad12459e86da59664e4e1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: df58b1cfe2bce7d42ac660a0f783bcd8, type: 2}
+  m_sharedMaterial: {fileID: 1259261332829646798, guid: df58b1cfe2bce7d42ac660a0f783bcd8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -339,8 +338,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -392,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 6082991892409512990, guid: 74be2586af200c24098856350189314a, type: 3}
       propertyPath: m_Name
       value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082991892409512990, guid: 74be2586af200c24098856350189314a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6673569288243204978, guid: 74be2586af200c24098856350189314a, type: 3}
       propertyPath: m_AnchorMax.y

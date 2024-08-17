@@ -36,14 +36,14 @@ public class Gato : MonoBehaviour
         }else if(Rato.position.x < transform.position.x){
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
-
+/*
         if(gameObject.tag == "Peixe"){
             if(Rato.position.x > transform.position.x){
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }else if(Rato.position.x < transform.position.x){
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
-        }
+        }*/
     }
 
     public void Run(){

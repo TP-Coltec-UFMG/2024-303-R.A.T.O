@@ -135,6 +135,10 @@ public class MenuController : MonoBehaviour
         ContrasteToggle.isOn = GameController.Instance.contrast;
         VolumeAudioScrollbar.value = GameController.Instance.audioVolume;
         VolumeMusicaScrollbar.value = GameController.Instance.musicVolume;
+
+        if(gameObject.tag == "MenuInGame"){
+            CloseMenuInGame();
+        }
     }
     public void SetContrast(){
         GameController.Instance.contrast = ContrasteToggle.isOn;

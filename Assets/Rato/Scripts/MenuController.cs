@@ -80,7 +80,7 @@ public class MenuController : MonoBehaviour
     }
 
     public void StartGame(){
-        GameController.Instance.loadSavedData = false;
+        GameController.Instance.SetLoadSavedData(false);
         GameController.Instance.ChangeScene(this.FirstScene);
         if(SaveAndLoad.LoadData() != null){
             SaveAndLoad.DeleteData();

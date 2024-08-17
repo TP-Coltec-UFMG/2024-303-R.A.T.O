@@ -9,10 +9,10 @@ public class MazeTimer : MonoBehaviour
     [SerializeField] public float timeRemaining;
     private bool timerIsRunning = false;
     [SerializeField] private TMP_Text timeText;
+    [SerializeField] private GameObject ShadowCanvas;
 
     private void Start()
     {
-        // Starts the timer automatically
         timerIsRunning = true;
     }
 
@@ -30,6 +30,7 @@ public class MazeTimer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 GameController.Instance.GameOver(0, 0);
+                ShadowCanvas.SetActive(false);
             }
         }
     }

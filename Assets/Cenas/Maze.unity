@@ -501,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7929464713568926415, guid: d5a10baf610ab7f45a9f61fdb0ef2c8a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -908,6 +908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRemaining: 20
   timeText: {fileID: 634021361}
+  ShadowCanvas: {fileID: 1358882958}
 --- !u!1 &1390060340
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,11 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
     private Rato rato;
-    [HideInInspector] public bool loadSavedData;
+    [HideInInspector] public static bool loadSavedData;
+
+    public void SetLoadSavedData(bool v){
+        loadSavedData = v;
+    }
 
     [SerializeField] private Slider RatoHealthBar;
     [SerializeField] private GameObject GameOverPanel;
@@ -32,7 +36,6 @@ public class GameController : MonoBehaviour
 
         SceneManager.sceneLoaded += OnSceneLoaded;
         GetValues();
-        loadSavedData = false;
     }
 
     void OnDestroy(){
@@ -159,10 +162,12 @@ public class GameController : MonoBehaviour
         }*/
         
         if(SaveAndLoad.LoadData() != null && SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene){
-            Continue();
+            loadSavedData = true;
         }else{
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            loadSavedData = false;
         }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public int FixedFontSize(int size){
@@ -208,18 +213,22 @@ public class GameController : MonoBehaviour
                     rato.GetComponent<Animator>().SetBool("startAwake", false);
                     rato.GetComponent<Animator>().SetBool("awake", false);
                 }else if(scene.name == "casateste"){
+                    Debug.Log("b");
                     rato.GetComponent<Animator>().SetBool("startAwake", false);
                     rato.GetComponent<Animator>().SetBool("awake", false);
                 }else{
+                    Debug.Log("c");
+                    rato.GetComponent<Animator>().SetBool("startAwake", true);
+                }
+            }else{
+                if(rato != null){
                     rato.GetComponent<Animator>().SetBool("startAwake", true);
                 }
             }
         }else if(scene.name == "casateste"){
-            Debug.Log("b");
             rato.GetComponent<Animator>().SetBool("startAwake", false);
             rato.GetComponent<Animator>().SetBool("awake", false);        
         }else{
-            Debug.Log("c");
             if(rato != null){
                 rato.GetComponent<Animator>().SetBool("startAwake", true);
             }
@@ -308,8 +317,8 @@ public class GameController : MonoBehaviour
     }
 
     public void Continue(){
-        SceneManager.LoadScene(SaveAndLoad.LoadData().currentScene);
         loadSavedData = true;
+        SceneManager.LoadScene(SaveAndLoad.LoadData().currentScene);
     }
 
     public void Save(Vector3 position){

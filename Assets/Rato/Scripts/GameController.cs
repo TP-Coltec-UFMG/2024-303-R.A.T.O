@@ -8,6 +8,13 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
     private Rato rato;
+    private static int ratoHumanity = 0;
+
+    public void IncreaseRatoHumanity(){
+        ratoHumanity++;
+        Debug.Log(ratoHumanity);
+    }
+
     [HideInInspector] public static bool loadSavedData;
 
     public void SetLoadSavedData(bool v){
@@ -304,16 +311,23 @@ public class GameController : MonoBehaviour
     }
 
     void AtivaPorta(){
-        if(GameObject.FindGameObjectsWithTag("Gato").Length == 0 && GameObject.FindGameObjectWithTag("Porta") != null){
+        if(GameObject.FindGameObjectsWithTag("Gato").Length == 0 && GameObject.FindGameObjectsWithTag("Queijo").Length == 0 && GameObject.FindGameObjectWithTag("Porta") != null){
             GameObject.FindGameObjectWithTag("Porta").GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 
     void DesativaBuraco(){
-        if(GameObject.FindGameObjectsWithTag("Gato").Length != 2 && GameObject.FindGameObjectWithTag("Buraco") != null){
-            GameObject.FindGameObjectWithTag("Buraco").GetComponent<BoxCollider2D>().enabled = false;
-            //GameObject.FindGameObjectWithTag("Freeze").GetComponent<BoxCollider2D>().enabled = false;
+        if(SceneManager.GetActiveScene().name == "casateste"){
+            if(GameObject.FindGameObjectsWithTag("Gato").Length < 2 && GameObject.FindGameObjectWithTag("Buraco") != null){
+                GameObject.FindGameObjectWithTag("Buraco").GetComponent<BoxCollider2D>().enabled = false;
+                //GameObject.FindGameObjectWithTag("Freeze").GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }else if(SceneManager.GetActiveScene().name == "Cena2"){
+            if(GameObject.FindGameObjectWithTag("Gato") != null && FindObjectOfType<Gato>().dead){
+                GameObject.FindGameObjectWithTag("Buraco").GetComponent<BoxCollider2D>().enabled = false;
+            }
         }
+        
     }
 
     public void Continue(){

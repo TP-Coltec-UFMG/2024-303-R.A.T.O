@@ -10,7 +10,10 @@ public class Gato : MonoBehaviour
     public float AttackRange;
     [SerializeField] public float MaxHealth; 
     public float health {get; private set;}
-    private bool attack;
+    private bool attack; 
+    public bool dead {get; private set;}
+    private float posY;
+    [SerializeField] private bool rotate;
     [SerializeField] GameObject Queijo, ContrastFilter;
 
     // Start is called before the first frame update
@@ -36,14 +39,14 @@ public class Gato : MonoBehaviour
         }else if(Rato.position.x < transform.position.x){
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
-/*
-        if(gameObject.tag == "Peixe"){
+
+        if(this.rotate){
             if(Rato.position.x > transform.position.x){
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }else if(Rato.position.x < transform.position.x){
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
-        }*/
+        }
     }
 
     public void Run(){
@@ -86,6 +89,7 @@ public class Gato : MonoBehaviour
 
     void Die(){
         if(this.health == 0){
+            this.dead = true;
             animator.SetTrigger("die");
         }
     }

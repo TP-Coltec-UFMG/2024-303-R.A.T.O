@@ -2469,7 +2469,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Peixe: {fileID: 0}
-  Dialogue: {fileID: 11400000, guid: e073c4cec8a2d712b8fa2e632a9958e7, type: 2}
+  Dialogues:
+  - {fileID: 11400000, guid: e073c4cec8a2d712b8fa2e632a9958e7, type: 2}
+  - {fileID: 11400000, guid: 452ff7184f08945b9ac25dbc8421fe61, type: 2}
+  - {fileID: 11400000, guid: 452ff7184f08945b9ac25dbc8421fe61, type: 2}
 --- !u!61 &796704311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2710,7 +2713,7 @@ PrefabInstance:
       objectReference: {fileID: 1348196875}
     - target: {fileID: 6428590060430040793, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
       propertyPath: maxLimit
-      value: 900
+      value: 915
       objectReference: {fileID: 0}
     - target: {fileID: 6428590060430040793, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
       propertyPath: minLimit
@@ -2953,6 +2956,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8964907401533355880, guid: d5a10baf610ab7f45a9f61fdb0ef2c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3168,7 +3175,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Peixe: {fileID: 0}
-  Dialogue: {fileID: 11400000, guid: 84e3baf7ed02b404d9e8123e2b0c95ea, type: 2}
+  Dialogues:
+  - {fileID: 11400000, guid: 84e3baf7ed02b404d9e8123e2b0c95ea, type: 2}
+  - {fileID: 11400000, guid: 84e3baf7ed02b404d9e8123e2b0c95ea, type: 2}
+  - {fileID: 11400000, guid: 84e3baf7ed02b404d9e8123e2b0c95ea, type: 2}
 --- !u!1 &1032322164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,7 +4788,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Peixe: {fileID: 12976803}
-  Dialogue: {fileID: 11400000, guid: e7054ae3b040fc54cb074170d9f14217, type: 2}
+  Dialogues:
+  - {fileID: 11400000, guid: e7054ae3b040fc54cb074170d9f14217, type: 2}
+  - {fileID: 11400000, guid: e7054ae3b040fc54cb074170d9f14217, type: 2}
+  - {fileID: 11400000, guid: e7054ae3b040fc54cb074170d9f14217, type: 2}
 --- !u!1 &1540869162
 GameObject:
   m_ObjectHideFlags: 0
@@ -5704,12 +5717,12 @@ MonoBehaviour:
   m_margin: {x: 9.948059, y: 0, z: 9.440691, w: 3.7261293}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1751997656}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1751997656
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6638,11 +6651,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3956235454026559704, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 197.3
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3956235454026559704, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.73
+      value: -3.03
       objectReference: {fileID: 0}
     - target: {fileID: 3956235454026559704, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_LocalPosition.z

@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using System.Collections.Generic;
  
 public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject Peixe;
-    [SerializeField] private Dialogue Dialogue;
+    [SerializeField] private List<Dialogue> Dialogues;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -15,7 +17,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void SpeakTo()
     {
-        DialogueManager.Instance.StartDialogue(Dialogue.RootNodes, this.gameObject);
+        DialogueManager.Instance.StartDialogue(Dialogues[GameController.Instance.GetRatoHumanity()].RootNodes, this.gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D collider){

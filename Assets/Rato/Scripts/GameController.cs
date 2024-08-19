@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour
         ratoHumanity++;
         Debug.Log(ratoHumanity);
     }
+    public int GetRatoHumanity(){
+        return ratoHumanity;
+    }
 
     [HideInInspector] public static bool loadSavedData;
 
@@ -240,6 +243,8 @@ public class GameController : MonoBehaviour
                 rato.GetComponent<Animator>().SetBool("startAwake", true);
             }
         }
+
+        Debug.Log(ratoHumanity);
     }
 
     public void SetNewSceneOnKeyPress(string sceneName, KeyCode keyCode){
@@ -337,6 +342,6 @@ public class GameController : MonoBehaviour
 
     public void Save(Vector3 position){
         rato = FindObjectOfType<Rato>();
-        SaveAndLoad.SaveData(new Data(rato.transform.position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex));
+        SaveAndLoad.SaveData(new Data(rato.transform.position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex, ratoHumanity));
     }
 }

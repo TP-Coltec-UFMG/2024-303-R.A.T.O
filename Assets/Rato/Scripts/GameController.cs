@@ -222,6 +222,7 @@ public class GameController : MonoBehaviour
                     rato.transform.position = new Vector3(SaveAndLoad.LoadData().currentPositionX, SaveAndLoad.LoadData().currentPositionY, 0);
                     rato.GetComponent<Animator>().SetBool("startAwake", false);
                     rato.GetComponent<Animator>().SetBool("awake", false);
+                    ratoHumanity = SaveAndLoad.LoadData().ratoHumanity;
                 }else if(scene.name == "casateste"){
                     Debug.Log("b");
                     rato.GetComponent<Animator>().SetBool("startAwake", false);

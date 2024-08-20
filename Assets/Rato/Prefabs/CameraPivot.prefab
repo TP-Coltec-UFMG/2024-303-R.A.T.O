@@ -142,3 +142,4 @@ MonoBehaviour:
   Speed: 0.1
   maxLimit: 70
   minLimit: -35
+  Offset: 0

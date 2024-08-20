@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private Transform Player;
     [SerializeField] private float Speed, maxLimit, minLimit, Offset;
+    private float aOffset;
     private float initialSize;
 
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class CameraController : MonoBehaviour
         instance = this;
         initialSize = cam.orthographicSize;
         transform.position = Player.position;
+        aOffset = Offset;
     }
 
     void FixedUpdate(){
@@ -56,14 +58,18 @@ public class CameraController : MonoBehaviour
             if((Player.position.x >= Target.position.x - RangeLeft) && (Player.position.x <= Target.position.x)){
                 if(Player.position.x < Target.position.x - ZoomRange / 2){
                     SetSize(((FinalSize - initialSize) / (ZoomRange / 2f - RangeLeft)) * (Target.position.x - Player.position.x - RangeLeft) + initialSize);
+                    Offset = cam.orthographicSize - 2;
                 }else{
                     SetSize(FinalSize);
+                    Offset = cam.orthographicSize - 2;
                 }
             }else if((Player.position.x > Target.position.x) && (Player.position.x <= Target.position.x + RangeRight)){
                 if(Player.position.x > Target.position.x + ZoomRange / 2){
                     SetSize(((FinalSize - initialSize) / (ZoomRange / 2f - RangeRight)) * (Player.position.x - Target.position.x - RangeRight) + initialSize);
+                    Offset = cam.orthographicSize - 2;
                 }else{
                     SetSize(FinalSize);
+                    Offset = cam.orthographicSize - 2;
                 }
             }else{
                 SetSize(initialSize);

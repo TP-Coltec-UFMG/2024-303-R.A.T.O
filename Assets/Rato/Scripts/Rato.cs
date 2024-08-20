@@ -140,7 +140,7 @@ public class Rato : MonoBehaviour
     void Run(){
         runInput = UserInput.Instance.RunInput;
         if(this.runInput != 0 && this.moveInput != 0){           
-            Speed = OriginalSpeed * 1.5f;
+            Speed = OriginalSpeed * 1.9f;
             animator.speed = Speed / OriginalSpeed;
         }else{
             Speed = OriginalSpeed;           

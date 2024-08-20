@@ -19,6 +19,7 @@ TagManager:
   - MenuInGame
   - Peixe
   - Queijo
+  - Suborno
   layers:
   - Default
   - TransparentFX

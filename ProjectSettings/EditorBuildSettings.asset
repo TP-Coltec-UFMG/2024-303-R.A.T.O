@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Cutscene.unity
     guid: 76a34b1abd3a196c49039f979ab37ef5
+  - enabled: 1
+    path: Assets/Cenas/Fabrica.unity
+    guid: 15a43fdc890f1fe4da987f1296ba9d93
   m_configObjects: {}

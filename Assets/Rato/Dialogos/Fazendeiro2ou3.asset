@@ -80,7 +80,7 @@ MonoBehaviour:
                 dialogueText: "\xD4 trem b\xE3o s\xF4, cab\xF4 de sair do forno.
                   T\xF3 quentin proc\xEA!"
                 responses: []
-    - responseText: "Uai, t\xF4 b\xE3o de mai da conta!"
+    - responseText: "B\xE3o de mai da conta!"
       nextDialogueNodes:
       - title: Lobato
         iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}

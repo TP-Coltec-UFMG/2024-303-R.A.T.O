@@ -23,34 +23,48 @@
 
 ### Tela Inicial
 
-<p align="center"><img src="Imagens/menu" alt="Menu"></p>
+<p align="center"><img src="Imagens/Menu.png" alt="Menu"></p>
 
 - **Jogar**  Carrega um novo jogo ou continua de onde parou;
-- **Novo Jogo:** Cria um novo save;
 - **Acessibilidade** Mais detalhes abaixo;
 - **Configurações** Abre as configurações da jogatina;
 - **Créditos** Abre os créditos do jogo;
-- **Sair:** Fecha o jogo;
+
+### Início da jornada
+
+<p align="center"><img src="Imagens/Iniciar.jpg" alt="Iniciar jornada"></p>
+
+- **Novo Jogo:** Cria um novo save;
+- **Continuar:** Continua o game de onde o jogador parou;
 
 ### Configurações
 
-<p align="center"><img src="Imagens/Config" alt="Configuracoes"></p>
+<p align="center"><img src="Imagens/Configuracoes.png" alt="Configuracoes"></p>
 
+- **Audio:** Permite desabilitar ou ajustar o volume dos audios gerais do jogo;
+- **Música** Permite desabilitar ou ajustar o volume da música;
 - **Tela cheia/ajustável** Escolhe um dos dois tipos de tela;
-- **Volume:** Ajuste de volume;
-- **Som** Permite desabilitar o som;
-- **Música** Permite desabilitar a música;
 
 ### Acessibilidade
 
-<p align="center"><img src="Imagens/acess" alt="Acessibilidade"></p>
+<p align="center"><img src="Imagens/Acessibilidade.jpg" alt="Acessibilidade"></p>
 
-- **Contraste de Cores** Aplica um filtro ao jogo que deixa as cores mais distoantes entre si, deixando mais fácil de distinguir objetos clicáveis e não clicáveis no jogo;
-- **Controle de Gama** Ajuste a gama do jogo, possibilitando deixar as cenas mais escuras ou mais claras;
 - **Dificuldade** Ajusta a dificuldade do jogo, podendo ser fácil, médio ou difícil;
 - **Tamanho da Fonte** Escolha entre os diferentes tamanhos de fonte para uma melhor visibilidade;
 - **Controles** Permite remapear as teclas;
+- **Temas** O jogador pode escolher o tema da legenda;
+- **Contraste de Cores** Aplica um filtro ao jogo que deixa as cores mais distoantes entre si, deixando mais fácil de distinguir objetos clicáveis e não clicáveis no jogo;
 
+### Temas de legenda
+
+<p align="center"><img src="Imagens/Temas.png" alt="Temas"></p>
+
+ <p> Há três modos de legendas que o jogador pode escolher para o jogo. </p>
+
+### Controles
+
+<p align="center"><img src="Imagens/Controles.png" alt="Controles"></p>
+<p>Todas as teclas podem ser remapeadas, permitindo que o usuário personalize cada comando com a tecla de sua preferência.</p>
 
 ### Créditos
 - Ainda não foi feito

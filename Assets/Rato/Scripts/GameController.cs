@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
     private Rato rato;
     private static int ratoHumanity = 0;
-
+    private static Vector3 ratoPosition = new Vector3(0, 0, 0);
     public void IncreaseRatoHumanity(){
         ratoHumanity++;
         Debug.Log(ratoHumanity);
@@ -62,13 +62,12 @@ public class GameController : MonoBehaviour
 
         if(MenuController.Instance.tag == "MenuInGame" && Input.GetKeyDown(KeyCode.H)){
             MenuController.Instance.OpenMenuInGame();
-            //StopGame();
-            Debug.Log("oi");
         }
     }
 
-    public void ChangeScene(string SceneName){
+    public void ChangeScene(string SceneName, Vector3 rp){
         SceneManager.LoadScene(SceneName);
+        ratoPosition = rp;
     }
 
     public void ChangeContrast(){
@@ -245,19 +244,9 @@ public class GameController : MonoBehaviour
             }
         }
 
-        Debug.Log(ratoHumanity);
-    }
-
-    public void SetNewSceneOnKeyPress(string sceneName, KeyCode keyCode){
-        StartCoroutine(WaitForKeyPress(sceneName, keyCode));
-    }
-
-    private IEnumerator WaitForKeyPress(string sceneName, KeyCode keyCode){
-        while (!Input.GetKeyDown(keyCode)){
-            yield return null;
+        if(ratoPosition != new Vector3(0, 0, 0)){
+            rato.transform.position = ratoPosition;
         }
-        
-        ChangeScene(sceneName);
     }
 
     void GetValues(){

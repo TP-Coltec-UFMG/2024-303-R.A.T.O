@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ChangeSceneTrigger : MonoBehaviour
 {
-    [SerializeField] private string NewScene;
+    [HideInInspector] public string NewScene;
+    [HideInInspector] public Vector3 RatoPosition;
 
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Player"){
-            GameController.Instance.ChangeScene(NewScene);
+            GameController.Instance.ChangeScene(this.NewScene, this.RatoPosition);
         }
     }
 }

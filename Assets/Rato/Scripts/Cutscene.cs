@@ -22,7 +22,7 @@ public class Cutscene : MonoBehaviour
             yield return null;
         }
         
-        GameController.Instance.ChangeScene(NewScene);
+        GameController.Instance.ChangeScene(NewScene, new Vector3(0, 0, 0));
     }
 }
 

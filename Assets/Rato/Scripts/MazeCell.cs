@@ -42,4 +42,9 @@ public class MazeCell : MonoBehaviour
     public void Path(){
         this.path.SetActive(true);
     }
+
+    public void SetExit(string NewScene, Vector3 ratoPosition){
+        this.Exit.GetComponent<ChangeSceneTrigger>().NewScene = NewScene;
+        this.Exit.GetComponent<ChangeSceneTrigger>().RatoPosition = ratoPosition;
+    }
 }

@@ -26,6 +26,6 @@ public class Buraco : MonoBehaviour
             yield return null;
         }
         
-        GameController.Instance.ChangeScene(sceneName);
+        GameController.Instance.ChangeScene(sceneName, new Vector3(0, 0, 0));
     }
 }

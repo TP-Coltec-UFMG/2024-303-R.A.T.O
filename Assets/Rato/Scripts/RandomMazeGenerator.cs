@@ -8,6 +8,8 @@ public class RandomMazeGenerator : MonoBehaviour
 {
     [SerializeField] private MazeCell Cell;
     [SerializeField] private int width, height;
+    [SerializeField] private Vector3 RatoPositionNextScene;
+    [SerializeField] private string NewScene;
     private MazeCell[,] maze;
     private List<int[]> edges;
     private List<MazeCell[]> DFSedges;
@@ -207,6 +209,7 @@ public class RandomMazeGenerator : MonoBehaviour
 
         this.Exit = topBorders[0];
         this.Exit.IsExit(true);
+        this.Exit.SetExit(this.NewScene, this.RatoPositionNextScene);
     }
 
     void DFS(){

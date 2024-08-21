@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject DialogueParent;
     [SerializeField] private TMP_Text DialogTitleText, DialogBodyText;
-    [SerializeField] private GameObject responseButtonPrefab;
+    [SerializeField] private GameObject Button1, Button2;
     [SerializeField] private Transform responseButtonContainer;
     [SerializeField] private Image Icon;
     private List<DialogueNode> currentDialogueNodes;
@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
 
         if(responseButtonContainer != null){
             foreach (Transform child in responseButtonContainer){
-                Destroy(child.gameObject);
+                child.gameObject.SetActive(false);
             }
         }
 
@@ -71,9 +71,11 @@ public class DialogueManager : MonoBehaviour
             foreach (DialogueResponse response in currentDialogueNodes[currentIndex].responses){
                 GameObject buttonObj;
                 if (i == 0){
-                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(100, 30, 0), Quaternion.identity, responseButtonContainer);
+                    Button1.SetActive(true);
+                    buttonObj = Button1;
                 }else if (i == 1){
-                    buttonObj = Instantiate(responseButtonPrefab, new Vector3(300, 30, 0), Quaternion.identity, responseButtonContainer);
+                    Button2.SetActive(true);
+                    buttonObj = Button2;
                 } else {
                     continue;
                 }

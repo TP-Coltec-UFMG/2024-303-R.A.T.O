@@ -738,6 +738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6404234887546706714, guid: 7573ebf2978dc1543893edc2af6a9cb5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1219,12 +1223,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 2.4144678}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 141807371}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 141807371}
+  m_maskType: 0
 --- !u!23 &141807371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2604,12 +2608,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 10.810705, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 234328181}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 234328181}
+  m_maskType: 0
 --- !u!23 &234328181
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2794,12 +2798,12 @@ MonoBehaviour:
   m_margin: {x: -0.88800263, y: -0.140445, z: 0, w: 1.5390948}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 267925779}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 267925779}
+  m_maskType: 0
 --- !u!23 &267925779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4281,12 +4285,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 10.711251, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 580683192}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 580683192}
+  m_maskType: 0
 --- !u!23 &580683192
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5199,12 +5203,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 2.4144678}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 708674163}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 708674163}
+  m_maskType: 0
 --- !u!23 &708674163
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5351,12 +5355,12 @@ MonoBehaviour:
   m_margin: {x: 4.2323, y: 0, z: 3.8874426, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 708944371}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 708944371}
+  m_maskType: 0
 --- !u!23 &708944371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7303,12 +7307,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 2.4144678}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 939213361}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 939213361}
+  m_maskType: 0
 --- !u!23 &939213361
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8554,7 +8558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1137464844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10039,12 +10043,12 @@ MonoBehaviour:
   m_margin: {x: 1.7222033, y: 0, z: 9.184241, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1279840959}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1279840959}
+  m_maskType: 0
 --- !u!23 &1279840959
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10212,12 +10216,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 2.4144678}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1286111775}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1286111775}
+  m_maskType: 0
 --- !u!23 &1286111775
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14024,12 +14028,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 19.44362, w: 3.7261293}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1719424546}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1719424546}
+  m_maskType: 0
 --- !u!23 &1719424546
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15143,12 +15147,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 19.44362, w: 3.7261293}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1984988034}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1984988034}
+  m_maskType: 0
 --- !u!23 &1984988034
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16071,7 +16075,7 @@ PrefabInstance:
       objectReference: {fileID: 1232170870}
     - target: {fileID: 7499223365799970768, guid: 2245b0a386e92c04280c1c3201cf31e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8548934031989751734, guid: 2245b0a386e92c04280c1c3201cf31e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16168,7 +16172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2970808799425145152, guid: 1a93b9b1ee01d37489a4ce65928eb696, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 4846535645303643143, guid: 1a93b9b1ee01d37489a4ce65928eb696, type: 3}
       propertyPath: ConsumirTutorial
@@ -16291,6 +16295,10 @@ PrefabInstance:
     - target: {fileID: 7929464713568926415, guid: d5a10baf610ab7f45a9f61fdb0ef2c8a, type: 3}
       propertyPath: m_Name
       value: MenuInGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929464713568926415, guid: d5a10baf610ab7f45a9f61fdb0ef2c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8964907401533355880, guid: d5a10baf610ab7f45a9f61fdb0ef2c8a, type: 3}
       propertyPath: m_IsActive
@@ -19320,6 +19328,10 @@ PrefabInstance:
     - target: {fileID: 7459262952655564279, guid: 5c3f5bcdcf0734244a1e806744fe3bd5, type: 3}
       propertyPath: m_Name
       value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459262952655564279, guid: 5c3f5bcdcf0734244a1e806744fe3bd5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

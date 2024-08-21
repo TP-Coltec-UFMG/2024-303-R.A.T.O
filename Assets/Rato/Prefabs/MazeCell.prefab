@@ -301,7 +301,6 @@ MonoBehaviour:
   GameOverPanel: {fileID: 0}
   GameOverTextUI: {fileID: 0}
   GameOverMessage: 
-  gama: 0
   audioVolume: 0
   musicVolume: 0
   left: 
@@ -1602,6 +1601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewScene: Cena2
+  RatoPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &8457799292053309509
 GameObject:
   m_ObjectHideFlags: 0

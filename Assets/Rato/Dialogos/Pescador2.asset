@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
+  m_Name: Pescador2
+  m_EditorClassIdentifier: 
+  RootNodes:
+  - title: Celso
+    iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+    dialogueText: "\xD4 diacho!"
+    responses: []
+  - title: Celso
+    iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+    dialogueText: "Perdi j\xE1 uma penca de isca!"
+    responses: []
+  - title: Celso
+    iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+    dialogueText: "Parece at\xE9 que s\xF3 tem tra\xEDra nesse r\xED."
+    responses: []
+  - title: Celso
+    iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+    dialogueText: "Rapaiz, olha s\xF3 que tamanho di camundongo!"
+    responses:
+    - responseText: ...
+      nextDialogueNodes:
+      - title: Celso
+        iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+        dialogueText: "E oc\xEA fala, mo\xE7o?"
+        responses:
+        - responseText: ...
+          nextDialogueNodes:
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "C\xEA besta!, que diacho \xE9 isso?"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: Eu, batendo papo com um camundongo!
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: Devo estar doidin de pedra!
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Mas de qualquer jeito oc\xEA toma cuidado em amiguinho?!"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Essas tra\xEDra n\xE3o s\xE3o brinquedo n\xE3o."
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Se eu fosse oc\xEA n\xE3o passava nem perto!"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Afinal de contas em terra de sapo, mosca n\xE3o d\xE1
+              rasante!"
+            responses: []
+        - responseText: '?'
+          nextDialogueNodes:
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "C\xEA besta!, que diacho \xE9 isso?"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: Eu, batendo papo com um camundongo!
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: Devo estar doidin de pedra!
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Mas de qualquer jeito oc\xEA toma cuidado em amiguinho?!"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Essas tra\xEDra n\xE3o s\xE3o brinquedo n\xE3o."
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Se eu fosse oc\xEA n\xE3o passava nem perto!"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Afinal de contas em terra de sapo, mosca n\xE3o d\xE1
+              rasante!"
+            responses: []
+    - responseText: "N\xE3o!"
+      nextDialogueNodes:
+      - title: Camundongo
+        iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+        dialogueText: "Eu n\xE3o sou um camundongo!"
+        responses: []
+      - title: Celso
+        iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+        dialogueText: "E oc\xEA fala, mo\xE7o?"
+        responses:
+        - responseText: ...
+          nextDialogueNodes:
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "C\xEA besta!, que diacho \xE9 isso?"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: Eu, batendo papo com um camundongo!
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: Devo estar doidin de pedra!
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Mas de qualquer jeito oc\xEA toma cuidado em amiguinho?!"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Essas tra\xEDra n\xE3o s\xE3o brinquedo n\xE3o."
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Se eu fosse oc\xEA n\xE3o passava nem perto!"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "Afinal de contas em terra de sapo, mosca n\xE3o d\xE1
+              rasante!"
+            responses: []
+        - responseText: Falo sim
+          nextDialogueNodes:
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: "C\xEA besta!, que diacho \xE9 isso?"
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: Eu, batendo papo com um camundongo!
+            responses: []
+          - title: Celso
+            iconSprite: {fileID: 21300000, guid: e9f2b9a999e239a4591c6a2c2299fe6d, type: 3}
+            dialogueText: Devo estar doidin de pedra!
+            responses:
+            - responseText: Quem diria...
+              nextDialogueNodes:
+              - title: Celso
+                iconSprite: {fileID: 0}
+                dialogueText: "Mas de qualquer jeito oc\xEA toma cuidado em amiguinho?!"
+                responses: []
+              - title: Celso
+                iconSprite: {fileID: 0}
+                dialogueText: "Essas tra\xEDra n\xE3o s\xE3o brinquedo n\xE3o."
+                responses: []
+              - title: Celso
+                iconSprite: {fileID: 0}
+                dialogueText: "Se eu fosse oc\xEA n\xE3o passava nem perto!"
+                responses: []
+              - title: Celso
+                iconSprite: {fileID: 0}
+                dialogueText: "Afinal de contas em terra de sapo, mosca n\xE3o d\xE1
+                  rasante!"
+                responses: []

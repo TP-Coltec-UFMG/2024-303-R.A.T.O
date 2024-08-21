@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
+  m_Name: SegurancaSubornado0
+  m_EditorClassIdentifier: 
+  RootNodes:
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: "O que \xE9 isso?"
+    responses: []
+  - title: Rato
+    iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+    dialogueText: ...
+    responses: []
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: "\xC9 pra mim?! Obrigado!"
+    responses: []
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: "Geralmente eu n\xE3o deixo as pessoas entrarem no domingo."
+    responses: []
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: " Mas voc\xEA \xE9 gente boa, n\xE3o far\xE1 mal a ningu\xE9m..."
+    responses: []
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: "S\xF3 n\xE3o conte aos meus supervisores que eu deixei voc\xEA
+      entrar."
+    responses: []

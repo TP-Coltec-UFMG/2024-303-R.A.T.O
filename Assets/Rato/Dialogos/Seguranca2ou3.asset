@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
+  m_Name: Seguranca2ou3
+  m_EditorClassIdentifier: 
+  RootNodes:
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: Opa, opa, opa!
+    responses: []
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: "Quem voc\xEA pensa que \xE9? "
+    responses: []
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: "N\xE3o pode ir entrando assim n\xE3o!"
+    responses: []
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: "Hoje \xE9 domingo, aqui ningu\xE9m entra."
+    responses: []
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: ' ... Que foi?'
+    responses:
+    - responseText: Mas...
+      nextDialogueNodes:
+      - title: Rato
+        iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+        dialogueText: "S\xE9rio, n\xE3o tem nada que eu possa-"
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "Calado! EU sou o seguran\xE7a e ningu\xE9m passa daqui sem
+          a MINHA permiss\xE3o."
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: Exceto pelo... Tsk
+        responses: []
+      - title: Rato
+        iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+        dialogueText: Exceto pelo... ?
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "\xC9 isso mesmo, exceto pelo seu Lobato!"
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "Ele \xE9 o fazendeiro da cidade, normalmente eu deixo ele
+          entrar porque a comida do cara \xE9 de outro mundo!"
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "Tsk, o que voc\xEA ainda est\xE1 fazendo aqui? Vai embora!"
+        responses: []
+    - responseText: Uma senhora...
+      nextDialogueNodes:
+      - title: Rato
+        iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+        dialogueText: Mas uma senhora me mandou aqu-
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "Calado! EU sou o seguran\xE7a e ningu\xE9m passa daqui sem
+          a MINHA permiss\xE3o."
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: Exceto pelo... Tsk
+        responses: []
+      - title: Rato
+        iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+        dialogueText: Exceto pelo... ?
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "\xC9 isso mesmo, exceto pelo seu Lobato!"
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "Ele \xE9 o fazendeiro da cidade, normalmente eu deixo ele
+          entrar porque a comida do cara \xE9 de outro mundo!"
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "Tsk, o que voc\xEA ainda est\xE1 fazendo aqui? Vai embora!"
+        responses: []

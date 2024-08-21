@@ -15,9 +15,13 @@ MonoBehaviour:
   RootNodes:
   - title: Peixe
     iconSprite: {fileID: 21300000, guid: 2dc343bbeb61ed1479b673a3c9de51a9, type: 3}
-    dialogueText: 'oi hahahahahahaa
-
-      hahahahahhaha
-
-'
+    dialogueText: Glub glub
+    responses: []
+  - title: Peixe
+    iconSprite: {fileID: 21300000, guid: 2dc343bbeb61ed1479b673a3c9de51a9, type: 3}
+    dialogueText: Glub glub glub glub
+    responses: []
+  - title: Peixe
+    iconSprite: {fileID: 21300000, guid: 2dc343bbeb61ed1479b673a3c9de51a9, type: 3}
+    dialogueText: Glub glub glub glub glub glub glub glub glub glub glub glub glub
     responses: []

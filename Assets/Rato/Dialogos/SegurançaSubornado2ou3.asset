@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
+  m_Name: "Seguran\xE7aSubornado2ou3"
+  m_EditorClassIdentifier: 
+  RootNodes:
+  - title: "Seguran\xE7a"
+    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+    dialogueText: "O que \xE9 isso?"
+    responses:
+    - responseText: Seu Lobato
+      nextDialogueNodes:
+      - title: Rato
+        iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+        dialogueText: "Seu Lobato mandou abra\xE7os!"
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "Cara, \xE9 s\xE9rio que isso \xE9 pra mim?"
+        responses:
+        - responseText: "Pera\xED"
+          nextDialogueNodes:
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: "N\xE3o t\xE3o r\xE1pido, voc\xEA me deve algo em troca,
+              n\xE3o?"
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Voc\xEA quer entrar na f\xE1brica \xE9?"
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Pode entrar, apesar da grosseria voc\xEA fez o favor de
+              me trazer o meu lanche."
+            responses: []
+        - responseText: Sim
+          nextDialogueNodes:
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: "\xC9 sim, pode ficar."
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: '[Come o bolo]'
+            responses: []
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: -_-
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Voc\xEA me salvou, obrigado estava faminto."
+            responses: []
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: "N\xE3o tem de qu\xEA, afinal \u201CGentileza gera gentileza\u201D,
+              n\xE3o \xE9 mesmo?"
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Cara, tenho um neg\xF3cio pra falar pra voc\xEA."
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Geralmente eu n\xE3o deixo as pessoas entrarem no domingo."
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Mas voc\xEA \xE9 gente boa, n\xE3o far\xE1 mal a ningu\xE9m
+              . . ."
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "S\xF3 n\xE3o conte aos meus supervisores que eu deixei
+              voc\xEA entrar."
+            responses: []
+    - responseText: "T\xF3"
+      nextDialogueNodes:
+      - title: Rato
+        iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+        dialogueText: "Eu trouxe pra voc\xEA!"
+        responses: []
+      - title: "Seguran\xE7a"
+        iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+        dialogueText: "Cara, \xE9 s\xE9rio que isso \xE9 pra mim?"
+        responses:
+        - responseText: "Pera\xED"
+          nextDialogueNodes:
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: "N\xE3o t\xE3o r\xE1pido, voc\xEA me deve algo em troca,
+              n\xE3o?"
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Voc\xEA quer entrar na f\xE1brica \xE9?"
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Pode entrar, apesar da grosseria voc\xEA fez o favor de
+              me trazer o meu lanche."
+            responses: []
+        - responseText: Sim
+          nextDialogueNodes:
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: "\xC9 sim, pode ficar."
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: '[Come o bolo]'
+            responses: []
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: -_-
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Voc\xEA me salvou, obrigado estava faminto."
+            responses: []
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: "N\xE3o tem de qu\xEA, afinal \u201CGentileza gera gentileza\u201D,
+              n\xE3o \xE9 mesmo?"
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Cara, tenho um neg\xF3cio pra falar pra voc\xEA."
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Geralmente eu n\xE3o deixo as pessoas entrarem no domingo."
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "Mas voc\xEA \xE9 gente boa, n\xE3o far\xE1 mal a ningu\xE9m
+              . . ."
+            responses: []
+          - title: "Seguran\xE7a"
+            iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
+            dialogueText: "S\xF3 n\xE3o conte aos meus supervisores que eu deixei
+              voc\xEA entrar."
+            responses: []

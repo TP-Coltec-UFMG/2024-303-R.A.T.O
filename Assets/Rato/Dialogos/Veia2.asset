@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
+  m_Name: Veia2
+  m_EditorClassIdentifier: 
+  RootNodes:
+  - title: Velha
+    iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+    dialogueText: Bom dia, Ratinho...
+    responses:
+    - responseText: "Quem \xE9 voc\xEA?"
+      nextDialogueNodes:
+      - title: Velha
+        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+        dialogueText: "Bem, isso n\xE3o importa..."
+        responses: []
+      - title: Velha
+        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+        dialogueText: "De qualquer forma, voc\xEA parece estar com fome, estou certa?"
+        responses:
+        - responseText: "Est\xE1 sim."
+          nextDialogueNodes:
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Bem, tenho algo perfeito para voc\xEA!"
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Do outro lado da cidade existe uma f\xE1brica."
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Voc\xEA pode ir l\xE1 checar para ver se tem algo de interessante!"
+            responses:
+            - responseText: Interessante...?
+              nextDialogueNodes:
+              - title: Velha
+                iconSprite: {fileID: 0}
+                dialogueText: Ops, estou sem tempo, tenho que ir.
+                responses: []
+              - title: Velha
+                iconSprite: {fileID: 0}
+                dialogueText: "At\xE9 logo, Ratinho!"
+                responses: []
+            - responseText: "\xC9 muito longe?"
+              nextDialogueNodes:
+              - title: Velha
+                iconSprite: {fileID: 0}
+                dialogueText: Ops, estou sem tempo, tenho que ir.
+                responses: []
+              - title: Velha
+                iconSprite: {fileID: 0}
+                dialogueText: "At\xE9 logo, Ratinho!"
+                responses: []
+        - responseText: Continue.
+          nextDialogueNodes:
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Bem, tenho algo perfeito para voc\xEA!"
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Do outro lado da cidade existe uma f\xE1brica."
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Voc\xEA pode ir l\xE1 checar para ver se tem algo de interessante!"
+            responses:
+            - responseText: Interessante...?
+              nextDialogueNodes:
+              - title: Velha
+                iconSprite: {fileID: 0}
+                dialogueText: Ops, estou sem tempo, tenho que ir.
+                responses: []
+              - title: Velha
+                iconSprite: {fileID: 0}
+                dialogueText: "At\xE9 logo, Ratinho!"
+                responses: []
+            - responseText: "\xC9 muito longe?"
+              nextDialogueNodes:
+              - title: Velha
+                iconSprite: {fileID: 0}
+                dialogueText: Ops, estou sem tempo, tenho que ir.
+                responses: []
+              - title: Velha
+                iconSprite: {fileID: 0}
+                dialogueText: "At\xE9 logo, Ratinho!"
+                responses: []
+    - responseText: Bom dia!
+      nextDialogueNodes:
+      - title: Velha
+        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+        dialogueText: "O que faz aqui t\xE3o cedo?"
+        responses:
+        - responseText: Fome
+          nextDialogueNodes:
+          - title: Rato
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
+            dialogueText: Estava procurando algo para comer, estou com muita fome.
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Bem, tenho algo perfeito para voc\xEA!"
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Do outro lado da cidade, existe uma f\xE1brica. "
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "Voc\xEA pode ir l\xE1 checar para ver se tem algo de interessante!"
+            responses:
+            - responseText: Interessante...?
+              nextDialogueNodes:
+              - title: Velha
+                iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                dialogueText: 'Ops, estou sem tempo, tenho que ir
+
+'
+                responses: []
+              - title: Velha
+                iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                dialogueText: "At\xE9 logo, Ratinho!"
+                responses: []
+            - responseText: "\xC9 muito longe?"
+              nextDialogueNodes:
+              - title: Velha
+                iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                dialogueText: 'Ops, estou sem tempo, tenho que ir
+
+'
+                responses: []
+              - title: Velha
+                iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+                dialogueText: "At\xE9 logo, Ratinho!"
+                responses: []

@@ -60,7 +60,7 @@ public class GameController : MonoBehaviour
         DesativaBuraco();
         ChangeContrast();
 
-        if(MenuController.Instance.tag == "MenuInGame" && Input.GetKeyDown(KeyCode.H)){
+        if(MenuController.Instance != null && MenuController.Instance.tag == "MenuInGame" && Input.GetKeyDown(KeyCode.H)){
             MenuController.Instance.OpenMenuInGame();
         }
     }
@@ -201,8 +201,8 @@ public class GameController : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         rato = FindObjectOfType<Rato>();
     
-        if(GameObject.Find("HealthBar") != null){
-            RatoHealthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
+        if(RatoHealthBar != null){
+            RatoHealthBar.gameObject.SetActive(rato != null);
         }
         
         if(GameObject.Find("GameOverTextUI")){

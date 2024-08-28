@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -63,6 +64,9 @@ public class DialogueManager : MonoBehaviour
         if(responseButtonContainer != null){
             foreach (Transform child in responseButtonContainer){
                 child.gameObject.SetActive(false);
+                if(EventSystem.current.currentSelectedGameObject == child.gameObject){
+                    EventSystem.current.SetSelectedGameObject(null);
+                }
             }
         }
 

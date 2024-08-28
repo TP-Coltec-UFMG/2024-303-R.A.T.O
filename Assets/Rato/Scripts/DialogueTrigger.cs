@@ -17,7 +17,11 @@ public class DialogueTrigger : MonoBehaviour
 
     public void SpeakTo()
     {
-        DialogueManager.Instance.StartDialogue(Dialogues[GameController.Instance.GetRatoHumanity()].RootNodes, this.gameObject);
+        if(GameController.Instance.GetRatoHumanity() == 0){
+            DialogueManager.Instance.StartDialogue(Dialogues[0].RootNodes, this.gameObject);
+        }else{
+            DialogueManager.Instance.StartDialogue(Dialogues[1].RootNodes, this.gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider){

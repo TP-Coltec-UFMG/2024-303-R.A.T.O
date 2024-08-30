@@ -12044,9 +12044,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 667550065517910335, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1079367013771130285, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_Name
       value: Rato
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434789410041009434, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3956235454026559704, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12087,6 +12095,14 @@ PrefabInstance:
     - target: {fileID: 3956235454026559704, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603394241939332089, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6324581687140958555, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7951869181131112920, guid: 800ed0ec5ebbb8e489c3461ec72b9776, type: 3}
       propertyPath: m_Color.b

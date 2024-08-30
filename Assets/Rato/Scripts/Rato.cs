@@ -93,6 +93,7 @@ public class Rato : MonoBehaviour
     }
 
     void Doublejump(){
+        animator.SetBool("jump", true);
         rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
         doublejump = false;
     }

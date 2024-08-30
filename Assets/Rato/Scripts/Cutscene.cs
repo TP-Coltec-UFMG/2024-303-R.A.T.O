@@ -11,7 +11,13 @@ public class Cutscene : MonoBehaviour
     [SerializeField] private TMP_Text TextUI;
     [SerializeField] [TextArea(1, 10)] private string[] Texts;
     [SerializeField] private string NewScene;
+    private AudioSource audioSource;
 
+    //[SerializeField] private Audio alma, cadeira, caindo, passos, procurando, rato, ratoeira, subindo;
+
+    private void Start(){
+        this.audioSource = GetComponent<AudioSource>();
+    }
     public void CutsceneNarration(){
         Typer.Instance.TypeNSkip(Panel, TextUI, Texts);
         StartCoroutine(CheckTypingCompletion());
@@ -23,6 +29,11 @@ public class Cutscene : MonoBehaviour
         }
         
         GameController.Instance.ChangeScene(NewScene, new Vector3(0, 0, 0));
+    }
+
+    public void PlayAudio(AudioClip audio){
+        audioSource.clip = audio;
+        audioSource.Play();
     }
 }
 

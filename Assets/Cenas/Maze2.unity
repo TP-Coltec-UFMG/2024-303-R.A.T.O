@@ -943,9 +943,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cell: {fileID: 146333670272800943, guid: 8365b9652180ac543a712366fc50b724, type: 3}
-  width: 6
-  height: 6
-  RatoPositionNextScene: {x: 295, y: -3.02, z: 0}
+  width: 7
+  height: 7
+  RatoPositionNextScene: {x: 669, y: -3.02, z: 0}
   NewScene: Cena2
 --- !u!4 &1390060342
 Transform:

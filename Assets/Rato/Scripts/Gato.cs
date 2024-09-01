@@ -14,7 +14,7 @@ public class Gato : MonoBehaviour
     public bool dead {get; private set;}
     private float posY;
     [SerializeField] private bool rotate;
-    [SerializeField] GameObject Queijo, ContrastFilter;
+    [SerializeField] GameObject Queijo, ContrastFilter, buraco;
 
     // Start is called before the first frame update
     void Start()
@@ -111,5 +111,9 @@ public class Gato : MonoBehaviour
 
     public void SetContrast(bool v){
         this.ContrastFilter.SetActive(v);
+    }
+
+    public void DesativaBuraco(){
+        this.buraco.SetActive(false);
     }
 }

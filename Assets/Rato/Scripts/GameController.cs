@@ -57,7 +57,6 @@ public class GameController : MonoBehaviour
         ChangeTheme();
         ChangeFontSize(FixedFontSize(fontSize));
         AtivaPorta();
-        DesativaBuraco();
         ChangeContrast();
 
         if(MenuController.Instance != null && MenuController.Instance.tag == "MenuInGame" && Input.GetKeyDown(KeyCode.H)){
@@ -309,20 +308,6 @@ public class GameController : MonoBehaviour
         if(GameObject.FindGameObjectsWithTag("Gato").Length == 0 && GameObject.FindGameObjectsWithTag("Queijo").Length == 0 && GameObject.FindGameObjectWithTag("Porta") != null){
             GameObject.FindGameObjectWithTag("Porta").GetComponent<BoxCollider2D>().enabled = true;
         }
-    }
-
-    void DesativaBuraco(){
-        if(SceneManager.GetActiveScene().name == "casateste"){
-            if(GameObject.FindGameObjectsWithTag("Gato").Length < 2 && GameObject.FindGameObjectWithTag("Buraco") != null){
-                GameObject.FindGameObjectWithTag("Buraco").GetComponent<BoxCollider2D>().enabled = false;
-                //GameObject.FindGameObjectWithTag("Freeze").GetComponent<BoxCollider2D>().enabled = false;
-            }
-        }else if(SceneManager.GetActiveScene().name == "Cena2"){
-            if(GameObject.FindGameObjectWithTag("Gato") != null && FindObjectOfType<Gato>().dead){
-                GameObject.FindGameObjectWithTag("Buraco").GetComponent<BoxCollider2D>().enabled = false;
-            }
-        }
-        
     }
 
     public void Continue(){

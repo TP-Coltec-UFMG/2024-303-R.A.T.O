@@ -83,7 +83,7 @@ public class Rato : MonoBehaviour
         jumpInput = UserInput.Instance.JumpInput;
         if(jumpInput){
             if(!isjumping){
-                animator.SetBool("jump", true);
+                animator.SetTrigger("jump");
                 rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 doublejump = true;
             }else if(doublejump){
@@ -93,7 +93,7 @@ public class Rato : MonoBehaviour
     }
 
     void Doublejump(){
-        animator.SetBool("jump", true);
+        //animator.SetTrigger("jump");
         rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
         doublejump = false;
     }
@@ -109,9 +109,9 @@ public class Rato : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.layer == 6 || collision.gameObject.layer == 9 ||collision.gameObject.tag == "Gato"){
+        if(collision.gameObject.layer == 6 || collision.gameObject.layer == 9 /*||collision.gameObject.tag == "Gato"*/){
             isjumping = false;
-            animator.SetBool("jump", false);
+            //animator.SetBool("jump", false);
         }
 
         if(collision.gameObject.tag == "Gato"){

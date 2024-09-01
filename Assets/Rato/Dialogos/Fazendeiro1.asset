@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
-  m_Name: Fazendeiro2ou3
+  m_Name: Fazendeiro1
   m_EditorClassIdentifier: 
   RootNodes:
   - title: Lobato
@@ -30,33 +30,33 @@ MonoBehaviour:
         - responseText: "N\xE3o"
           nextDialogueNodes:
           - title: Rato
-            iconSprite: {fileID: 0}
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
             dialogueText: "N\xE3o senhor Lobato, eu n\xE3o quero dar trabalho"
             responses: []
           - title: Lobato
-            iconSprite: {fileID: 0}
+            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
             dialogueText: "Ah que isso s\xF4, d\xE1 trabalho nenhum!"
             responses: []
           - title: Rato
-            iconSprite: {fileID: 0}
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
             dialogueText: "Tudo bem, pro senhor ficar tranquilo ent\xE3o quero s\xF3
               um trenzin pra beliscar."
             responses: []
           - title: Lobato
-            iconSprite: {fileID: 0}
+            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
             dialogueText: "Ah, int\xE3o que tal um bolin?"
             responses:
             - responseText: Perfeito!
               nextDialogueNodes:
               - title: Lobato
-                iconSprite: {fileID: 0}
+                iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
                 dialogueText: "\xD4 trem b\xE3o s\xF4, cab\xF4 de sair do forno.
                   T\xF3 quentin proc\xEA!"
                 responses: []
             - responseText: Parece delicioso!
               nextDialogueNodes:
               - title: Lobato
-                iconSprite: {fileID: 0}
+                iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
                 dialogueText: "\xD4 trem b\xE3o s\xF4, cab\xF4 de sair do forno.
                   T\xF3 quentin proc\xEA!"
                 responses: []
@@ -93,33 +93,33 @@ MonoBehaviour:
         - responseText: "N\xE3o"
           nextDialogueNodes:
           - title: Rato
-            iconSprite: {fileID: 0}
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
             dialogueText: "N\xE3o senhor Lobato, eu n\xE3o quero dar trabalho"
             responses: []
           - title: Lobato
-            iconSprite: {fileID: 0}
+            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
             dialogueText: "Ah que isso s\xF4, d\xE1 trabalho nenhum!"
             responses: []
           - title: Rato
-            iconSprite: {fileID: 0}
+            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
             dialogueText: "Tudo bem, pro senhor ficar tranquilo ent\xE3o quero s\xF3
               um trenzin pra beliscar."
             responses: []
           - title: Lobato
-            iconSprite: {fileID: 0}
+            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
             dialogueText: "Ah, int\xE3o que tal um bolin?"
             responses:
             - responseText: Perfeito!
               nextDialogueNodes:
               - title: Lobato
-                iconSprite: {fileID: 0}
+                iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
                 dialogueText: "\xD4 trem b\xE3o s\xF4, cab\xF4 de sair do forno.
                   T\xF3 quentin proc\xEA!"
                 responses: []
             - responseText: Parece delicioso!
               nextDialogueNodes:
               - title: Lobato
-                iconSprite: {fileID: 0}
+                iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
                 dialogueText: "\xD4 trem b\xE3o s\xF4, cab\xF4 de sair do forno.
                   T\xF3 quentin proc\xEA!"
                 responses: []

@@ -15,10 +15,6 @@ MonoBehaviour:
   RootNodes:
   - title: "Seguran\xE7a"
     iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-    dialogueText: "Seguran\xE7a\n"
-    responses: []
-  - title: "Seguran\xE7a"
-    iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
     dialogueText: Opa, opa, opa!
     responses: []
   - title: "Seguran\xE7a"
@@ -75,5 +71,6 @@ MonoBehaviour:
     responses: []
   - title: "Seguran\xE7a"
     iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-    dialogueText: "sk, D\xE1 muito trabalho ser fazendeiro, ainda bem que virei seguran\xE7a!"
+    dialogueText: "Tsk, D\xE1 muito trabalho ser fazendeiro, ainda bem que virei
+      seguran\xE7a!"
     responses: []

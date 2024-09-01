@@ -24,7 +24,7 @@ public class GafanhotoAttacking : StateMachineBehaviour
         }else if(target.position.x > this.gato.transform.position.x){
             rb.AddForce(new Vector2(0.3f, 3f), ForceMode2D.Impulse);
         }else if(target.position.x == this.gato.transform.position.x){
-            rb.AddForce(new Vector2(0f, -400f), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0f, -8f), ForceMode2D.Impulse);
         }
     }
 

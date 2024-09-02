@@ -248,12 +248,12 @@ MonoBehaviour:
   m_margin: {x: 6.554006, y: 2.4877155, z: 10.187543, w: 3.8562307}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 122555160}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &122555160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1694,7 +1694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1203653452
 MonoBehaviour:
   m_ObjectHideFlags: 0

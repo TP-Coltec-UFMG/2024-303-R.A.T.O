@@ -12,6 +12,7 @@ public class Gato : MonoBehaviour
     public float health {get; private set;}
     private bool attack; 
     public bool dead {get; private set;}
+    public bool isjumping {get; private set;}
     private float posY;
     [SerializeField] private bool rotate;
     [SerializeField] GameObject Queijo, ContrastFilter, buraco;
@@ -70,6 +71,10 @@ public class Gato : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "Player"){
             attack = true;
+        }
+
+        if(collision.gameObject.layer == 6 || collision.gameObject.layer == 9){
+            isjumping = false;
         }
     }
 

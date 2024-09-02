@@ -19,9 +19,9 @@ public class GafanhotoAttacking : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(target.position.x < this.gato.transform.position.x){
+        if(target.position.x < this.gato.transform.position.x && !gato.isjumping){
             rb.AddForce(new Vector2(-0.3f, 3f), ForceMode2D.Impulse);
-        }else if(target.position.x > this.gato.transform.position.x){
+        }else if(target.position.x > this.gato.transform.position.x && !gato.isjumping){
             rb.AddForce(new Vector2(0.3f, 3f), ForceMode2D.Impulse);
         }else if(target.position.x == this.gato.transform.position.x){
             rb.AddForce(new Vector2(0f, -8f), ForceMode2D.Impulse);

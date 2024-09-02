@@ -76,4 +76,9 @@ public class CameraController : MonoBehaviour
             }
         }
     }
+
+    public void SetLimits(float min, float max){
+        minLimit = min;
+        maxLimit = max;
+    }
 } 

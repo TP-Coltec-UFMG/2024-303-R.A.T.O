@@ -13,7 +13,7 @@ public class Rato : MonoBehaviour
     private Animator animator;
     private bool isBiting, flip;
     [SerializeField] public float MaxHealth; 
-    public float health {get; private set;}
+    public float health;
     private GameObject attack;
     [SerializeField] private GameObject ContrastFilter;
     public bool dead {get; set;}

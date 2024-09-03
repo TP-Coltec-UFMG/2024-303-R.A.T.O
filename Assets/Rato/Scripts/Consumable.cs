@@ -33,6 +33,7 @@ public class Consumable : MonoBehaviour
 
         if(gameObject.tag == "Queijo"){
             GameController.Instance.IncreaseRatoHumanity();
+            FindObjectOfType<Rato>().ResetLife();
         }
 
         Destroy(gameObject);

@@ -9,13 +9,23 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
     private Rato rato;
     private static int ratoHumanity = 0;
+    private static float ratoHealth;
     private static Vector3 ratoPosition = new Vector3(0, 0, 0);
+
     public void IncreaseRatoHumanity(){
         ratoHumanity++;
         Debug.Log(ratoHumanity);
     }
     public int GetRatoHumanity(){
         return ratoHumanity;
+    }
+
+    public float GetRatoHealth(){
+        return ratoHealth;
+    }
+
+    public void SetRatoHealth(float h){
+        ratoHealth = h;
     }
 
     [HideInInspector] public static bool loadSavedData;
@@ -46,6 +56,7 @@ public class GameController : MonoBehaviour
 
         SceneManager.sceneLoaded += OnSceneLoaded;
         GetValues();
+        rato = FindObjectOfType<Rato>();
     }
 
     void OnDestroy(){
@@ -61,6 +72,10 @@ public class GameController : MonoBehaviour
 
         if(MenuController.Instance != null && MenuController.Instance.tag == "MenuInGame" && Input.GetKeyDown(KeyCode.H)){
             MenuController.Instance.OpenMenuInGame();
+        }
+
+        if(rato != null && rato.health != 0){
+            ratoHealth = rato.health;
         }
     }
 
@@ -221,6 +236,7 @@ public class GameController : MonoBehaviour
                     rato.GetComponent<Animator>().SetBool("startAwake", false);
                     rato.GetComponent<Animator>().SetBool("awake", false);
                     ratoHumanity = SaveAndLoad.LoadData().ratoHumanity;
+                    ratoHealth = SaveAndLoad.LoadData().ratoHealth;
                 }else if(scene.name == "casateste"){
                     Debug.Log("b");
                     rato.GetComponent<Animator>().SetBool("startAwake", false);
@@ -244,7 +260,11 @@ public class GameController : MonoBehaviour
         }
 
         if(ratoPosition != new Vector3(0, 0, 0)){
-            rato.transform.position = ratoPosition;
+            rato.transform.position = ratoPosition; 
+        }
+
+        if(rato != null && ratoHealth != 0){
+            rato.health = ratoHealth;
         }
     }
 
@@ -259,13 +279,13 @@ public class GameController : MonoBehaviour
         if(SavePrefs.HasKey("audioVolume")){
             audioVolume = SavePrefs.GetFloat("audioVolume");
         }else{
-            audioVolume = 0;
+            audioVolume = 1;
         }
 
         if(SavePrefs.HasKey("musicVolume")){
             musicVolume = SavePrefs.GetFloat("musicVolume");
         }else{
-            musicVolume = 0;
+            musicVolume = 1;
         }
 
         if(SavePrefs.HasKey("contrast")) {
@@ -317,6 +337,6 @@ public class GameController : MonoBehaviour
 
     public void Save(Vector3 position){
         rato = FindObjectOfType<Rato>();
-        SaveAndLoad.SaveData(new Data(rato.transform.position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex, ratoHumanity));
+        SaveAndLoad.SaveData(new Data(rato.transform.position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex, ratoHumanity, ratoHealth));
     }
 }

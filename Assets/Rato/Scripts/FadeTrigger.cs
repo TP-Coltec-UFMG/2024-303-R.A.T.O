@@ -11,6 +11,7 @@ public class FadeTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider){
         if(collider.gameObject.tag == "Player"){
             StartCoroutine(Fade());
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 

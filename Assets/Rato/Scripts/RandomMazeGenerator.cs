@@ -23,8 +23,8 @@ public class RandomMazeGenerator : MonoBehaviour
     }
     
     void InitializeMaze(){
-        this.width *= (GameController.Instance.difficulty + 1);
-        this.height *= (GameController.Instance.difficulty + 1);
+        this.width += 3 * (GameController.Instance.difficulty);
+        this.height += 3 * (GameController.Instance.difficulty);
 
         this.maze = new MazeCell[this.width, this.height];
         for(int x = 0; x < this.width; x++){

@@ -184,8 +184,10 @@ public class GameController : MonoBehaviour
             gato.ResetLife();
         }*/
         
+        
         if(SaveAndLoad.LoadData() != null && SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene){
             loadSavedData = true;
+            //SaveAndLoad.SaveData(new Data(rato.transform.position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex, ratoHumanity, rato.MaxHealth));
         }else{
             loadSavedData = false;
         }
@@ -196,16 +198,16 @@ public class GameController : MonoBehaviour
     public int FixedFontSize(int size){
         switch (size){
             case 0:
-                size = 30;
+                size = 20;
                 break;
             case 1:
-                size = 35;
+                size = 25;
                 break;
             case 2:
-                size = 40;
+                size = 30;
                 break;
             default:
-                size = 35;
+                size = 25;
                 break;
         }
 

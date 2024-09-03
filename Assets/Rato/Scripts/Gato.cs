@@ -22,7 +22,7 @@ public class Gato : MonoBehaviour
     {
         Rato = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
-        MaxHealth *= (GameController.Instance.difficulty + 1);
+        MaxHealth += 5 * (GameController.Instance.difficulty);
         Damage *= (GameController.Instance.difficulty + 1);
         health = MaxHealth;   
     }

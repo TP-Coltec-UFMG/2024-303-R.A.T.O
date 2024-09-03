@@ -8,11 +8,15 @@ public class OnOffTrigger : MonoBehaviour
     [SerializeField] private bool OnOff;
 
     void OnTriggerEnter2D(Collider2D collider){
-        if(collider.gameObject.tag == "Player" && gameObject.tag != "Adeus"){
+        if(collider.gameObject.tag == "Player" && gameObject.tag != "Adeus" && gameObject.tag != "Barrier"){
             foreach(GameObject activate in Activate){
                 activate.SetActive(OnOff);
             }
         }else if(gameObject.tag == "Adeus" && collider.gameObject.tag == "Suborno"){
+            foreach(GameObject activate in Activate){
+                activate.SetActive(OnOff);
+            }
+        }else if(gameObject.tag == "Barrier" && collider.gameObject.tag == "Moeda"){
             foreach(GameObject activate in Activate){
                 activate.SetActive(OnOff);
             }

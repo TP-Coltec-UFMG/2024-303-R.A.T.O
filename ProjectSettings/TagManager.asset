@@ -20,6 +20,7 @@ TagManager:
   - Peixe
   - Queijo
   - Suborno
+  - Moeda
   layers:
   - Default
   - TransparentFX

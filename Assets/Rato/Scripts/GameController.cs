@@ -187,7 +187,6 @@ public class GameController : MonoBehaviour
         
         if(SaveAndLoad.LoadData() != null && SceneManager.GetActiveScene().buildIndex == SaveAndLoad.LoadData().currentScene){
             loadSavedData = true;
-            //SaveAndLoad.SaveData(new Data(rato.transform.position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex, ratoHumanity, rato.MaxHealth));
         }else{
             loadSavedData = false;
         }

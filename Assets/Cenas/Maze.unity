@@ -501,7 +501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7929464713568926415, guid: d5a10baf610ab7f45a9f61fdb0ef2c8a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729072321856920700, guid: d5a10baf610ab7f45a9f61fdb0ef2c8a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8964907401533355880, guid: d5a10baf610ab7f45a9f61fdb0ef2c8a, type: 3}
       propertyPath: m_IsActive

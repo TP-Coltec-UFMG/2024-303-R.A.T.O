@@ -14,6 +14,7 @@ public class MazeTimer : MonoBehaviour
     private void Start()
     {
         timerIsRunning = true;
+        timeRemaining *= (GameController.Instance.difficulty + 1);
     }
 
     void Update()

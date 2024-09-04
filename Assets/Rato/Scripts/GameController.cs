@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     private static int ratoHumanity = 0;
     private static float ratoHealth;
     private static Vector3 ratoPosition = new Vector3(0, 0, 0);
+    [SerializeField] private GameObject Canvas;
 
     public void IncreaseRatoHumanity(){
         ratoHumanity++;
@@ -73,6 +74,7 @@ public class GameController : MonoBehaviour
 
         if(MenuController.Instance != null && MenuController.Instance.tag == "MenuInGame"){
             OpenMenuButton.gameObject.SetActive(true);
+            Canvas.SetActive(!MenuController.Instance.MenuIsOpen);
         }else{
             OpenMenuButton.gameObject.SetActive(false);
         }

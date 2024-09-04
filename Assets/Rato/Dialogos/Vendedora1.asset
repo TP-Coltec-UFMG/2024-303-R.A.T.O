@@ -33,7 +33,3 @@ MonoBehaviour:
     iconSprite: {fileID: 21300000, guid: 1b4724506a7bc34c69244bcb12374861, type: 3}
     dialogueText: "Custa s\xF3 uma moedinha "
     responses: []
-  - title: Vendedora
-    iconSprite: {fileID: 21300000, guid: 1b4724506a7bc34c69244bcb12374861, type: 3}
-    dialogueText: Volte sempre
-    responses: []

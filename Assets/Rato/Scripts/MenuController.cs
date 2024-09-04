@@ -16,6 +16,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private TMP_Dropdown DificuldadeDropdown, TamanhoFonteDropdown;
     [SerializeField] private TMP_InputField EsquerdaInputText, DireitaInputText, PularInputText, AbaixarInputText, CorrerInputText, InteragirInputText;
     [SerializeField] private Toggle ContrasteToggle, TelaCheiaToggle;
+    public bool MenuIsOpen;
 
     public static MenuController Instance;
 
@@ -30,6 +31,8 @@ public class MenuController : MonoBehaviour
         }
 
         InitialChanges();
+
+        MenuIsOpen = false;
     }
     
     public void Main(){
@@ -186,10 +189,11 @@ public class MenuController : MonoBehaviour
 
     public void OpenMenuInGame(){
         MenuInGameCanvas.SetActive(true);
+        MenuIsOpen = true;
     }
 
     public void CloseMenuInGame(){
         MenuInGameCanvas.SetActive(false);
-        GameController.Instance.Resume();
+        MenuIsOpen = false;
     }
 }

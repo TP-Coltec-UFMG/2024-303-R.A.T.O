@@ -627,6 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f2de034f2fdaa4587d1c2d09cd361a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Canvas: {fileID: 153341564765822818}
   RatoHealthBar: {fileID: 7310560466363135976}
   OpenMenuButton: {fileID: 1346420280130566768}
   GameOverPanel: {fileID: 1029651849649365429}

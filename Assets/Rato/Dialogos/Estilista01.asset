@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
+  m_Name: Estilista01
+  m_EditorClassIdentifier: 
+  RootNodes:
+  - title: Estilista
+    iconSprite: {fileID: 21300000, guid: bafb7d9c7e6ab134eaa49e8c05f2d6e1, type: 3}
+    dialogueText: Que BREGUICE essa cidade!
+    responses: []
+  - title: Estilista
+    iconSprite: {fileID: 21300000, guid: bafb7d9c7e6ab134eaa49e8c05f2d6e1, type: 3}
+    dialogueText: "Quando eu voltar para a civiliza\xE7\xE3o vou imediatamente para
+      um SPA 5 estrelas!"
+    responses: []

@@ -41,13 +41,26 @@ MonoBehaviour:
         responses: []
       - title: Lobato
         iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-        dialogueText: "J\xE1 sei, cabei de amassar um bolin aqui."
+        dialogueText: "Parece que n\xE3o..."
         responses: []
       - title: Lobato
         iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-        dialogueText: "T\xE1 quintin quintin, cab\xF4 de sair do forno."
+        dialogueText: "Aproveitando que oc\xEA ta aqui, oc\xEA num qu\xE9 arrumar
+          um trem aqui pra mim n\xE3o?"
+        responses: []
+      - title: Lobato
+        iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
+        dialogueText: "Tem um gril\xE3o atormentando as minhas mimosa."
         responses: []
       - title: Rato
         iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-        dialogueText: ...!
+        dialogueText: ...
+        responses: []
+      - title: Lobato
+        iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
+        dialogueText: "Seria b\xE3o de mai da conta se oc\xEA desse um cascudo nele. "
+        responses: []
+      - title: Lobato
+        iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
+        dialogueText: "Arrumo at\xE9 um agradim proc\xEA."
         responses: []

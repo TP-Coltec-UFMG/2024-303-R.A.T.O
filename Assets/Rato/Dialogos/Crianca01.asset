@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
+  m_Name: Crianca01
+  m_EditorClassIdentifier: 
+  RootNodes:
+  - title: "Crian\xE7a"
+    iconSprite: {fileID: 21300000, guid: 1ce7d7c50b9a9afa1bda5a28ad1b879b, type: 3}
+    dialogueText: "Fazem dias que eu n\xE3o venho brincar aqui fora..."
+    responses: []
+  - title: "Crian\xE7a"
+    iconSprite: {fileID: 21300000, guid: 1ce7d7c50b9a9afa1bda5a28ad1b879b, type: 3}
+    dialogueText: "A minha m\xE3e disse que n\xE3o ia acontecer nada, que eram coisas
+      da minha cabe\xE7a.."
+    responses: []
+  - title: "Crian\xE7a"
+    iconSprite: {fileID: 21300000, guid: 1ce7d7c50b9a9afa1bda5a28ad1b879b, type: 3}
+    dialogueText: Mas eu tenho medo de brincar aqui fora...
+    responses: []
+  - title: "Crian\xE7a"
+    iconSprite: {fileID: 21300000, guid: 1ce7d7c50b9a9afa1bda5a28ad1b879b, type: 3}
+    dialogueText: "Ningu\xE9m fala disso mas o tio Teobaldo desapareceu h\xE1 alguns
+      dias..."
+    responses: []
+  - title: "Crian\xE7a"
+    iconSprite: {fileID: 21300000, guid: 1ce7d7c50b9a9afa1bda5a28ad1b879b, type: 3}
+    dialogueText: "Ele estava por aqui e derrepente \xE9 como se ele n\xE3o existisse
+      mais..."
+    responses: []
+  - title: "Crian\xE7a"
+    iconSprite: {fileID: 21300000, guid: 1ce7d7c50b9a9afa1bda5a28ad1b879b, type: 3}
+    dialogueText: "\r\nNingu\xE9m quer falar sobre, ningu\xE9m diz nada..."
+    responses: []
+  - title: "Crian\xE7a"
+    iconSprite: {fileID: 21300000, guid: 1ce7d7c50b9a9afa1bda5a28ad1b879b, type: 3}
+    dialogueText: Eu quero ir para casa.
+    responses: []

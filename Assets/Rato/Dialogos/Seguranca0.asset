@@ -55,7 +55,7 @@ MonoBehaviour:
     responses: []
   - title: "Seguran\xE7a"
     iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-    dialogueText: Nossa, que fome da peste! Quem dera se o mano estivesse aqui!
+    dialogueText: "Nossa, n\xE3o devia ter pulado o caf\xE9 da manh\xE3 hoje."
     responses: []
   - title: Rato
     iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
@@ -63,14 +63,13 @@ MonoBehaviour:
     responses: []
   - title: "Seguran\xE7a"
     iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-    dialogueText: Ele podia trazer uma broinha pra mim . . . Sempre tem de manhazinha.
+    dialogueText: Acabei perdendo a hora e tive que sair correndo.
     responses: []
   - title: "Seguran\xE7a"
     iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-    dialogueText: Mas o Lobato deve estar muito ocupado cuidando das vacas.
+    dialogueText: "Meu humor sempre \xE9 pior quando estou com fome."
     responses: []
   - title: "Seguran\xE7a"
     iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-    dialogueText: "Tsk, D\xE1 muito trabalho ser fazendeiro, ainda bem que virei
-      seguran\xE7a!"
+    dialogueText: "Mas n\xE3o tem o que fazer tsk."
     responses: []

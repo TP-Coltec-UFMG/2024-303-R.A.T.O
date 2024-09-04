@@ -46,24 +46,24 @@ MonoBehaviour:
         responses: []
       - title: "Seguran\xE7a"
         iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-        dialogueText: Exceto pelo... Tsk
+        dialogueText: "A n\xE3o ser que... Tsk"
         responses: []
       - title: Rato
         iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-        dialogueText: Exceto pelo... ?
+        dialogueText: "A n\xE3o ser que... ?"
         responses: []
       - title: "Seguran\xE7a"
         iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-        dialogueText: "\xC9 isso mesmo, exceto pelo seu Lobato!"
+        dialogueText: Hoje foi meio corrido, sabe?
         responses: []
       - title: "Seguran\xE7a"
         iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-        dialogueText: "Ele \xE9 o fazendeiro da cidade, normalmente eu deixo ele
-          entrar porque a comida do cara \xE9 de outro mundo!"
+        dialogueText: "Geralmente eu tomo um caf\xE9 antes de sair mas hoje n\xE3o
+          deu tempo."
         responses: []
       - title: "Seguran\xE7a"
         iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-        dialogueText: "Tsk, o que voc\xEA ainda est\xE1 fazendo aqui? Vai embora!"
+        dialogueText: "Quem sabe meu humor n\xE3o melhore com a barriga cheia..."
         responses: []
     - responseText: Uma senhora...
       nextDialogueNodes:
@@ -78,22 +78,22 @@ MonoBehaviour:
         responses: []
       - title: "Seguran\xE7a"
         iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-        dialogueText: Exceto pelo... Tsk
+        dialogueText: "A n\xE3o ser que... Tsk"
         responses: []
       - title: Rato
         iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-        dialogueText: Exceto pelo... ?
+        dialogueText: "A n\xE3o ser que... ?"
         responses: []
       - title: "Seguran\xE7a"
         iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-        dialogueText: "\xC9 isso mesmo, exceto pelo seu Lobato!"
+        dialogueText: Hoje foi meio corrido, sabe?
         responses: []
       - title: "Seguran\xE7a"
         iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-        dialogueText: "Ele \xE9 o fazendeiro da cidade, normalmente eu deixo ele
-          entrar porque a comida do cara \xE9 de outro mundo!"
+        dialogueText: "Geralmente eu tomo um caf\xE9 antes de sair mas hoje n\xE3o
+          deu tempo."
         responses: []
       - title: "Seguran\xE7a"
         iconSprite: {fileID: 21300000, guid: 6a01d5217264cd44294abd05688e2a89, type: 3}
-        dialogueText: "Tsk, o que voc\xEA ainda est\xE1 fazendo aqui? Vai embora!"
+        dialogueText: "Quem sabe meu humor n\xE3o melhore com a barriga cheia..."
         responses: []

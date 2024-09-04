@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
     }
 
     [SerializeField] private Slider RatoHealthBar;
+    [SerializeField] private Button OpenMenuButton;
     [SerializeField] private GameObject GameOverPanel;
     [SerializeField] private TMP_Text GameOverTextUI;
     [SerializeField] [TextArea(1, 10)] private string GameOverMessage;
@@ -70,13 +71,19 @@ public class GameController : MonoBehaviour
         AtivaPorta();
         ChangeContrast();
 
-        if(MenuController.Instance != null && MenuController.Instance.tag == "MenuInGame" && Input.GetKeyDown(KeyCode.H)){
-            MenuController.Instance.OpenMenuInGame();
+        if(MenuController.Instance != null && MenuController.Instance.tag == "MenuInGame"){
+            OpenMenuButton.gameObject.SetActive(true);
+        }else{
+            OpenMenuButton.gameObject.SetActive(false);
         }
 
         if(rato != null && rato.health != 0){
             ratoHealth = rato.health;
         }
+    }
+
+    public void OpenMenuInGame(){
+        MenuController.Instance.OpenMenuInGame();
     }
 
     public void ChangeScene(string SceneName, Vector3 rp){

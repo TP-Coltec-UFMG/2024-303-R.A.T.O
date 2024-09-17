@@ -11,6 +11,7 @@ public class Cutscene : MonoBehaviour
     [SerializeField] private TMP_Text TextUI;
     [SerializeField] [TextArea(1, 10)] private string[] Texts;
     [SerializeField] private string NewScene;
+    [SerializeField] private GameObject PularButton;
     private AudioSource audioSource;
 
     //[SerializeField] private Audio alma, cadeira, caindo, passos, procurando, rato, ratoeira, subindo;
@@ -19,6 +20,7 @@ public class Cutscene : MonoBehaviour
         this.audioSource = GetComponent<AudioSource>();
     }
     public void CutsceneNarration(){
+        PularButton.SetActive(false);
         Typer.Instance.TypeNSkip(Panel, TextUI, Texts);
         StartCoroutine(CheckTypingCompletion());
     }

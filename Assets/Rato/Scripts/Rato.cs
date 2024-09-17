@@ -11,7 +11,7 @@ public class Rato : MonoBehaviour
     private bool isjumping;
     private bool doublejump;
     private Animator animator;
-    private bool isBiting, flip;
+    private bool isBiting, flip, canRun;
     [SerializeField] public float MaxHealth; 
     public float health;
     private GameObject attack;
@@ -22,8 +22,7 @@ public class Rato : MonoBehaviour
     private bool jumpInput;
     private bool interactInput;
     private bool attackInput;
-    private float runInput; 
-
+    private float runInput;
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +41,14 @@ public class Rato : MonoBehaviour
         health = MaxHealth;
         dead = false;
         flip = false;
+        canRun = false;
     }
 
     void FixedUpdate(){
         Walk();
-        Run();                                                                                             
+        if(canRun){
+            Run(); 
+        }                                                                                            
     }
 
     void Update(){
@@ -176,5 +178,6 @@ public class Rato : MonoBehaviour
         Speed = OriginalSpeed;
         JumpForce = aJumpForce;
         flip = true;
+        canRun = true;
     }
 }

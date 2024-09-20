@@ -246,7 +246,9 @@ public class RandomMazeGenerator : MonoBehaviour
     void FinishDFS(MazeCell cell){
         do{
             cell.Path();
+            MazeCell aux = cell;
             cell = cell.parent;
+            cell.child = aux;
         }while(cell != this.Entrance);
         this.Entrance.Path();
     }

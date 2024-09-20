@@ -556,15 +556,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -632,9 +634,8 @@ MonoBehaviour:
   OpenMenuButton: {fileID: 1346420280130566768}
   GameOverPanel: {fileID: 1029651849649365429}
   GameOverTextUI: {fileID: 6759300803272020880}
-  GameOverMessage: "Voc\xEA morreu, roedor. Na vida n\xE3o temos uma segunda chance,
-    mas voc\xEA n\xE3o est\xE1 vivo, n\xE3o \xE9 mesmo?\n\nPressione <ENTER> para
-    tentar novamente"
+  GameOverMessage: "Voc\xEA morreu, roedor.\nLembre-se de que as luzes est\xE3o sempre
+    ao norte. Global, n\xE3o magn\xE9tico.\n\n\nPressione <ENTER> para tentar novamente"
   audioVolume: 0
   musicVolume: 0
   left: 
@@ -759,15 +760,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0

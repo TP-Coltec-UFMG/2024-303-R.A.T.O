@@ -10,7 +10,8 @@ public class MazeRato : MonoBehaviour
     [SerializeField] private GameObject ContrastFilter;
     
     void Start(){
-        this.transform.position = FindObjectOfType<RandomMazeGenerator>().Entrance.transform.position;
+        Vector3 position = FindObjectOfType<RandomMazeGenerator>().Entrance.transform.position;
+        this.transform.position = new Vector3(position.x - 1, position.y, 0);
         animator = GetComponent<Animator>();
         transform.eulerAngles = new Vector3(0f, 0f, 90f);
     }

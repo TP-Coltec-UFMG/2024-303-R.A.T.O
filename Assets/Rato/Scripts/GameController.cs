@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class GameController : MonoBehaviour
     private static float ratoHealth;
     private static Vector3 ratoPosition = new Vector3(0, 0, 0);
     [SerializeField] private GameObject Canvas;
+    private bool contrastChanged = false, contrastApplied = false;
+    private List<Color> colors;
 
     public void IncreaseRatoHumanity(){
         ratoHumanity++;
@@ -59,6 +62,7 @@ public class GameController : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
         GetValues();
         rato = FindObjectOfType<Rato>();
+        colors = new List<Color>();
     }
 
     void OnDestroy(){
@@ -94,20 +98,38 @@ public class GameController : MonoBehaviour
     }
 
     public void ChangeContrast(){
-        Rato rato = FindObjectOfType<Rato>();
-        if(rato != null){
-            rato.SetContrast(contrast);
+        /*SpriteRenderer[] images = FindObjectsOfType<SpriteRenderer>();
+
+        if(!contrastChanged){
+            foreach(SpriteRenderer item in images){
+                if(GetComponent<ContrastFilter>() == null && item.gameObject.tag != "ColorFilter"){
+                    colors.Add(item.color);
+                }
+            }
         }
 
-        MazeRato mazeRato = FindObjectOfType<MazeRato>();
-        if(mazeRato != null){
-            mazeRato.SetContrast(contrast);
+        int i = 0;
+        foreach(SpriteRenderer item in images){
+            if(GetComponent<ContrastFilter>() == null && item.gameObject.tag != "ColorFilter"){
+                if(contrast /*&& !contrastApplied){
+                    item.color = new Color(item.color.r, item.color.g, item.color.b, 0.9f);
+                    //contrastApplied = true;
+                }else{
+                    //item.color = colors[i];
+                    //contrastApplied = false;
+                    item.color = new Color(item.color.r, item.color.g, item.color.b, 255);
+                }
+
+                i++;
+            }
+        }*/
+        
+        ContrastFilter[] contrasts = FindObjectsOfType<ContrastFilter>();
+        foreach (ContrastFilter item in contrasts){
+            item.SetContrast(contrast);
         }
 
-        Gato[] gatos = FindObjectsOfType<Gato>();
-        foreach (Gato gato in gatos){
-            gato.SetContrast(contrast);
-        }
+        contrastChanged = true;
     }
 
     public void ChangeTheme(){

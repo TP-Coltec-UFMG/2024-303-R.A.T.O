@@ -15,7 +15,7 @@ public class Rato : MonoBehaviour
     [SerializeField] public float MaxHealth; 
     public float health;
     private GameObject attack;
-    [SerializeField] private GameObject ContrastFilter;
+    //[SerializeField] private GameObject ContrastFilter;
     public bool dead {get; set;}
 
     private float moveInput;
@@ -168,9 +168,9 @@ public class Rato : MonoBehaviour
         health = MaxHealth;
     }
 
-    public void SetContrast(bool v){
+    /*public void SetContrast(bool v){
         this.ContrastFilter.SetActive(v);
-    }
+    }*/
 
     public void SetAwake(){
         GetComponent<Animator>().SetBool("awake", true);

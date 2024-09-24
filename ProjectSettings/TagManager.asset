@@ -21,6 +21,7 @@ TagManager:
   - Queijo
   - Suborno
   - Moeda
+  - ColorFilter
   layers:
   - Default
   - TransparentFX

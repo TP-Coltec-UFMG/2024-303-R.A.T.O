@@ -9688,7 +9688,7 @@ GameObject:
   - component: {fileID: 986749021}
   m_Layer: 0
   m_Name: filtro de cor
-  m_TagString: Untagged
+  m_TagString: ColorFilter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20860,6 +20860,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1376647905871604650, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.9883
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376647905871604650, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.861
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389792282312588453, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
+      propertyPath: m_Size.x
+      value: 47.50171
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389792282312588453, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
+      propertyPath: m_Size.y
+      value: 46.42502
+      objectReference: {fileID: 0}
     - target: {fileID: 1389792282312588453, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
       propertyPath: m_SortingOrder
       value: -5
@@ -22839,6 +22855,22 @@ PrefabInstance:
     - target: {fileID: 8509781498376862630, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
       propertyPath: m_Offset.y
       value: 0.4590695
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627449892484375992, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627449892484375992, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627449892484375992, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627449892484375992, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8627449892484375992, guid: d5be073616af5fd41b4b86ee8d9ac596, type: 3}
       propertyPath: m_SortingOrder

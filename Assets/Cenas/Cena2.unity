@@ -1903,6 +1903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88a8512cdea27d40be3c9c38378a063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EffectsMusic: 0
 --- !u!1 &217225916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6654,7 +6655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &821745540
 Transform:
   m_ObjectHideFlags: 0
@@ -9979,7 +9980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1909279051724701310, guid: 5c3f5bcdcf0734244a1e806744fe3bd5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5087824248311275737, guid: 5c3f5bcdcf0734244a1e806744fe3bd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11512,6 +11513,7 @@ MonoBehaviour:
   RunRange: 0
   Damage: 2
   queijoOffset: 0.2
+  CollisionResponseImpulse: 0
   AttackRange: 3
   MaxHealth: 15
   rotate: 1

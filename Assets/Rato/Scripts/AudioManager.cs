@@ -5,6 +5,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
+    [SerializeField] private bool EffectsMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,10 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        audioSource.volume = GameController.Instance.musicVolume;
+        if(EffectsMusic){
+            audioSource.volume = GameController.Instance.audioVolume;
+        }else{
+            audioSource.volume = GameController.Instance.musicVolume;
+        }
     }
 }

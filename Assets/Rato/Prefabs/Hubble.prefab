@@ -721,6 +721,7 @@ MonoBehaviour:
   RunRange: 5
   Damage: 0.5
   queijoOffset: 0.2
+  CollisionResponseImpulse: 0.8
   AttackRange: 3
   MaxHealth: 10
   rotate: 0

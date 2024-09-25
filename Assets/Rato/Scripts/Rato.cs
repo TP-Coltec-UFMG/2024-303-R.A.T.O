@@ -105,6 +105,7 @@ public class Rato : MonoBehaviour
 
         if(attackInput && !isBiting){
             animator.SetTrigger("bite");
+            GetComponent<AudioSource>().Play();
         }else{
             animator.ResetTrigger("bite");
         }
@@ -158,6 +159,13 @@ public class Rato : MonoBehaviour
 
     public void TakeDamage(float damage){
         this.health -= damage;
+        StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut(){
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().enabled = true;
     }
 
     void Die(){

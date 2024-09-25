@@ -6,7 +6,7 @@ public class Gato : MonoBehaviour
 {
     private Transform Rato;
     private Animator animator;
-    [SerializeField] private float RunRange, Damage, queijoOffset; 
+    [SerializeField] private float RunRange, Damage, queijoOffset, CollisionResponseImpulse; 
     public float AttackRange;
     [SerializeField] public float MaxHealth; 
     public float health {get; private set;}
@@ -66,11 +66,24 @@ public class Gato : MonoBehaviour
 
     public void TakeDamage(float damage){
         this.health -= damage;
+        StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut(){
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().enabled = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "Player"){
             attack = true;
+
+            if(transform.position.x < Rato.position.x){
+                transform.position += new Vector3(-CollisionResponseImpulse, 0f, 0f);
+            }else{
+                transform.position += new Vector3(CollisionResponseImpulse, 0f, 0f);
+            }
         }
 
         if(collision.gameObject.layer == 6 || collision.gameObject.layer == 9){

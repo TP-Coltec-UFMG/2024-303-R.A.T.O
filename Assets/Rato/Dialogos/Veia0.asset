@@ -15,109 +15,141 @@ MonoBehaviour:
   RootNodes:
   - title: Velha
     iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-    dialogueText: Bom dia, Ratinho...
+    dialogueText: Ei, ratinho...
     responses:
     - responseText: Qui qui!
       nextDialogueNodes:
       - title: Velha
         iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-        dialogueText: "Ah, voc\xEA ainda n\xE3o aprendeu a falar, certo?"
-        responses: []
-      - title: Velha
-        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-        dialogueText: "Bem, isso n\xE3o importa..."
-        responses: []
-      - title: Velha
-        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-        dialogueText: "De qualquer forma, voc\xEA parece estar com fome, estou certa?"
+        dialogueText: Quer um queijinho?
         responses:
         - responseText: '!!!'
           nextDialogueNodes:
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "Se voc\xEA estiver com fome, voc\xEA pode ir \xE0 f\xE1brica
-              do outro lado da cidade. "
+            dialogueText: "N\xE3o, agora n\xE3o tenho."
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "Pode ser que l\xE1 tenha um pouco de queijo..."
+            dialogueText: "Mas voc\xEA pode encontrar alguns na f\xE1brica do outro
+              lado da cidade."
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: Ops, estou sem tempo, tenho que ir.
+            dialogueText: "Ouvi dizer que s\xE3o muito nutritivos\u2026"
+            responses: []
+          - title: "Rel\xF3gio"
+            iconSprite: {fileID: -1474562658147115733, guid: 38680925d4b8ec94bb149ae46489ba19, type: 3}
+            dialogueText: TRRRIM
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "At\xE9 logo, Ratinho!"
+            dialogueText: "Ah, parece que meu caf\xE9 est\xE1 pronto!"
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: Tenho que ir.
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "At\xE9 logo ratinho!\r\n"
             responses: []
         - responseText: ...
           nextDialogueNodes:
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "Se voc\xEA estiver com fome, voc\xEA pode ir \xE0 f\xE1brica
-              do outro lado da cidade. "
+            dialogueText: "N\xE3o, agora n\xE3o tenho."
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "Pode ser que l\xE1 tenha um pouco de queijo..."
+            dialogueText: "Mas voc\xEA pode encontrar alguns na f\xE1brica do outro
+              lado da cidade."
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: Ops, estou sem tempo, tenho que ir.
+            dialogueText: "Ouvi dizer que s\xE3o muito nutritivos\u2026"
+            responses: []
+          - title: "Rel\xF3gio"
+            iconSprite: {fileID: -1474562658147115733, guid: 38680925d4b8ec94bb149ae46489ba19, type: 3}
+            dialogueText: TRRRIM
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "At\xE9 logo, Ratinho!"
+            dialogueText: "Ah, parece que meu caf\xE9 est\xE1 pronto!"
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: Tenho que ir.
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "At\xE9 logo ratinho!\r\n"
             responses: []
     - responseText: ...
       nextDialogueNodes:
       - title: Velha
         iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-        dialogueText: "Ah, voc\xEA ainda n\xE3o aprendeu a falar, certo?"
-        responses: []
-      - title: Velha
-        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-        dialogueText: "Bem, isso n\xE3o importa..."
-        responses: []
-      - title: Velha
-        iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-        dialogueText: "De qualquer forma, voc\xEA parece estar com fome, estou certa?"
+        dialogueText: Quer um queijinho?
         responses:
         - responseText: '!!!'
           nextDialogueNodes:
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "Se voc\xEA estiver com fome, voc\xEA pode ir \xE0 f\xE1brica
-              do outro lado da cidade. "
+            dialogueText: "N\xE3o, agora n\xE3o tenho."
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "Pode ser que l\xE1 tenha um pouco de queijo..."
+            dialogueText: "Mas voc\xEA pode encontrar alguns na f\xE1brica do outro
+              lado da cidade."
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: Ops, estou sem tempo, tenho que ir.
+            dialogueText: "Ouvi dizer que s\xE3o muito nutritivos\u2026"
+            responses: []
+          - title: "Rel\xF3gio"
+            iconSprite: {fileID: -1474562658147115733, guid: 38680925d4b8ec94bb149ae46489ba19, type: 3}
+            dialogueText: TRRRIM
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "At\xE9 logo, Ratinho!"
+            dialogueText: "Ah, parece que meu caf\xE9 est\xE1 pronto!"
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: Tenho que ir.
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "At\xE9 logo ratinho!\r\n"
             responses: []
         - responseText: ...
           nextDialogueNodes:
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "Se voc\xEA estiver com fome, voc\xEA pode ir \xE0 f\xE1brica
-              do outro lado da cidade. "
+            dialogueText: "N\xE3o, agora n\xE3o tenho."
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "Pode ser que l\xE1 tenha um pouco de queijo..."
+            dialogueText: "Mas voc\xEA pode encontrar alguns na f\xE1brica do outro
+              lado da cidade."
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: Ops, estou sem tempo, tenho que ir.
+            dialogueText: "Ouvi dizer que s\xE3o muito nutritivos\u2026"
+            responses: []
+          - title: "Rel\xF3gio"
+            iconSprite: {fileID: -1474562658147115733, guid: 38680925d4b8ec94bb149ae46489ba19, type: 3}
+            dialogueText: TRRRIM
             responses: []
           - title: Velha
             iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
-            dialogueText: "At\xE9 logo, Ratinho!"
+            dialogueText: "Ah, parece que meu caf\xE9 est\xE1 pronto!"
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: Tenho que ir.
+            responses: []
+          - title: Velha
+            iconSprite: {fileID: 21300000, guid: 52cd27521552d0349907b2caa8ee3adb, type: 3}
+            dialogueText: "At\xE9 logo ratinho!\r\n"
             responses: []

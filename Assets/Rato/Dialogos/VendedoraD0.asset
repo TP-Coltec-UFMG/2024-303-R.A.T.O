@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
-  m_Name: Vendedora0
+  m_Name: VendedoraD0
   m_EditorClassIdentifier: 
   RootNodes:
   - title: Vendedora
     iconSprite: {fileID: 21300000, guid: 1b4724506a7bc34c69244bcb12374861, type: 3}
-    dialogueText: "Ol\xE1, precisa de algo?"
-    responses: []
-  - title: Vendedora
-    iconSprite: {fileID: 21300000, guid: 1b4724506a7bc34c69244bcb12374861, type: 3}
-    dialogueText: "Temos cookies, p\xE3es..."
-    responses: []
-  - title: Vendedora
-    iconSprite: {fileID: 21300000, guid: 1b4724506a7bc34c69244bcb12374861, type: 3}
-    dialogueText: Bolo...
+    dialogueText: 'Ei rapaz, vai comprar algo agora?
+
+'
     responses: []
   - title: Rato
     iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-    dialogueText: '...!
+    dialogueText: '!
 
 '
     responses: []
   - title: Vendedora
     iconSprite: {fileID: 21300000, guid: 1b4724506a7bc34c69244bcb12374861, type: 3}
-    dialogueText: Opa, custa uma moedinha
-    responses: []
+    dialogueText: Que tal esse bolo que acabei de fazer?
+    responses:
+    - responseText: Entregar Moeda
+      nextDialogueNodes:
+      - title: Vendedora
+        iconSprite: {fileID: 21300000, guid: 1b4724506a7bc34c69244bcb12374861, type: 3}
+        dialogueText: Volte sempre!
+        responses: []

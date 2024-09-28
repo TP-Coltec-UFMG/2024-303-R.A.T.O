@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
+  m_Name: DoidoDaMoita01
+  m_EditorClassIdentifier: 
+  RootNodes:
+  - title: Um doido na moita
+    iconSprite: {fileID: -3063989347985775460, guid: ba2726e18002f7c468fd33c772c4973d, type: 3}
+    dialogueText: "VOC\xCA, RATO, QUER ENTRAR NA F\xC1BRICA! E EU\u2026 sei como
+      hahahahahahahhahhahahhahhahahhahahhahahahhah"
+    responses: []
+  - title: Um doido na moita
+    iconSprite: {fileID: -3063989347985775460, guid: ba2726e18002f7c468fd33c772c4973d, type: 3}
+    dialogueText: "J\xE1 conheci muitos de voc\xEA durante a vida, sabe, ou talvez
+      nenhum, a verdade \xE9 que o seguran\xE7a, acorda todo dia e vai para a f\xE1brica
+      proteg\xEA-la, termina seu turno \xE0s 19 horas, volta para sua casa para jantar
+      e em seu caminho de volta passa pela confeitaria da rua de cima e compra o
+      bolo que comer\xE1 no almo\xE7o do dia seguinte. Ent\xE3o no pr\xF3ximo dia
+      ele recome\xE7a tudo de novo, e de novo e de novo\u2026. RATO\u2026 HAHAHA. "
+    responses: []
+  - title: Um doido na moita
+    iconSprite: {fileID: -3063989347985775460, guid: ba2726e18002f7c468fd33c772c4973d, type: 3}
+    dialogueText: "triste, nem amargurado, a f\xE1brica \xE9 a vida dele\u2026 oras
+      o que \xE9 de um seguran\xE7a sem algo para proteger? \r\n"
+    responses: []
+  - title: Um doido na moita
+    iconSprite: {fileID: -3063989347985775460, guid: ba2726e18002f7c468fd33c772c4973d, type: 3}
+    dialogueText: "Mas vamos supor que um dia desses\u2026 quem sabe ontem, o coitado
+      esqueceu de passar na padaria antes de chegar em casa? Sabe\u2026 as pessoas\u2026.
+      AS PESSOAS\u2026 n\xE3o s\xE3o t\xE3o fortes quanto gostariam de ser\u2026
+      o seguran\xE7a pode muito bem pensar que o bolo \xE9 a parte mais interessante
+      de seu dia\u2026"
+    responses: []
+  - title: Um doido na moita
+    iconSprite: {fileID: -3063989347985775460, guid: ba2726e18002f7c468fd33c772c4973d, type: 3}
+    dialogueText: "e agora\u2026 se foi\u2026 tudo culpa dele\u2026 Mas se algu\xE9m
+      aparecesse l\xE1\u2026 com um bolo desse em m\xE3os\u2026 bem\u2026 \xE9 poss\xEDvel
+      que ele faria de tudo para voltar a sua rotina normal\u2026 se \xE9 que entende
+      o que eu estou dizendo\u2026. OU N\xC3O HAHAHAHAHAHAHAHA\u2026. Fa\xE7a o que
+      quiser\u2026 N\xC3O EXISTEM REGRAS!!  "
+    responses: []

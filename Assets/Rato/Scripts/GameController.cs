@@ -369,6 +369,6 @@ public class GameController : MonoBehaviour
 
     public void Save(Vector3 position){
         rato = FindObjectOfType<Rato>();
-        SaveAndLoad.SaveData(new Data(rato.transform.position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex, ratoHumanity, ratoHealth));
+        SaveAndLoad.SaveData(new Data(/*rato.transform.*/position.x, rato.transform.position.y, SceneManager.GetActiveScene().buildIndex, ratoHumanity, ratoHealth));
     }
 }

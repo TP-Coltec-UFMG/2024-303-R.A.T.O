@@ -9,17 +9,17 @@ public class OnOffTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider){
         if(collider.gameObject.tag == "Player" && gameObject.tag != "Adeus" && gameObject.tag != "Barrier"){
-            foreach(GameObject activate in Activate){
-                activate.SetActive(OnOff);
-            }
+            SetOnOff();
         }else if(gameObject.tag == "Adeus" && collider.gameObject.tag == "Suborno"){
-            foreach(GameObject activate in Activate){
-                activate.SetActive(OnOff);
-            }
+            SetOnOff();
         }else if(gameObject.tag == "Barrier" && collider.gameObject.tag == "Moeda"){
-            foreach(GameObject activate in Activate){
-                activate.SetActive(OnOff);
-            }
+            SetOnOff();
+        }
+    }
+
+    void SetOnOff(){
+        foreach(GameObject activate in Activate){
+            activate.SetActive(OnOff);
         }
     }
 }

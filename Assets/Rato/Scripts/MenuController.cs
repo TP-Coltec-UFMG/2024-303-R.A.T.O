@@ -26,8 +26,6 @@ public class MenuController : MonoBehaviour
             if(gameObject.tag == "MenuInGame"){
                 DontDestroyOnLoad(gameObject);
             }
-        }else{
-            Destroy(gameObject);
         }
 
         InitialChanges();

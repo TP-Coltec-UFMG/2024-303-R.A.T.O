@@ -6,7 +6,7 @@ using System.Collections.Generic;
  
 public class DialogueTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject Peixe, SpeakToTutorial;
+    [SerializeField] private GameObject SpeakToTutorial;
     [SerializeField] private List<Dialogue> Dialogues;
     [SerializeField] private bool Optional;
 
@@ -21,10 +21,6 @@ public class DialogueTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider){
         if(collider.gameObject.tag == "Player"){
-            if(gameObject.tag == "Peixe" && this.Peixe != null){
-                Peixe.SetActive(true);
-            }
-
             if(this.Optional){
                 SpeakToTutorial.SetActive(true);
                 StartCoroutine(WaitForKeyPress());

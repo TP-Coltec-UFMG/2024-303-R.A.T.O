@@ -24,6 +24,8 @@ public class Rato : MonoBehaviour
     private bool attackInput;
     private float runInput;
 
+    [SerializeField] private AudioClip AttackSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -105,7 +107,6 @@ public class Rato : MonoBehaviour
 
         if(attackInput && !isBiting){
             animator.SetTrigger("bite");
-            GetComponent<AudioSource>().Play();
         }else{
             animator.ResetTrigger("bite");
         }
@@ -187,5 +188,9 @@ public class Rato : MonoBehaviour
         JumpForce = aJumpForce;
         flip = true;
         canRun = true;
+    }
+
+    public void PlayAudio(AudioClip audio){
+        GetComponent<AudioSource>().PlayOneShot(audio);
     }
 }

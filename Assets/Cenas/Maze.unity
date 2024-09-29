@@ -198,7 +198,7 @@ PrefabInstance:
     - target: {fileID: 6428590060430040793, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1681905078}
     - target: {fileID: 8290921488137641592, guid: 26ed3fb392575a045be498088b7903dd, type: 3}
       propertyPath: m_Name
       value: CameraPivot
@@ -457,6 +457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeRato
       objectReference: {fileID: 0}
+    - target: {fileID: 5521570753559640446, guid: cd85291e9ea2f354c945783c8bc15d9c, type: 3}
+      propertyPath: AudioListener
+      value: 
+      objectReference: {fileID: 626596032}
     - target: {fileID: 7890986405380553640, guid: cd85291e9ea2f354c945783c8bc15d9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.134
@@ -778,6 +782,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1681905078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7890986405380553640, guid: cd85291e9ea2f354c945783c8bc15d9c, type: 3}
+  m_PrefabInstance: {fileID: 1134162371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2002402138
 GameObject:
   m_ObjectHideFlags: 0

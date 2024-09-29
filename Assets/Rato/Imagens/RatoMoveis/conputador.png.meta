@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 38680925d4b8ec94bb149ae46489ba19
+guid: 41b7d7f210efa254f9d23f5dc83f9b75
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1474562658147115733
-    second: Despertador _0
+      213: -7493024628676248513
+    second: conputador_0
+  - first:
+      213: -7920254975791637797
+    second: conputador_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,26 +99,60 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Despertador _0
+      name: conputador_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 0
-        width: 944
-        height: 862
+        x: 271
+        y: 383
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2dd512331d498be0800000000000000
-      internalID: -1474562658147115733
+      spriteID: f3cbf7acccd630890800000000000000
+      internalID: -7493024628676248513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: conputador_1
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 191
+        width: 1042
+        height: 1346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda5b65101a951290800000000000000
+      internalID: -7920254975791637797
       vertices: []
       indices: 
       edges: []
@@ -123,7 +160,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9359a2b625297ca4d994282a97f062a1
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +168,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Despertador _0: -1474562658147115733
+      conputador_0: -7493024628676248513
+      conputador_1: -7920254975791637797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

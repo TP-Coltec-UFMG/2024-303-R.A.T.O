@@ -19,5 +19,5 @@ MonoBehaviour:
     responses: []
   - title: "Crian\xE7a"
     iconSprite: {fileID: 21300000, guid: 24b544e0317924cef836123405cfbaf3, type: 3}
-    dialogueText: "Mam\xE3e, mam\xE3e, posso matar o ratinho?"
+    dialogueText: "Mam\xE3e, mam\xE3e, posso brincar com o ratinho?"
     responses: []

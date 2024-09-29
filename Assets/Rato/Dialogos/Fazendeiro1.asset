@@ -15,191 +15,57 @@ MonoBehaviour:
   RootNodes:
   - title: Lobato
     iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-    dialogueText: Bom dia, ratin, tranquilo?
+    dialogueText: "\xD4 menino oc\xEA num quer fazer uns trabaio pra mim n\xE3o?\r\n"
     responses:
-    - responseText: "Tudo bem e voc\xEA- "
+    - responseText: "T\xF4 com pressa"
       nextDialogueNodes:
       - title: Lobato
         iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-        dialogueText: "Eu sou o sinh\xF4 Lobato."
+        dialogueText: "Uai a pressa \xE9 oc\xEA que escolhe, tem certeza que num
+          quer ajudar um senhor como eu, te dou at\xE9 uma recompensa depois!"
         responses: []
       - title: Lobato
         iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-        dialogueText: Pode ir entrando, vou passar um cafezin ali pra noiz dois rapidin.
+        dialogueText: "\xC9 que eu tenho um gril\xE3o atormentando minhas vaca aqui.
+          T\xF4 precisando de algu\xE9m pra arrumar isso pra mim:(\r\n"
         responses:
-        - responseText: "N\xE3o"
-          nextDialogueNodes:
-          - title: Rato
-            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-            dialogueText: "N\xE3o senhor Lobato, eu n\xE3o quero dar trabalho"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Ah que isso s\xF4, d\xE1 trabalho nenhum!"
-            responses: []
-          - title: Rato
-            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-            dialogueText: "Tudo bem, pro senhor ficar tranquilo ent\xE3o quero s\xF3
-              um trenzin pra beliscar."
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "U\xE9 oc\xEA num qu\xE9 cafezin n\xE3o?"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Nossa, mais a\xED oc\xEA me apert\xF4 sem me abra\xE7\xE1."
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Mo\xE7o, aproveitando que oc\xEA t\xE1 aqui, c\xEA num
-              qu\xE9 um sirvi\xE7o n\xE3o?"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Esses dias um gril\xE3o tem atormentado as minhas mimosa."
-            responses: []
-          - title: Rato
-            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-            dialogueText: "\xC9 complicado n\xE9"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Oc\xEA pareci um sujeito das ideias boa"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: Consegue se livra dessa praga dessi bixo pra mim?
-            responses:
-            - responseText: Deixa comigo!
-              nextDialogueNodes: []
-            - responseText: "Podex\xE1 qui eu aprumo tudo certin proc\xEA"
-              nextDialogueNodes: []
-        - responseText: "N\xE3o, eu n\xE3o quero caf\xE9"
+        - responseText: "Sendo assim\u2026"
           nextDialogueNodes:
           - title: Lobato
             iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "U\xE9 oc\xEA num qu\xE9 cafezin n\xE3o?"
+            dialogueText: "Sabia que oc\xEA era inteligente, quando acabar passa
+              aqui pra gente acertar esse neg\xF3cio."
             responses: []
+        - responseText: Se for rapidinho
+          nextDialogueNodes:
           - title: Lobato
             iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Nossa, mais a\xED oc\xEA me apert\xF4 sem me abra\xE7\xE1."
+            dialogueText: "Sabia que oc\xEA era inteligente, quando acabar passa
+              aqui pra gente acertar esse neg\xF3cio."
             responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Mo\xE7o, aproveitando que oc\xEA t\xE1 aqui, c\xEA num
-              qu\xE9 um sirvi\xE7o n\xE3o?"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Esses dias um gril\xE3o tem atormentado as minhas mimosa."
-            responses: []
-          - title: Rato
-            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-            dialogueText: "\xC9 complicado n\xE9"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Oc\xEA pareci um sujeito das ideias boa"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: Consegue se livra dessa praga dessi bixo pra mim?
-            responses:
-            - responseText: Deixa comigo!
-              nextDialogueNodes: []
-            - responseText: "Podex\xE1 qui eu aprumo tudo certin proc\xEA"
-              nextDialogueNodes: []
-    - responseText: "Uai, t\xF4 b\xE3o demais da conta!"
+    - responseText: "De gra\xE7a?"
       nextDialogueNodes:
       - title: Lobato
         iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-        dialogueText: "Eu sou o sinh\xF4 Lobato."
+        dialogueText: "Ara de gra\xE7a nada, s\xF4 cheio dos dinheiros, te dou uma
+          recompensa das boas!\r\n"
         responses: []
       - title: Lobato
         iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-        dialogueText: Pode ir entrando, vou passar um cafezin ali pra noiz dois rapidin.
+        dialogueText: "\xC9 que eu tenho um gril\xE3o atormentando minhas vaca aqui.
+          T\xF4 precisando de algu\xE9m pra arrumar isso pra mim"
         responses:
-        - responseText: "N\xE3o"
-          nextDialogueNodes:
-          - title: Rato
-            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-            dialogueText: "N\xE3o senhor Lobato, eu n\xE3o quero dar trabalho"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Ah que isso s\xF4, d\xE1 trabalho nenhum!"
-            responses: []
-          - title: Rato
-            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-            dialogueText: "Tudo bem, pro senhor ficar tranquilo ent\xE3o quero s\xF3
-              um trenzin pra beliscar."
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "U\xE9 oc\xEA num qu\xE9 cafezin n\xE3o?"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Nossa, mais a\xED oc\xEA me apert\xF4 sem me abra\xE7\xE1."
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Mo\xE7o, aproveitando que oc\xEA t\xE1 aqui, c\xEA num
-              qu\xE9 um sirvi\xE7o n\xE3o?"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Esses dias um gril\xE3o tem atormentado as minhas mimosa."
-            responses: []
-          - title: Rato
-            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-            dialogueText: "\xC9 complicado n\xE9"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Oc\xEA pareci um sujeito das ideias boa"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: Consegue se livra dessa praga dessi bixo pra mim?
-            responses:
-            - responseText: Deixa comigo!
-              nextDialogueNodes: []
-            - responseText: "Podex\xE1 qui eu aprumo tudo certin proc\xEA"
-              nextDialogueNodes: []
-        - responseText: "N\xE3o, eu n\xE3o quero caf\xE9"
+        - responseText: "Sendo assim\u2026"
           nextDialogueNodes:
           - title: Lobato
             iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "U\xE9 oc\xEA num qu\xE9 cafezin n\xE3o?"
+            dialogueText: "Sabia que oc\xEA era inteligente, quando acabar passa
+              aqui pra gente acertar esse neg\xF3cio."
             responses: []
+        - responseText: Se for rapidinho
+          nextDialogueNodes:
           - title: Lobato
             iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Nossa, mais a\xED oc\xEA me apert\xF4 sem me abra\xE7\xE1."
+            dialogueText: "Sabia que oc\xEA era inteligente, quando acabar passa
+              aqui pra gente acertar esse neg\xF3cio."
             responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Mo\xE7o, aproveitando que oc\xEA t\xE1 aqui, c\xEA num
-              qu\xE9 um sirvi\xE7o n\xE3o?"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Esses dias um gril\xE3o tem atormentado as minhas mimosa."
-            responses: []
-          - title: Rato
-            iconSprite: {fileID: 21300000, guid: 67e01fd89a04a7c908d0b163a454c761, type: 3}
-            dialogueText: "\xC9 complicado n\xE9"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: "Oc\xEA pareci um sujeito das ideias boa"
-            responses: []
-          - title: Lobato
-            iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-            dialogueText: Consegue se livra dessa praga dessi bixo pra mim?
-            responses:
-            - responseText: Deixa comigo!
-              nextDialogueNodes: []
-            - responseText: "Podex\xE1 qui eu aprumo tudo certin proc\xEA"
-              nextDialogueNodes: []

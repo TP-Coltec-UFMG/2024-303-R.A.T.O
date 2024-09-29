@@ -15,5 +15,9 @@ MonoBehaviour:
   RootNodes:
   - title: Fofoqueiro
     iconSprite: {fileID: 21300000, guid: 1822114f3c4699a0aad4992bd145a387, type: 3}
-    dialogueText: 'Que babado! A filha do prefeito odeia a cidade '
+    dialogueText: "Eu fico aqui o dia inteiro\u2026"
+    responses: []
+  - title: Fofoqueiro
+    iconSprite: {fileID: 21300000, guid: 1822114f3c4699a0aad4992bd145a387, type: 3}
+    dialogueText: "S\xF3 escutando hihihihihi\u2026"
     responses: []

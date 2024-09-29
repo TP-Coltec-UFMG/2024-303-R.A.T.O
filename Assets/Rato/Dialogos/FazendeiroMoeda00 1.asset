@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c77e2b4ee342cae82b11260e272dde, type: 3}
-  m_Name: FazendeiroMoeda01
+  m_Name: FazendeiroMoeda00 1
   m_EditorClassIdentifier: 
   RootNodes:
   - title: Lobato
     iconSprite: {fileID: 21300000, guid: 84fe44f3a9c47ec4f83d61e45d6bccb7, type: 3}
-    dialogueText: Bom trabalho rapaz! Toma aqui sua recompensa.
+    dialogueText: " Olha num sei qu\xEA que oc\xEA foi arrumar naquele buraco mas
+      o bich\xE3o sumiu, toma aqui sua recompensa\r\n"
     responses: []
